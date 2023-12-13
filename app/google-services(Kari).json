@@ -1,13 +1,13 @@
 {
   "project_info": {
-    "project_number": "913982470294",
-    "project_id": "triviatrek-2023",
-    "storage_bucket": "triviatrek-2023.appspot.com"
+    "project_number": "1028004557257",
+    "project_id": "triviatrek-klhm",
+    "storage_bucket": "triviatrek-klhm.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:913982470294:android:932fb03276d1f3f8abaab7",
+        "mobilesdk_app_id": "1:1028004557257:android:f45be7c61f00d7f1343818",
         "android_client_info": {
           "package_name": "com.example.triviatrek"
         }
@@ -15,7 +15,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyCWjtZO4oqJWvjC75mt5A0TzJfO4wvUubY"
+          "current_key": "AIzaSyCEHmPi7iglrxmLWgcclTFvIJQAGS1h994"
         }
       ],
       "services": {
