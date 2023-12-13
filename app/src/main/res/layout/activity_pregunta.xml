@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".PreguntaActivity">
+    tools:context=".PreguntaActivity"
+    android:background="@drawable/fondo_amarillo">
 
     <ImageView
         android:id="@+id/imgPregunta"
@@ -17,15 +18,15 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/txtPregunta"
-        android:layout_width="335dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="28dp"
-        android:text="Aqui va la pregunta ¿?¿?¿?¿?¿?¿?¿?¿?"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imgPregunta" />
+            android:id="@+id/txtPregunta"
+            android:layout_width="335dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="28dp"
+            android:text="Aqui va la pregunta ¿?¿?¿?¿?¿?¿?¿?¿?"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imgPregunta" android:textColor="@color/rosado_logo"/>
 
     <RadioGroup
         android:id="@+id/radioGroup1"
@@ -37,25 +38,25 @@
         app:layout_constraintTop_toBottomOf="@+id/txtPregunta">
 
         <RadioButton
-            android:id="@+id/rbOpcion1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="OPCION 1"
-            android:textColor="@color/black" />
+                android:id="@+id/rbOpcion1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="OPCION 1"
+                android:textColor="@color/rosado_logo"/>
 
         <RadioButton
-            android:id="@+id/rbOpcion2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="OPCION 2"
-            android:textColor="@color/black" />
+                android:id="@+id/rbOpcion2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="OPCION 2"
+                android:textColor="@color/rosado_logo"/>
 
         <RadioButton
-            android:id="@+id/rbOpcion3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="OPCION 3"
-            android:textColor="@color/black" />
+                android:id="@+id/rbOpcion3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="OPCION 3"
+                android:textColor="@color/rosado_logo"/>
     </RadioGroup>
 
     <Button
@@ -68,7 +69,9 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/radioGroup1"
-        app:layout_constraintVertical_bias="0.236" />
+        app:layout_constraintVertical_bias="0.236"
+        android:backgroundTint="@color/azuloscuro_logo"
+        android:textColor="@color/celeste_logo"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

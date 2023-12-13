@@ -18,18 +18,18 @@
         app:srcCompat="@drawable/logo1" />
 
     <TextView
-        android:id="@+id/textView"
-        android:layout_width="330dp"
-        android:layout_height="41dp"
-        android:layout_marginTop="60dp"
-        android:text="HECHO POR LITVAK Y MARTÍNEZ"
-        android:textAlignment="center"
-        android:textColor="#9C27B0"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.493"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imgLogo"
-        tools:textStyle="bold" />
+            android:id="@+id/textView"
+            android:layout_width="330dp"
+            android:layout_height="41dp"
+            android:layout_marginTop="60dp"
+            android:text="HECHO POR LITVAK Y MARTÍNEZ"
+            android:textAlignment="center"
+            android:textColor="@color/rosado_logo"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.493"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imgLogo"
+            tools:textStyle="bold"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

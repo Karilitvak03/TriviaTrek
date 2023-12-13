@@ -1,9 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MenuAdminActivity">
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                   xmlns:tools="http://schemas.android.com/tools"
+                                                   android:layout_width="match_parent"
+                                                   android:layout_height="match_parent"
+                                                   tools:context=".MenuAdminActivity"
+                                                   android:background="@drawable/fondo_login"
+                                                   android:textAlignment="center">
 
+
+    <ImageView
+            android:id="@+id/imgLogo4"
+            android:layout_width="230dp"
+            android:layout_height="227dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/logo2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintVertical_bias="0.031"/>
+
+    <TextView
+            android:id="@+id/txtOpcion"
+            android:layout_width="348dp"
+            android:layout_height="49dp"
+            android:text="Selecciona una opcion"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:textSize="34sp"
+            android:textColor="@color/rosado_logo"
+            app:layout_constraintHorizontal_bias="0.492"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintVertical_bias="0.401"
+            android:fontFamily="@font/sprite_graffiti" android:textAlignment="center"/>
+    <Button
+            android:id="@+id/btnVersugerencia"
+            android:layout_width="247dp"
+            android:layout_height="63dp"
+            android:text="VER SUGERENCIA PREGUNTA"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintVertical_bias="0.514"
+            android:backgroundTint="@color/azuloscuro_logo"
+            android:textColor="@color/celeste_logo"/>
+    <Button
+            android:id="@+id/btnAgregar"
+            android:layout_width="198dp"
+            android:layout_height="63dp"
+            android:text="AGREGAR PREGUNTA"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintVertical_bias="0.679"
+            android:backgroundTint="@color/azuloscuro_logo"
+            android:textColor="@color/celeste_logo"
+            app:layout_constraintHorizontal_bias="0.497"/>
+    <Button
+            android:id="@+id/btnEliminar"
+            android:layout_width="198dp"
+            android:layout_height="63dp"
+            android:text="ELIMINAR PREGUNTA"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintVertical_bias="0.838"
+            android:backgroundTint="@color/azuloscuro_logo"
+            android:textColor="@color/celeste_logo"
+            app:layout_constraintHorizontal_bias="0.497"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

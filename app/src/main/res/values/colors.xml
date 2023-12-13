@@ -2,4 +2,8 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="amarillo_logo">#F6D922</color>
+    <color name="celeste_logo">#22D6F6</color>
+    <color name="rosado_logo">#F6299B</color>
+    <color name="azuloscuro_logo">#140522</color>
 </resources>

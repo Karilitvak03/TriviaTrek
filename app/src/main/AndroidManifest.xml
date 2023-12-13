@@ -13,7 +13,31 @@
         android:theme="@style/Theme.TriviaTrek"
         tools:targetApi="31">
         <activity
-            android:name=".MenuAdminActivity"
+                android:name=".AdministradorActivity"
+                android:exported="false" />
+        <activity
+                android:name=".InstruccionesActivity"
+                android:exported="false" />
+        <activity
+                android:name=".MainActivity"
+                android:exported="false" />
+        <activity
+                android:name=".MenuActivity"
+                android:exported="false" />
+        <activity
+                android:name=".MenuAdminActivity"
+                android:exported="false" />
+        <activity
+                android:name=".PerfilActivity"
+                android:exported="false" />
+        <activity
+                android:name=".RegistroActivity"
+                android:exported="false" />
+        <activity
+                android:name=".ResultadosActivity"
+                android:exported="false" />
+        <activity
+            android:name=".SugerenciaPreguntaActivity"
             android:exported="false" />
         <activity
             android:name=".PodioActivity"

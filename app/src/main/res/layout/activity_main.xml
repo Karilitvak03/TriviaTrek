@@ -32,52 +32,72 @@
         tools:textColor="@color/white" />
 
     <Button
-        android:id="@+id/btnJugar"
-        android:layout_width="382dp"
-        android:layout_height="63dp"
-        android:layout_marginStart="108dp"
-        android:layout_marginTop="128dp"
-        android:layout_marginEnd="109dp"
-        android:backgroundTint="#2196F3"
-        android:text="JUGAR"
-        android:textColorHighlight="#FFFFFF"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.505"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtCantidadOro" />
+            android:id="@+id/btnJugar"
+            android:layout_width="382dp"
+            android:layout_height="63dp"
+            android:layout_marginStart="108dp"
+            android:layout_marginTop="128dp"
+            android:layout_marginEnd="109dp"
+            android:backgroundTint="@color/amarillo_logo"
+            android:text="JUGAR"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.505"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtCantidadOro"
+            android:textColor="@color/rosado_logo"
+            android:textSize="30sp"/>
 
     <Button
-        android:id="@+id/btnTop3"
-        android:layout_width="180dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="48dp"
-        android:layout_marginEnd="16dp"
-        android:text="VER TOP 3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtCantidadOro" />
+            android:id="@+id/btnTop3"
+            android:layout_width="180dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="48dp"
+            android:layout_marginEnd="16dp"
+            android:text="VER TOP 3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtCantidadOro"
+            android:backgroundTint="@color/azuloscuro_logo"
+            android:textColor="@color/celeste_logo"/>
 
     <Button
-        android:id="@+id/btnInstrucciones"
-        android:layout_width="180dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="48dp"
-        android:text="INSTRUCCIONES"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtCantidadOro" />
+            android:id="@+id/btnInstrucciones"
+            android:layout_width="180dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="48dp"
+            android:text="INSTRUCCIONES"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtCantidadOro"
+            android:textColor="@color/celeste_logo"
+            android:backgroundTint="@color/azuloscuro_logo"/>
 
     <Button
-        android:id="@+id/btnEditar"
-        android:layout_width="180dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="133dp"
-        android:layout_marginTop="31dp"
-        android:layout_marginEnd="133dp"
-        android:text="EDITAR PERFIL"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnJugar" />
+            android:id="@+id/btnEditar"
+            android:layout_width="180dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="133dp"
+            android:layout_marginTop="31dp"
+            android:layout_marginEnd="133dp"
+            android:text="EDITAR PERFIL"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnJugar"
+            android:backgroundTint="@color/azuloscuro_logo"
+            android:textColor="@color/celeste_logo"/>
 
+    <Button
+            android:id="@+id/btnVovler2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="VOLVER"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.049"
+            app:layout_constraintVertical_bias="0.976"
+            android:backgroundTint="@color/azuloscuro_logo"
+            android:textColor="@color/celeste_logo"/>
     <ImageView
         android:id="@+id/imageView3"
         android:layout_width="116dp"
@@ -101,5 +121,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView3"
         tools:textColor="@color/white" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
