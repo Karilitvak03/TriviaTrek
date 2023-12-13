@@ -121,31 +121,32 @@
             app:layout_constraintTop_toBottomOf="@+id/txtApellido"
             tools:hint="eMail - Ej: abc@xyz.com" app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintVertical_bias="0.022"/>
-    <Button
-            android:id="@+id/btnAceptar"
-            android:layout_width="173dp"
-            android:layout_height="48dp"
-            android:layout_marginBottom="80dp"
-            android:text="ACEPTAR"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.487"
-            app:layout_constraintStart_toStartOf="parent"
-            android:backgroundTint="@color/azuloscuro_logo"
-            android:textColor="@color/celeste_logo"/>
 
     <Button
-            android:id="@+id/btnVovler"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="VOLVER"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            android:layout_marginTop="664dp"
-            app:layout_constraintHorizontal_bias="0.049"
-            android:backgroundTint="@color/azuloscuro_logo"
-            android:textColor="@color/celeste_logo"/>
+        android:id="@+id/btnAceptar"
+        android:layout_width="173dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="100dp"
+        android:backgroundTint="@color/azuloscuro_logo"
+        android:text="ACEPTAR"
+        android:textColor="@color/celeste_logo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnVovler"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="664dp"
+        android:backgroundTint="@color/azuloscuro_logo"
+        android:text="VOLVER"
+        android:textColor="@color/celeste_logo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.051"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.157" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

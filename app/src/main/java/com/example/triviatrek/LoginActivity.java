@@ -1,5 +1,6 @@
 package com.example.triviatrek;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,6 +12,9 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class LoginActivity extends AppCompatActivity {
@@ -34,15 +38,20 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View view) {
                 if (validarCampos()) {
                     FirebaseAuth.getInstance()
-                            .signInWithEmailAndPassword(txtEmail.getText().toString(), txtClave.getText().toString());
-
-                    Toast.makeText(LoginActivity.this, "Registro trekminado exitosamente", Toast.LENGTH_SHORT).show();
-
-                    Intent intent = new Intent(LoginActivity.this, MainActivity.class);
-                    startActivity(intent);
-                    finish();
-                } else {
-                    //Toast.makeText(LoginActivity.this, "Error. Verifica tus datos :(.", Toast.LENGTH_SHORT).show();
+                            .signInWithEmailAndPassword(txtEmail.getText().toString(), txtClave.getText().toString())
+                            .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                                @Override
+                                public void onComplete(@NonNull Task<AuthResult> task) {
+                                    if (task.isSuccessful()) {
+                                        //Toast.makeText(LoginActivity.this, "Bienvenido ", Toast.LENGTH_SHORT).show();
+                                        Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                                        startActivity(intent);
+                                        finish();
+                                    } else {
+                                        Toast.makeText(LoginActivity.this, "Error. Verifica tus datos :(", Toast.LENGTH_SHORT).show();
+                                    }
+                                }
+                            });
                 }
             }
         });

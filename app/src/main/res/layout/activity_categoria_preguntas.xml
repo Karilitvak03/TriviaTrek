@@ -58,7 +58,7 @@
             app:layout_constraintTop_toTopOf="parent"
             tools:textSize="34sp" android:textColor="@color/rosado_logo"/>
     <Button
-            android:id="@+id/btnVovler2"
+            android:id="@+id/btnSalir"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="VOLVER"

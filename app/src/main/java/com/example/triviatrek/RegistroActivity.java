@@ -9,14 +9,23 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.FirebaseFirestore;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class RegistroActivity extends AppCompatActivity {
 
     private EditText txtNombre, txtApellido, txtEmail, txtClave, txtConfirmarClave;
     private Button btnAceptar, btnVolver;
+    private FirebaseFirestore db;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,20 +47,31 @@ public class RegistroActivity extends AppCompatActivity {
                 if (validarCampos()) {
 
                     FirebaseAuth.getInstance()
-                            .createUserWithEmailAndPassword(txtEmail.getText().toString(), txtConfirmarClave.getText().toString());
+                            .createUserWithEmailAndPassword(txtEmail.getText().toString(), txtConfirmarClave.getText().toString())
+                            .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                                @Override
+                                public void onComplete(@NonNull Task<AuthResult> task) {
+                                    if (task.isSuccessful()) {
 
-                    Toast.makeText(RegistroActivity.this, "Registro trekminado exitosamente", Toast.LENGTH_SHORT).show();
+                                        registarUsuario();
+                                        Toast.makeText(RegistroActivity.this, "Registro trekminado exitosamente", Toast.LENGTH_SHORT).show();
 
-                    Intent intent = new Intent(RegistroActivity.this, LoginActivity.class);
-                    startActivity(intent);
-                    finish();
+                                        Intent intent = new Intent(RegistroActivity.this, LoginActivity.class);
+                                        startActivity(intent);
+                                        finish();
+                                    } else {
+                                        Toast.makeText(RegistroActivity.this, "Error. Verifica tus datos :(", Toast.LENGTH_SHORT).show();
+                                    }
+                                }
+                            });;
+
+
                 }else{
                     //Toast.makeText(RegistroActivity.this, "Error, vuelve a intentarlo porfa!", Toast.LENGTH_SHORT).show();
                 }
             }
         });
 
-        // Configurar el botón de Volver para cerrar la actividad
         btnVolver.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -99,5 +119,25 @@ public class RegistroActivity extends AppCompatActivity {
 
     private void mostrarMensaje(String mensaje) {
         Toast.makeText(this, mensaje, Toast.LENGTH_SHORT).show();
+    }
+
+    private void registarUsuario() {
+        String nombre = txtNombre.getText().toString().trim();
+        String apellido = txtApellido.getText().toString().trim();
+        String email = txtEmail.getText().toString().trim();
+
+        // En el Map de usuario guardo los datos
+        Map<String, Object> usuario = new HashMap<>();
+        usuario.put("nombre", nombre);
+        usuario.put("apellido", apellido);
+        usuario.put("email", email);
+
+        // Obtener una referencia a la colección "usuarios" en tu Firestore
+        db.collection("usuarios")
+                .add(usuario)
+                .addOnFailureListener(e -> {
+                    // Handle failure
+                    mostrarMensaje("Error al guardar en Firestore: " + e.getMessage());
+                });
     }
 }

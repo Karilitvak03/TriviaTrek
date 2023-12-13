@@ -93,13 +93,18 @@
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/logo2" app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintHorizontal_bias="0.497" app:layout_constraintVertical_bias="0.0"/>
+
     <Button
-            android:id="@+id/btnIngresar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="INGRESAR"
-            tools:layout_editor_absoluteX="147dp"
-            tools:layout_editor_absoluteY="424dp" android:backgroundTint="@color/azuloscuro_logo"
-            android:textColor="@color/celeste_logo"/>
+        android:id="@+id/btnIngresar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:backgroundTint="@color/azuloscuro_logo"
+        android:text="INGRESAR"
+        android:textColor="@color/celeste_logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtClave" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
