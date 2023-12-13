@@ -32,6 +32,8 @@ public class RegistroActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.registro_main);
 
+        db = FirebaseFirestore.getInstance();
+
         txtNombre = findViewById(R.id.txtNombre);
         txtApellido = findViewById(R.id.txtApellido);
         txtEmail = findViewById(R.id.txtEmail2);
@@ -52,18 +54,21 @@ public class RegistroActivity extends AppCompatActivity {
                                 @Override
                                 public void onComplete(@NonNull Task<AuthResult> task) {
                                     if (task.isSuccessful()) {
+                                        registarUsuario(); // Realiza el registro en Firestore
 
-                                        registarUsuario();
-                                        Toast.makeText(RegistroActivity.this, "Registro trekminado exitosamente", Toast.LENGTH_SHORT).show();
+                                        Toast.makeText(RegistroActivity.this, "Registro completado exitosamente", Toast.LENGTH_SHORT).show();
 
                                         Intent intent = new Intent(RegistroActivity.this, LoginActivity.class);
                                         startActivity(intent);
                                         finish();
                                     } else {
-                                        Toast.makeText(RegistroActivity.this, "Error. Verifica tus datos :(", Toast.LENGTH_SHORT).show();
+                                        // Manejar errores de autenticación
+                                        String errorMessage = task.getException().getMessage();
+                                        Toast.makeText(RegistroActivity.this, "Error en el registro: " + errorMessage, Toast.LENGTH_SHORT).show();
                                     }
                                 }
-                            });;
+                            });
+
 
 
                 }else{
@@ -120,7 +125,6 @@ public class RegistroActivity extends AppCompatActivity {
     private void mostrarMensaje(String mensaje) {
         Toast.makeText(this, mensaje, Toast.LENGTH_SHORT).show();
     }
-
     private void registarUsuario() {
         String nombre = txtNombre.getText().toString().trim();
         String apellido = txtApellido.getText().toString().trim();
@@ -135,9 +139,32 @@ public class RegistroActivity extends AppCompatActivity {
         // Obtener una referencia a la colección "usuarios" en tu Firestore
         db.collection("usuarios")
                 .add(usuario)
+                .addOnSuccessListener(documentReference -> {
+                    // Registro en Firestore completado con éxito
+                    Toast.makeText(RegistroActivity.this, "Registro en Firestore completado", Toast.LENGTH_SHORT).show();
+
+                    // Ahora, realiza la autenticación después de que el registro en Firestore ha tenido éxito
+                    FirebaseAuth.getInstance()
+                            .createUserWithEmailAndPassword(txtEmail.getText().toString(), txtConfirmarClave.getText().toString())
+                            .addOnCompleteListener(task -> {
+                                if (task.isSuccessful()) {
+                                    // Autenticación completada con éxito
+                                    Toast.makeText(RegistroActivity.this, "Autenticación completada", Toast.LENGTH_SHORT).show();
+
+                                    Intent intent = new Intent(RegistroActivity.this, LoginActivity.class);
+                                    startActivity(intent);
+                                    finish();
+                                } else {
+                                    // Manejar errores de autenticación
+                                    String errorMessage = task.getException().getMessage();
+                                    Toast.makeText(RegistroActivity.this, "Error en la autenticación: " + errorMessage, Toast.LENGTH_SHORT).show();
+                                }
+                            });
+                })
                 .addOnFailureListener(e -> {
                     // Handle failure
                     mostrarMensaje("Error al guardar en Firestore: " + e.getMessage());
                 });
     }
+
 }
