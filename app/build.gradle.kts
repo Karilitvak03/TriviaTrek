@@ -33,7 +33,6 @@ android {
 
 dependencies {
 
-
     implementation("androidx.appcompat:appcompat:1.6.1")
     implementation("com.google.android.material:material:1.10.0")
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
@@ -51,4 +50,7 @@ dependencies {
     implementation("com.google.firebase:firebase-auth:22.3.0")
     // Agrega la dependencia de Firestore
     implementation ("com.google.firebase:firebase-firestore:24.10.0")
+    //Picasssssssso
+    implementation ("com.squareup.picasso:picasso:2.71828")
+
 }
