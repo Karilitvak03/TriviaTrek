@@ -20,6 +20,7 @@ public class CategoriaPreguntasActivity extends AppCompatActivity {
         ImageButton btnGeografia = findViewById(R.id.btnGeografia);
         ImageButton btnDeporte = findViewById(R.id.btnDeporte);
         Button btnRandom = findViewById(R.id.btnRandom);
+        Button btnVolver4 = findViewById(R.id.btnVolver4);
 
         btnArte.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -55,11 +56,20 @@ public class CategoriaPreguntasActivity extends AppCompatActivity {
                 startPreguntaActivity("random");
             }
         });
+        btnVolver4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
     }
-
+    public void volverAtras() {
+        onBackPressed();
+    }
     private void startPreguntaActivity(String categoria) {
         Intent intent = new Intent(CategoriaPreguntasActivity.this, PreguntaActivity.class);
         intent.putExtra("categoria", categoria);
         startActivity(intent);
     }
+
 }

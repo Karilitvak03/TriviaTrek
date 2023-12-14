@@ -18,18 +18,18 @@
         app:srcCompat="@drawable/logo2" />
 
     <TextView
-        android:id="@+id/txtHola"
-        android:layout_width="249dp"
-        android:layout_height="39dp"
-        android:layout_marginTop="48dp"
-        android:text="Hola Nombre!"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.239"
-        app:layout_constraintStart_toEndOf="@+id/imgLogo4"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:textColor="@color/white" />
+            android:id="@+id/txtHola"
+            android:layout_width="249dp"
+            android:layout_height="39dp"
+            android:layout_marginTop="48dp"
+            android:text="Hola Nombre!"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.239"
+            app:layout_constraintStart_toEndOf="@+id/imgLogo4"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:textColor="@color/rosado_logo"/>
 
     <Button
             android:id="@+id/btnJugar"
@@ -112,15 +112,15 @@
         app:srcCompat="@android:drawable/btn_star_big_on" />
 
     <TextView
-        android:id="@+id/txtCantidadOro"
-        android:layout_width="211dp"
-        android:layout_height="74dp"
-        android:text="Cantidad de Oro total (si la estrella es el oro xD)"
-        android:textSize="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView3"
-        tools:textColor="@color/white" />
+            android:id="@+id/txtCantidadOro"
+            android:layout_width="211dp"
+            android:layout_height="74dp"
+            android:text="Cantidad de Oro total (si la estrella es el oro xD)"
+            android:textSize="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView3"
+            tools:textColor="@color/rosado_logo"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

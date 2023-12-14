@@ -31,7 +31,7 @@
             app:layout_constraintTop_toTopOf="parent"/>
 
     <EditText
-            android:id="@+id/txtApellido"
+            android:id="@+id/txtApellido2"
             android:layout_width="310dp"
             android:layout_height="57dp"
             android:layout_marginTop="4dp"
@@ -46,12 +46,12 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.485"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtNombre"
+            app:layout_constraintTop_toBottomOf="@+id/txtNombre2"
             tools:hint="Apellido"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintVertical_bias="0.0"/>
     <EditText
-            android:id="@+id/txtClave2"
+            android:id="@+id/txtClave5"
             android:layout_width="310dp"
             android:layout_height="63dp"
             android:layout_marginTop="16dp"
@@ -66,11 +66,11 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.485"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtEmail2"
+            app:layout_constraintTop_toBottomOf="@+id/txtEmail3"
             tools:hint="Ingresa nueva contraseña" />
 
     <EditText
-            android:id="@+id/txtNombre"
+            android:id="@+id/txtNombre2"
             android:layout_width="310dp"
             android:layout_height="60dp"
             android:backgroundTint="@color/azuloscuro_logo"
@@ -89,7 +89,7 @@
             app:layout_constraintTop_toTopOf="@+id/imgLogo3"
             app:layout_constraintVertical_bias="0.357"/>
     <EditText
-            android:id="@+id/txtClave3"
+            android:id="@+id/txtClave4"
             android:layout_width="310dp"
             android:layout_height="57dp"
             android:layout_marginTop="4dp"
@@ -104,11 +104,11 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.485"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtClave2"
+            app:layout_constraintTop_toBottomOf="@+id/txtClave5"
             tools:hint="Confirmar nueva contraseña" />
 
     <EditText
-            android:id="@+id/txtEmail2"
+            android:id="@+id/txtEmail3"
             android:layout_width="310dp"
             android:layout_height="57dp"
             android:backgroundTint="@color/azuloscuro_logo"
@@ -122,12 +122,12 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.485"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtApellido"
+            app:layout_constraintTop_toBottomOf="@+id/txtApellido2"
             tools:hint="eMail"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintVertical_bias="0.022"/>
     <Button
-            android:id="@+id/btnAceptar"
+            android:id="@+id/btnAceptar2"
             android:layout_width="173dp"
             android:layout_height="48dp"
             android:layout_marginBottom="80dp"
@@ -140,7 +140,7 @@
             android:textColor="@color/celeste_logo"/>
 
     <Button
-            android:id="@+id/btnVovler"
+            android:id="@+id/btnVolver3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="VOLVER"

@@ -9,8 +9,8 @@
 
     <ImageView
         android:id="@+id/imgPregunta"
-        android:layout_width="409dp"
-        android:layout_height="184dp"
+        android:layout_width="@dimen/imagen_ancho"
+        android:layout_height="@dimen/imagen_alto"
         android:layout_marginTop="72dp"
         android:background="@color/black"
         app:layout_constraintEnd_toEndOf="parent"

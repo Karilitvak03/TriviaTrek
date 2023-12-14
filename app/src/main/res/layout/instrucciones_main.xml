@@ -18,7 +18,7 @@
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintVertical_bias="0.001"/>
     <Button
-            android:id="@+id/btnVovler"
+            android:id="@+id/btnVolver"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="VOLVER"
