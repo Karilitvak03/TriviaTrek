@@ -10,7 +10,7 @@
     <ImageView
         android:id="@+id/imgPregunta"
         android:layout_width="416dp"
-        android:layout_height="276dp"
+        android:layout_height="250dp"
         android:layout_marginTop="60dp"
         android:background="#4D000000"
         app:layout_constraintEnd_toEndOf="parent"
@@ -18,11 +18,12 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+
     <RadioGroup
         android:id="@+id/radioGroup1"
-        android:layout_width="300dp"
-        android:layout_height="186dp"
-        android:layout_marginTop="4dp"
+        android:layout_width="304dp"
+        android:layout_height="216dp"
+        android:layout_marginTop="12dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.747"
         app:layout_constraintStart_toStartOf="parent"
@@ -33,15 +34,9 @@
             style="@style/Widget.AppCompat.CompoundButton.RadioButton"
             android:layout_width="match_parent"
             android:layout_height="60dp"
-            android:buttonTint="@color/celeste_logo"
-            android:textColor="@color/rosado_logo"
-            android:textSize="18sp" />
-
-        <RadioButton
-            android:id="@+id/rbOpcion3"
-            style="@style/Widget.AppCompat.CompoundButton.RadioButton"
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
+            android:layout_marginBottom="10sp"
+            android:background="@drawable/edittext_border"
+            android:backgroundTint="#33000000"
             android:buttonTint="@color/celeste_logo"
             android:textColor="@color/rosado_logo"
             android:textSize="18sp" />
@@ -51,6 +46,20 @@
             style="@style/Widget.AppCompat.CompoundButton.RadioButton"
             android:layout_width="match_parent"
             android:layout_height="60dp"
+            android:layout_marginBottom="10sp"
+            android:background="@drawable/edittext_border"
+            android:backgroundTint="#33000000"
+            android:buttonTint="@color/celeste_logo"
+            android:textColor="@color/rosado_logo"
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:id="@+id/rbOpcion3"
+            style="@style/Widget.AppCompat.CompoundButton.RadioButton"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/edittext_border"
+            android:backgroundTint="#33000000"
             android:buttonTint="@color/celeste_logo"
             android:textColor="@color/rosado_logo"
             android:textSize="18sp" />
@@ -74,12 +83,13 @@
         android:id="@+id/txtPregunta"
         android:layout_width="357dp"
         android:layout_height="94dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/edittext_border"
+        android:backgroundTint="#33000000"
         android:textAlignment="center"
         android:textColor="@color/rosado_logo"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.486"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imgPregunta" />
 
@@ -111,7 +121,6 @@
         android:layout_height="29dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="4dp"
-        android:text="20"
         android:textAlignment="textEnd"
         android:textColor="@color/amarillo_logo"
         android:textSize="18sp"

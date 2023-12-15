@@ -12,16 +12,18 @@
         android:layout_width="289dp"
         android:layout_height="57dp"
         android:layout_marginTop="20dp"
-        android:backgroundTint="@color/azuloscuro_logo"
+        android:background="@drawable/edittext_border"
+        android:backgroundTint="#38000000"
         android:drawableLeft="@drawable/outline_email_white_24dp"
         android:drawablePadding="10sp"
         android:ems="10"
         android:hint="Ingresa tu email"
         android:inputType="text"
         android:textColor="@color/amarillo_logo"
-        android:textColorHint="#99FFFFFF"
+        android:textColorHint="#99F6D922"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtIniciarSesion" />
 
@@ -29,17 +31,19 @@
         android:id="@+id/txtClave"
         android:layout_width="289dp"
         android:layout_height="57dp"
-        android:layout_marginTop="76dp"
-        android:backgroundTint="@color/azuloscuro_logo"
+        android:layout_marginTop="92dp"
+        android:background="@drawable/edittext_border"
+        android:backgroundTint="#38000000"
         android:drawableLeft="@drawable/outline_lock_open_white_24dp"
         android:drawablePadding="10sp"
         android:ems="10"
         android:hint="Ingresa tu contraseña"
         android:inputType="textPassword"
         android:textColor="@color/amarillo_logo"
-        android:textColorHint="#99FFFFFF"
+        android:textColorHint="#99F6D922"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtIniciarSesion" />
 
@@ -66,7 +70,7 @@
         android:textColor="#FED900"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtClave" />
 
@@ -80,7 +84,8 @@
         android:textColor="#FE1C9E"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.25"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/textView3"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtClave" />
 
@@ -105,7 +110,7 @@
         android:text="INGRESAR"
         android:textColor="@color/celeste_logo"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtClave" />
 
