@@ -15,7 +15,7 @@
         android:theme="@style/Theme.TriviaTrek"
         tools:targetApi="31">
         <activity
-                android:name=".AdministradorActivity"
+                android:name=".AdministradorEliminarPreguntaActivity"
                 android:exported="false" />
         <activity
                 android:name=".InstruccionesActivity"

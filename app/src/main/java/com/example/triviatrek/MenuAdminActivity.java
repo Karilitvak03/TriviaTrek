@@ -21,7 +21,7 @@ public class MenuAdminActivity extends AppCompatActivity {
         btnVersugerencia.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MenuAdminActivity.this, AdministradorActivity.class);
+                Intent intent = new Intent(MenuAdminActivity.this, AdministradorVerSugerenciaActivity.class);
                 startActivity(intent);
             }
         });
@@ -29,7 +29,7 @@ public class MenuAdminActivity extends AppCompatActivity {
         btnAgregar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MenuAdminActivity.this, AdministradorActivity.class);
+                Intent intent = new Intent(MenuAdminActivity.this, AdministradorAgregarPreguntaActivity.class);
                 startActivity(intent);
             }
         });
@@ -37,7 +37,7 @@ public class MenuAdminActivity extends AppCompatActivity {
         btnEliminar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MenuAdminActivity.this, AdministradorActivity.class);
+                Intent intent = new Intent(MenuAdminActivity.this, AdministradorEliminarPreguntaActivity.class);
                 startActivity(intent);
             }
         });

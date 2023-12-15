@@ -76,7 +76,8 @@ public class SugerenciaPreguntaActivity extends AppCompatActivity {
 
         btnVolver6.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) { onBackPressed(); }
+            public void onClick(View v) {
+                onBackPressed(); }
         });
     }
 }

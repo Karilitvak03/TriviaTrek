@@ -17,7 +17,7 @@ public class PodioActivity extends AppCompatActivity {
         Button btnJugar2 = findViewById(R.id.btnJugar2);
         Button btnVolver2 = findViewById(R.id.btnVolver2);
 
-        btnJugar2 .setOnClickListener(new View.OnClickListener() {
+        btnJugar2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(PodioActivity.this, CategoriaPreguntasActivity.class);
@@ -30,8 +30,5 @@ public class PodioActivity extends AppCompatActivity {
                 onBackPressed();
             }
         });
-    }
-    public void volverAtras() {
-        onBackPressed();
     }
 }
