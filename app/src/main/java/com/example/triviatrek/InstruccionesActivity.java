@@ -18,12 +18,14 @@ public class InstruccionesActivity extends AppCompatActivity {
         btnVolver.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 onBackPressed();
             }
         });
     }
 
     public void volverAtras() {
+
         onBackPressed();
     }
 }

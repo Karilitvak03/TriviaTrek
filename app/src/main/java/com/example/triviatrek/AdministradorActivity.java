@@ -11,6 +11,6 @@ public class AdministradorActivity extends AppCompatActivity {
         setContentView(R.layout.administrador_agregar_pregunta);
         setContentView(R.layout.administrador_eliminar_pregunta);
         setContentView(R.layout.administrador_sugerencia_pregunta);
-    }
 
+    }
 }
