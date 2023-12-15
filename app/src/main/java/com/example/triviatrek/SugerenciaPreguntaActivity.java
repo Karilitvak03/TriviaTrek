@@ -35,8 +35,9 @@ public class SugerenciaPreguntaActivity extends AppCompatActivity {
         btnEnviar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String nombre = txtApellido3.getText().toString();
-                String apellido = txtNombre3.getText().toString();
+                String nombre = txtNombre3.getText().toString();
+                String apellido = txtApellido3.getText().toString();
+
                 String email = txtEmail4.getText().toString();
                 String pregunta = txtSugerirPregunta.getText().toString();
 
@@ -75,15 +76,8 @@ public class SugerenciaPreguntaActivity extends AppCompatActivity {
 
         btnVolver6.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-
-                onBackPressed();
-            }
+            public void onClick(View v) { onBackPressed(); }
         });
-    }
-    public void volverAtras() {
-
-        onBackPressed();
     }
 }
 
