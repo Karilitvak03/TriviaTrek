@@ -1,7 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                   xmlns:tools="http://schemas.android.com/tools"
                                                    android:layout_width="match_parent"
                                                    android:layout_height="match_parent"
+                                                   tools:context=".AdministradorActivity"
                                                    android:background="@drawable/fondo_login">
+    <ImageView
+            android:id="@+id/imgLogo4"
+            android:layout_width="170dp"
+            android:layout_height="169dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/logo2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintVertical_bias="0.001"/>
 
+    <ListView
+            android:id="@+id/listViewPreguntas"
+            android:layout_width="297dp"
+            android:layout_height="416dp"
+            android:layout_above="@+id/btnEliminarPregunta"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.469"
+            android:dividerHeight="1dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:background="@drawable/edittext_border"
+            android:cacheColorHint="@color/amarillo_logo"
+            android:textColor="@color/amarillo_logo"
+            android:textColorHint="@color/amarillo_logo"
+            android:shadowColor="@color/amarillo_logo"
+            android:textColorHighlight="@color/amarillo_logo"
+            android:textColorLink="@color/amarillo_logo"
+            android:divider="@color/azuloscuro_logo"/>
+    <Button
+            android:id="@+id/btnEliminarPregunta"
+            android:layout_width="173dp"
+            android:layout_height="48dp"
+            android:layout_marginBottom="80dp"
+            android:text="ELIMINAR"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.487"
+            app:layout_constraintStart_toStartOf="parent"
+            android:backgroundTint="@color/azuloscuro_logo"
+            android:textColor="@color/celeste_logo"/>
+
+    <Button
+            android:id="@+id/btnVolver8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="VOLVER"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginTop="664dp"
+            app:layout_constraintHorizontal_bias="0.049"
+            android:backgroundTint="@color/azuloscuro_logo"
+            android:textColor="@color/celeste_logo"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
