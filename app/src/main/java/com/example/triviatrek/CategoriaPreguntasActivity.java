@@ -25,35 +25,35 @@ public class CategoriaPreguntasActivity extends AppCompatActivity {
         btnArte.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startPreguntaActivity("arte");
+                jugar("arte");
             }
         });
 
         btnEntretenimiento.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startPreguntaActivity("entretenimiento");
+                jugar("entretenimiento");
             }
         });
 
         btnGeografia.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startPreguntaActivity("geografia");
+                jugar("geografia");
             }
         });
 
         btnDeporte.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startPreguntaActivity("deporte");
+                jugar("deportes");
             }
         });
 
         btnRandom.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startPreguntaActivity("random");
+                jugar("random");
             }
         });
         btnVolver4.setOnClickListener(new View.OnClickListener() {
@@ -63,10 +63,7 @@ public class CategoriaPreguntasActivity extends AppCompatActivity {
             }
         });
     }
-    public void volverAtras() {
-        onBackPressed();
-    }
-    private void startPreguntaActivity(String categoria) {
+    private void jugar(String categoria) {
         Intent intent = new Intent(CategoriaPreguntasActivity.this, PreguntaActivity.class);
         intent.putExtra("categoria", categoria);
         startActivity(intent);

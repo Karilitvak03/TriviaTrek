@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/fondo_login"
+    android:background="@drawable/fondo_oscuro"
     tools:context=".LoginActivity">
 
     <EditText
@@ -16,14 +16,14 @@
         android:drawableLeft="@drawable/outline_email_white_24dp"
         android:drawablePadding="10sp"
         android:ems="10"
+        android:hint="Ingresa tu email"
         android:inputType="text"
         android:textColor="@color/amarillo_logo"
-        android:textColorHint="@color/amarillo_logo"
+        android:textColorHint="#99FFFFFF"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtIniciarSesion"
-        tools:hint="Ingresa tu email" />
+        app:layout_constraintTop_toBottomOf="@+id/txtIniciarSesion" />
 
     <EditText
         android:id="@+id/txtClave"
@@ -34,27 +34,27 @@
         android:drawableLeft="@drawable/outline_lock_open_white_24dp"
         android:drawablePadding="10sp"
         android:ems="10"
+        android:hint="Ingresa tu contraseña"
         android:inputType="textPassword"
         android:textColor="@color/amarillo_logo"
-        android:textColorHint="@color/amarillo_logo"
+        android:textColorHint="#99FFFFFF"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtIniciarSesion"
-        tools:hint="Ingresa tu contraseña" />
+        app:layout_constraintTop_toBottomOf="@+id/txtIniciarSesion" />
 
     <TextView
-            android:id="@+id/txtIniciarSesion"
-            android:layout_width="277dp"
-            android:layout_height="60dp"
-            android:layout_marginTop="192dp"
-            android:text="INICIA SESION"
-            android:textAlignment="center"
-            android:textColor="@color/amarillo_logo"
-            android:textSize="30sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
+        android:id="@+id/txtIniciarSesion"
+        android:layout_width="277dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="192dp"
+        android:text="INICIA SESION"
+        android:textAlignment="center"
+        android:textColor="@color/amarillo_logo"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView3"
@@ -85,14 +85,16 @@
         app:layout_constraintTop_toBottomOf="@+id/txtClave" />
 
     <ImageView
-            android:id="@+id/imageView2"
-            android:layout_width="226dp"
-            android:layout_height="192dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/logo2" app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintHorizontal_bias="0.497" app:layout_constraintVertical_bias="0.0"/>
+        android:id="@+id/imageView2"
+        android:layout_width="226dp"
+        android:layout_height="192dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/logo2" />
 
     <Button
         android:id="@+id/btnIngresar"

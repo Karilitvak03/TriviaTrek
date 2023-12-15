@@ -4,32 +4,30 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/fondo_login"
+    android:background="@drawable/fondo_oscuro"
     tools:context=".MainActivity"
     tools:layout_editor_absoluteX="2dp"
     tools:layout_editor_absoluteY="1dp">
 
     <ImageView
         android:id="@+id/imgLogo4"
-        android:layout_width="120dp"
-        android:layout_height="118dp"
+        android:layout_width="170dp"
+        android:layout_height="144dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/logo2" />
 
     <TextView
-            android:id="@+id/txtHola"
-            android:layout_width="249dp"
-            android:layout_height="39dp"
-            android:layout_marginTop="48dp"
-            android:text="Hola Nombre!"
-            android:textAlignment="center"
-            android:textSize="20sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.239"
-            app:layout_constraintStart_toEndOf="@+id/imgLogo4"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:textColor="@color/rosado_logo"/>
+        android:id="@+id/txtHola"
+        android:layout_width="223dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="48dp"
+        android:textColor="@color/rosado_logo"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/imgLogo4"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
             android:id="@+id/btnJugar"
@@ -112,15 +110,14 @@
         app:srcCompat="@drawable/oro" />
 
     <TextView
-            android:id="@+id/txtCantidadOro"
-            android:layout_width="211dp"
-            android:layout_height="74dp"
-            android:text="Cantidad de Oro total (si la estrella es el oro xD)"
-            android:textSize="20dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView3"
-            tools:textColor="@color/rosado_logo"/>
+        android:id="@+id/txtCantidadOro"
+        android:layout_width="211dp"
+        android:layout_height="74dp"
+        android:textColor="@color/amarillo_logo"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

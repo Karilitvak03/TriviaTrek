@@ -1,5 +1,6 @@
 package com.example.triviatrek;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -14,12 +15,18 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QuerySnapshot;
-
-import java.util.List;
 import com.squareup.picasso.Picasso;
+
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
 
 public class PreguntaActivity extends AppCompatActivity {
 
@@ -30,21 +37,26 @@ public class PreguntaActivity extends AppCompatActivity {
     private RadioButton rbOpcion2;
     private RadioButton rbOpcion3;
     private Button btnContinuar;
+    private TextView txtOro;
+    private TextView txtUsuario;
 
     private FirebaseFirestore db;
-
     private DocumentSnapshot documento;
+    private int respuestasCorrectas = 0;
+    private int intentosRestantes = 3;
+    private int cantidadOro;
+    private boolean primeraVez = true;
+
+    private Set<String> preguntasMostradas = new HashSet<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pregunta);
 
-        db = FirebaseFirestore.getInstance();  // Inicio el coso de Firestore
-
+        db = FirebaseFirestore.getInstance();
         String categoria = getIntent().getStringExtra("categoria"); // Me guardo la categoria que se selecciono
 
-        //Vistas
         txtPregunta = findViewById(R.id.txtPregunta);
         imgPregunta = findViewById(R.id.imgPregunta);
         radioGroup = findViewById(R.id.radioGroup1);
@@ -53,57 +65,183 @@ public class PreguntaActivity extends AppCompatActivity {
         rbOpcion3 = findViewById(R.id.rbOpcion3);
         btnContinuar = findViewById(R.id.btnContinuar);
 
-        obtenerPregunta(categoria); // Traigo la pregunta segun la categoria seleccionadaaaa
+        txtOro = findViewById(R.id.txtOro);
+        txtUsuario = findViewById(R.id.txtusuario);
+
+        // Obtener el chabon logueado
+        FirebaseUser usuario = FirebaseAuth.getInstance().getCurrentUser();
+
+        if (usuario != null) {
+            // UID del chabon logueado
+            String uid = usuario.getUid();
+
+            // Referencia al documento del chabon logueado
+            DocumentReference docRef = FirebaseFirestore.getInstance().collection("usuarios").document(uid);
+
+            docRef.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+                @Override
+                public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                    if (task.isSuccessful()) {
+                        DocumentSnapshot document = task.getResult();
+                        if (document.exists()) {
+                            // Documento del chabon logueado
+                            String nombreUsuario = document.getString("nombre");
+                            int oroUsuario = document.getLong("oro").intValue();
+
+                            // Muestro los datos del chabon logueado xD
+                            txtUsuario.setText("Usuario: " + nombreUsuario);
+                            txtOro.setText("Oro: " + oroUsuario);
+                        }
+                    }
+                }
+            });
+        } else {
+            Toast.makeText(PreguntaActivity.this, "No existe usuario", Toast.LENGTH_SHORT).show();
+
+        }
+
+        ponerPregunta(categoria); // Pongo una pregunta de la categoria que eligió el chabon
 
         btnContinuar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
                 int selectedId = radioGroup.getCheckedRadioButtonId();
 
-                if (selectedId == -1) { // No hay opcion seleccionada
-                    Toast.makeText(PreguntaActivity.this, "Selecciona una opcion che!", Toast.LENGTH_SHORT).show();
+                if (selectedId == -1) {
+                    Toast.makeText(PreguntaActivity.this, "Selecciona una opción, por favor.", Toast.LENGTH_SHORT).show();
                 } else {
                     RadioButton selectedRadioButton = findViewById(selectedId);
-
                     int opcionElegida = radioGroup.indexOfChild(selectedRadioButton);
 
-                    // Guardo la respuesta correcta de la bd en la variable "correcta", correcto?
                     int correcta = documento.getLong("correcta").intValue();
 
-                    // Comparo la opcion con la respuesta correcta para obviamante saber si es o no correcta xD
                     if (opcionElegida == correcta) {
-                        // Respuesta Correcta, mostrar Toast
-                        Toast.makeText(PreguntaActivity.this, "Respuesta Correcta", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(PreguntaActivity.this, "¡Respuesta Correcta! +10 oro", Toast.LENGTH_SHORT).show();
+                        cantidadOro += 10;
+                        respuestasCorrectas++;
                     } else {
-                        // Respuesta Incorrecta, mostrar Toast
-                        Toast.makeText(PreguntaActivity.this, "Respuesta Incorrecta", Toast.LENGTH_SHORT).show();
+                        // Respuesta Incorrecta
+                        Toast.makeText(PreguntaActivity.this, "Respuesta Incorrecta. -10 oro", Toast.LENGTH_SHORT).show();
+                        cantidadOro -= 10;
+                    }
+
+                    intentosRestantes--;
+
+                    if (intentosRestantes > 0) {
+                        ponerPregunta(categoria); // Pongo otra pregunta
+                        actualizarInterfazOro();
+                        radioGroup.clearCheck();
+                    } else {
+                        redirigirAMenu(); // Si no hay mas intentos mando al chabon al menu
                     }
                 }
             }
         });
-
     }
 
-    private void obtenerPregunta(String categoria) {
-        // Busco una pregunta de la categoria elegida :)
-        db.collection("preguntas")
-                .whereEqualTo("categoria", categoria)
-                .limit(1)
-                .get()
-                .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
-                    @Override
-                    public void onComplete(@NonNull Task<QuerySnapshot> task) {
-                        if (task.isSuccessful() && task.getResult() != null && !task.getResult().isEmpty()) {
-                            // Obtener la pregunta desde el primer documento
-                            documento = task.getResult().getDocuments().get(0);
+    private void ponerPregunta(String categoria) {
+        double random = Math.random();
 
-                            actualizarInterfaz(documento); // Actualizo la interfaz con la pregunta, imagen y opciones
-                        } else {
-                            // Manejar el caso en el que no se obtuvieron preguntas
-                        }
-                    }
-                });
+        if (categoria.equals("random")) {
+            // Si preguntasMostradas está vacío, obtén cualquier pregunta aleatoria
+            if (preguntasMostradas.isEmpty()) {
+                db.collection("preguntas")
+                        .limit(1)
+                        .get()
+                        .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                            @Override
+                            public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                                if (task.isSuccessful() && task.getResult() != null && !task.getResult().isEmpty()) {
+                                    // Obtener la pregunta aleatoria desde el primer documento
+                                    documento = task.getResult().getDocuments().get(0);
+
+                                    // Agrega la pregunta actual al conjunto de preguntas mostradas
+                                    preguntasMostradas.add(documento.getId());
+
+                                    // Actualiza la interfaz con la nueva pregunta
+                                    actualizarInterfaz(documento);
+                                    bonusOro(documento.getLong("correcta").intValue());
+                                }
+                            }
+                        });
+            } else {
+                // Si preguntasMostradas no está vacío, obtén una pregunta aleatoria excluyendo las mostradas
+                db.collection("preguntas")
+                        .whereNotIn("id", new ArrayList<>(preguntasMostradas))
+                        .limit(1)
+                        .get()
+                        .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                            @Override
+                            public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                                if (task.isSuccessful() && task.getResult() != null && !task.getResult().isEmpty()) {
+                                    // Obtener la pregunta aleatoria desde el primer documento
+                                    documento = task.getResult().getDocuments().get(0);
+
+                                    // Agrega la pregunta actual al conjunto de preguntas mostradas
+                                    preguntasMostradas.add(documento.getId());
+
+                                    // Actualiza la interfaz con la nueva pregunta
+                                    actualizarInterfaz(documento);
+                                    bonusOro(documento.getLong("correcta").intValue());
+                                }
+                            }
+                        });
+            }
+        } else {
+            if (preguntasMostradas.isEmpty()) {
+                db.collection("preguntas")
+                        .limit(1)
+                        .get()
+                        .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                            @Override
+                            public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                                if (task.isSuccessful() && task.getResult() != null && !task.getResult().isEmpty()) {
+                                    // Obtener la pregunta aleatoria desde el primer documento
+                                    documento = task.getResult().getDocuments().get(0);
+
+                                    // Agrega la pregunta actual al conjunto de preguntas mostradas
+                                    preguntasMostradas.add(documento.getId());
+
+                                    // Actualiza la interfaz con la nueva pregunta
+                                    actualizarInterfaz(documento);
+                                }
+                            }
+                        });
+            }else {
+
+                // Si la categoría no es 'random', selecciona una pregunta de la categoría específica
+                db.collection("preguntas")
+                        .whereEqualTo("categoria", categoria)
+                        .whereNotIn("id", new ArrayList<>(preguntasMostradas))
+                        .limit(1)
+                        .get()
+                        .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                            @Override
+                            public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                                if (task.isSuccessful() && task.getResult() != null && !task.getResult().isEmpty()) {
+                                    // Obtener la pregunta aleatoria desde el primer documento
+                                    documento = task.getResult().getDocuments().get(0);
+
+                                    // Agrega la pregunta actual al conjunto de preguntas mostradas
+                                    preguntasMostradas.add(documento.getId());
+
+                                    // Actualiza la interfaz con la nueva pregunta
+                                    actualizarInterfaz(documento);
+                                }
+                            }
+                        });
+            }
+        }
+    }
+
+    private void actualizarInterfazOro() {
+        txtOro.setText(String.valueOf(cantidadOro));
+    }
+
+    private void redirigirAMenu() {
+        Intent intent = new Intent(PreguntaActivity.this, MenuActivity.class);
+        startActivity(intent);
+        finish();
     }
 
     private void actualizarInterfaz(DocumentSnapshot document) {
@@ -126,6 +264,20 @@ public class PreguntaActivity extends AppCompatActivity {
         rbOpcion1.setText(opciones.get(0));
         rbOpcion2.setText(opciones.get(1));
         rbOpcion3.setText(opciones.get(2));
+    }
+
+    private void bonusOro(int opcionCorrecta) {
+        if (opcionCorrecta == documento.getLong("correcta").intValue()) {
+            // Respuesta Correcta
+            Toast.makeText(PreguntaActivity.this, "¡Respuesta Correcta! +25 oro", Toast.LENGTH_SHORT).show();
+            cantidadOro += 25;
+            respuestasCorrectas++;
+        } else {
+            // Respuesta Incorrecta
+            Toast.makeText(PreguntaActivity.this, "Respuesta Incorrecta. -25 oro", Toast.LENGTH_SHORT).show();
+            cantidadOro -= 25;
+        }
+        actualizarInterfazOro();
     }
 }
 
