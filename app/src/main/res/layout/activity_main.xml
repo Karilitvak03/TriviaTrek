@@ -11,17 +11,19 @@
 
     <ImageView
         android:id="@+id/imgLogo4"
-        android:layout_width="170dp"
-        android:layout_height="144dp"
+        android:layout_width="157dp"
+        android:layout_height="145dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/logo2" />
 
     <TextView
         android:id="@+id/txtHola"
-        android:layout_width="223dp"
-        android:layout_height="49dp"
+        android:layout_width="191dp"
+        android:layout_height="53dp"
         android:layout_marginTop="48dp"
+        android:background="@drawable/edittext_border"
+        android:backgroundTint="#33000000"
         android:textColor="@color/rosado_logo"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -30,58 +32,37 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-            android:id="@+id/btnJugar"
-            android:layout_width="382dp"
-            android:layout_height="63dp"
-            android:layout_marginStart="108dp"
-            android:layout_marginTop="128dp"
-            android:layout_marginEnd="109dp"
-            android:backgroundTint="@color/amarillo_logo"
-            android:text="JUGAR"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.505"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtCantidadOro"
-            android:textColor="@color/rosado_logo"
-            android:textSize="30sp"/>
+        android:id="@+id/btnJugar"
+        android:layout_width="382dp"
+        android:layout_height="63dp"
+        android:layout_marginStart="108dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="109dp"
+        android:backgroundTint="@color/amarillo_logo"
+        android:text="JUGAR"
+        android:textColor="@color/rosado_logo"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.489"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnInstrucciones" />
 
     <Button
-            android:id="@+id/btnTop3"
-            android:layout_width="180dp"
-            android:layout_height="50dp"
-            android:layout_marginTop="48dp"
-            android:layout_marginEnd="16dp"
-            android:text="VER TOP 3"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtCantidadOro"
-            android:backgroundTint="@color/azuloscuro_logo"
-            android:textColor="@color/celeste_logo"/>
+        android:id="@+id/btnEditar"
+        android:layout_width="47dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="52dp"
+        android:backgroundTint="@color/azuloscuro_logo"
+        android:drawableLeft="@android:drawable/ic_menu_edit"
+        android:drawableTint="@color/celeste_logo"
+        android:paddingHorizontal="10sp"
 
-    <Button
-            android:id="@+id/btnInstrucciones"
-            android:layout_width="180dp"
-            android:layout_height="48dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="48dp"
-            android:text="INSTRUCCIONES"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtCantidadOro"
-            android:textColor="@color/celeste_logo"
-            android:backgroundTint="@color/azuloscuro_logo"/>
-
-    <Button
-            android:id="@+id/btnEditar"
-            android:layout_width="180dp"
-            android:layout_height="50dp"
-            android:layout_marginStart="133dp"
-            android:layout_marginTop="31dp"
-            android:layout_marginEnd="133dp"
-            android:text="EDITAR PERFIL"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btnJugar"
-            android:backgroundTint="@color/azuloscuro_logo"
-            android:textColor="@color/celeste_logo"/>
+        android:textAlignment="textStart"
+        android:textColor="@color/celeste_logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.964"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/btnSalir"
@@ -96,28 +77,65 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.976" />
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="116dp"
-        android:layout_height="107dp"
-        android:layout_marginStart="147dp"
-        android:layout_marginTop="52dp"
-        android:layout_marginEnd="148dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtHola"
-        app:srcCompat="@drawable/oro" />
 
-    <TextView
-        android:id="@+id/txtCantidadOro"
-        android:layout_width="211dp"
-        android:layout_height="74dp"
-        android:textColor="@color/amarillo_logo"
-        android:textSize="20dp"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="337dp"
+        android:layout_height="304dp"
+        android:layout_marginTop="160dp"
+        android:background="@drawable/edittext_border"
+        android:backgroundTint="#33000000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/btnTop3"
+            android:layout_width="180dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="24dp"
+            android:backgroundTint="@color/azuloscuro_logo"
+            android:text="VER TOP 3"
+            android:textColor="@color/celeste_logo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtCantidadOro" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="135dp"
+            android:layout_height="124dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/oro" />
+
+        <TextView
+            android:id="@+id/txtCantidadOro"
+            android:layout_width="263dp"
+            android:layout_height="54dp"
+            android:layout_marginTop="124dp"
+            android:textAlignment="center"
+            android:textColor="@color/amarillo_logo"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/imageView3" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/btnInstrucciones"
+        android:layout_width="180dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/azuloscuro_logo"
+        android:text="INSTRUCCIONES"
+        android:textColor="@color/celeste_logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

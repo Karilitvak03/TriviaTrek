@@ -47,20 +47,19 @@ public class RegistroActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (validarCampos()) {
+                    // Limpiar espacios iniciales y finales
+                    String email = txtEmail.getText().toString().trim();
+                    String nombre = txtNombre.getText().toString().trim();
+                    String apellido = txtApellido.getText().toString().trim();
 
                     FirebaseAuth.getInstance()
-                            .createUserWithEmailAndPassword(txtEmail.getText().toString(), txtConfirmarClave.getText().toString())
+                            .createUserWithEmailAndPassword(email, txtConfirmarClave.getText().toString())
                             .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                                 @Override
                                 public void onComplete(@NonNull Task<AuthResult> task) {
                                     if (task.isSuccessful()) {
-                                        registarUsuario(); // Realiza el registro en Firestore
-
-                                        Toast.makeText(RegistroActivity.this, "Registro completado exitosamente", Toast.LENGTH_SHORT).show();
-
-                                        Intent intent = new Intent(RegistroActivity.this, LoginActivity.class);
-                                        startActivity(intent);
-                                        finish();
+                                        // Registra el usuario en Firestore
+                                        registarUsuario(nombre, apellido, email); // Realiza el registro en Firestore
                                     } else {
                                         // Manejar errores de autenticación
                                         String errorMessage = task.getException().getMessage();
@@ -68,14 +67,10 @@ public class RegistroActivity extends AppCompatActivity {
                                     }
                                 }
                             });
-
-
-
-                }else{
-                    //Toast.makeText(RegistroActivity.this, "Error, vuelve a intentarlo porfa!", Toast.LENGTH_SHORT).show();
                 }
             }
         });
+
 
         btnVolver.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -125,41 +120,29 @@ public class RegistroActivity extends AppCompatActivity {
     private void mostrarMensaje(String mensaje) {
         Toast.makeText(this, mensaje, Toast.LENGTH_SHORT).show();
     }
-    private void registarUsuario() {
-        String nombre = txtNombre.getText().toString().trim();
-        String apellido = txtApellido.getText().toString().trim();
-        String email = txtEmail.getText().toString().trim();
-
+    private void registarUsuario(String nombre, String apellido, String email) {
         // En el Map de usuario guardo los datos
         Map<String, Object> usuario = new HashMap<>();
         usuario.put("nombre", nombre);
         usuario.put("apellido", apellido);
         usuario.put("email", email);
+        usuario.put("oro", 100); // Agrega oro = 100
+        usuario.put("rol", "user"); // Agrega rol = "user"
 
-        // Obtener una referencia a la colección "usuarios" en tu Firestore
+        // Obtener el UID del usuario autenticado
+        String uid = FirebaseAuth.getInstance().getCurrentUser().getUid();
+
+        // Actualiza el documento con el UID correcto
         db.collection("usuarios")
-                .add(usuario)
+                .document(uid)
+                .set(usuario)
                 .addOnSuccessListener(documentReference -> {
                     // Registro en Firestore completado con éxito
                     Toast.makeText(RegistroActivity.this, "Registro en Firestore completado", Toast.LENGTH_SHORT).show();
 
-                    // Ahora, realiza la autenticación después de que el registro en Firestore ha tenido éxito
-                    FirebaseAuth.getInstance()
-                            .createUserWithEmailAndPassword(txtEmail.getText().toString(), txtConfirmarClave.getText().toString())
-                            .addOnCompleteListener(task -> {
-                                if (task.isSuccessful()) {
-                                    // Autenticación completada con éxito
-                                    Toast.makeText(RegistroActivity.this, "Autenticación completada", Toast.LENGTH_SHORT).show();
-
-                                    Intent intent = new Intent(RegistroActivity.this, LoginActivity.class);
-                                    startActivity(intent);
-                                    finish();
-                                } else {
-                                    // Manejar errores de autenticación
-                                    String errorMessage = task.getException().getMessage();
-                                    Toast.makeText(RegistroActivity.this, "Error en la autenticación: " + errorMessage, Toast.LENGTH_SHORT).show();
-                                }
-                            });
+                    Intent intent = new Intent(RegistroActivity.this, LoginActivity.class);
+                    startActivity(intent);
+                    finish();
                 })
                 .addOnFailureListener(e -> {
                     // Handle failure

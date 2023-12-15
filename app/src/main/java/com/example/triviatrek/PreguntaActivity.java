@@ -60,9 +60,9 @@ public class PreguntaActivity extends AppCompatActivity {
         txtPregunta = findViewById(R.id.txtPregunta);
         imgPregunta = findViewById(R.id.imgPregunta);
         radioGroup = findViewById(R.id.radioGroup1);
-        rbOpcion1 = findViewById(R.id.rbOpcion1);
-        rbOpcion2 = findViewById(R.id.rbOpcion2);
-        rbOpcion3 = findViewById(R.id.rbOpcion3);
+        rbOpcion1 = findViewById(R.id.txtOpcion1);
+        rbOpcion2 = findViewById(R.id.txtOpcion2);
+        rbOpcion3 = findViewById(R.id.txtOpcion3);
         btnContinuar = findViewById(R.id.btnContinuar);
 
         txtOro = findViewById(R.id.txtOro);
@@ -85,12 +85,14 @@ public class PreguntaActivity extends AppCompatActivity {
                         DocumentSnapshot document = task.getResult();
                         if (document.exists()) {
                             // Documento del chabon logueado
-                            String nombreUsuario = document.getString("nombre");
+                            String nombre = document.getString("nombre");
+                            String apellido = document.getString("apellido");;
+                            String nombreUsuario = nombre + " " + apellido;
                             int oroUsuario = document.getLong("oro").intValue();
 
                             // Muestro los datos del chabon logueado xD
-                            txtUsuario.setText("Usuario: " + nombreUsuario);
-                            txtOro.setText("Oro: " + oroUsuario);
+                            txtUsuario.setText(nombreUsuario);
+                            txtOro.setText(String.valueOf(oroUsuario));
                         }
                     }
                 }

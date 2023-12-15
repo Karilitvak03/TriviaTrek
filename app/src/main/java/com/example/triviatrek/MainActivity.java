@@ -2,6 +2,7 @@ package com.example.triviatrek;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -37,14 +38,14 @@ public class MainActivity extends AppCompatActivity {
         txtHola = findViewById(R.id.txtHola);
         txtCantidadOro = findViewById(R.id.txtCantidadOro);
 
-        // Obtener el chabon actual de Firebase
         FirebaseUser usuario = FirebaseAuth.getInstance().getCurrentUser();
 
         if (usuario != null) {
             // UID del chabon logueado
             String uid = usuario.getUid();
+            Log.d("Firebase", "UID del usuario: " + uid);
 
-            // Referencia al documento del chabon en Firestore
+            // Referencia al documento del chabon logueado
             DocumentReference docRef = FirebaseFirestore.getInstance().collection("usuarios").document(uid);
 
             docRef.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
@@ -58,15 +59,17 @@ public class MainActivity extends AppCompatActivity {
                             int oro = document.getLong("oro").intValue();
 
                             // Mostrar el nombre y la cantidad de oro en los TextView
-                            txtHola.setText("Hola, " + nombre);
-                            txtCantidadOro.setText("Oro: " + oro);
+                            txtHola.setText("¡Hola, " + nombre + "!");
+                            txtCantidadOro.setText("Tienes " + oro + " de oro!");
+                        } else {
+                            Toast.makeText(MainActivity.this, "El documento del usuario no existe", Toast.LENGTH_SHORT).show();
                         }
                     } else {
-                        Toast.makeText(MainActivity.this, "no estas", Toast.LENGTH_SHORT).show();
-
+                        Toast.makeText(MainActivity.this, "Error al obtener el documento del usuario: " + task.getException(), Toast.LENGTH_SHORT).show();
                     }
                 }
             });
+
         }
 
         btnJugar.setOnClickListener(new View.OnClickListener() {

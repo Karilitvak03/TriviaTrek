@@ -15,6 +15,11 @@
         android:theme="@style/Theme.TriviaTrek"
         tools:targetApi="31">
         <activity
+            android:name=".AdministradorVerSugerenciaActivity"
+            android:exported="false" />
+         <activity android:name=".AdministradorAgregarPreguntaActivity"
+                android:exported="false" />
+        <activity
                 android:name=".AdministradorEliminarPreguntaActivity"
                 android:exported="false" />
         <activity

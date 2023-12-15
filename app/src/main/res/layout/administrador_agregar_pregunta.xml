@@ -7,117 +7,181 @@
     android:background="@drawable/fondo_oscuro"
     tools:context=".PreguntaActivity">
 
-    <ImageView
-            android:id="@+id/imgPregunta2"
-            android:layout_width="416dp"
-            android:layout_height="250dp"
-            android:layout_marginTop="60dp"
-            android:background="#4D000000"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.6"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-
-    <RadioGroup
-            android:id="@+id/radioGroup2"
-            android:layout_width="304dp"
-            android:layout_height="216dp"
-            android:layout_marginTop="12dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.747"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtPregunta2">
-
-        <RadioButton
-                android:id="@+id/rbOpcion1"
-                style="@style/Widget.AppCompat.CompoundButton.RadioButton"
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:layout_marginBottom="10sp"
-                android:background="@drawable/edittext_border"
-                android:backgroundTint="#33000000"
-                android:buttonTint="@color/celeste_logo"
-                android:textColor="@color/rosado_logo"
-                android:textSize="18sp" />
-
-        <RadioButton
-                android:id="@+id/rbOpcion2"
-                style="@style/Widget.AppCompat.CompoundButton.RadioButton"
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:layout_marginBottom="10sp"
-                android:background="@drawable/edittext_border"
-                android:backgroundTint="#33000000"
-                android:buttonTint="@color/celeste_logo"
-                android:textColor="@color/rosado_logo"
-                android:textSize="18sp" />
-
-        <RadioButton
-                android:id="@+id/rbOpcion3"
-                style="@style/Widget.AppCompat.CompoundButton.RadioButton"
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:background="@drawable/edittext_border"
-                android:backgroundTint="#33000000"
-                android:buttonTint="@color/celeste_logo"
-                android:textColor="@color/rosado_logo"
-                android:textSize="18sp" />
-
-    </RadioGroup>
 
     <Button
-            android:id="@+id/btnGuardar"
-            android:layout_width="180dp"
-            android:layout_height="50dp"
-            android:layout_marginTop="20dp"
-            android:backgroundTint="@color/azuloscuro_logo"
-            android:text="GUARDAR"
-            android:textColor="@color/celeste_logo"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.497"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/radioGroup2" />
+        android:id="@+id/btnBuscar"
+        android:layout_width="227dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="68dp"
+        android:layout_marginEnd="92dp"
+        android:backgroundTint="@color/azuloscuro_logo"
+        android:drawableLeft="@android:drawable/ic_menu_search"
+        android:text="BUSCAR IMAGEN"
+        android:textColor="@color/celeste_logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/spinnerCategorias" />
 
     <EditText
-            android:id="@+id/txtPregunta2"
-            android:layout_width="351dp"
-            android:layout_height="68dp"
-            android:layout_marginTop="8dp"
-            android:background="@drawable/edittext_border"
-            android:backgroundTint="#33000000"
-            android:textAlignment="center"
-            android:textColor="@color/rosado_logo"
-            android:textSize="20sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imgPregunta2"/>
+        android:id="@+id/txtPonerPregunta"
+        android:layout_width="355dp"
+        android:layout_height="74dp"
+        android:layout_marginTop="64dp"
+        android:background="@drawable/edittext_border"
+        android:backgroundTint="#33000000"
+        android:hint="Ingrese la pregunta aquí"
+        android:textAlignment="center"
+        android:textColor="@color/celeste_logo"
+        android:textColorHint="#9922D6F6"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-            android:id="@+id/imgTriviaTrek"
-            android:layout_width="64dp"
-            android:layout_height="63dp"
-            android:layout_marginStart="4dp"
-            android:layout_marginTop="4dp"
-            app:layout_constraintBottom_toTopOf="@+id/imgPregunta2"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.5"
-            app:srcCompat="@drawable/logo1" />
+    <EditText
+        android:id="@+id/txtOpcion2"
+        style="@style/Widget.AppCompat.CompoundButton.RadioButton"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/edittext_border"
+        android:backgroundTint="#33000000"
+        android:buttonTint="@color/celeste_logo"
+        android:hint="Ingrese opcion 2"
+        android:textColor="@color/celeste_logo"
+        android:textColorHint="#9922D6F6"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtOpcion1" />
+
+    <CheckBox
+        android:id="@+id/cb2"
+        android:layout_width="40dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="72dp"
+        android:buttonTint="@color/amarillo_logo"
+        app:layout_constraintStart_toEndOf="@+id/txtOpcion2"
+        app:layout_constraintTop_toTopOf="@+id/cb1"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <EditText
+
+        android:id="@+id/txtOpcion1"
+        style="@style/Widget.AppCompat.CompoundButton.RadioButton"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/edittext_border"
+        android:backgroundTint="#33000000"
+        android:buttonTint="@color/celeste_logo"
+        android:hint="Ingrese opcion 1"
+        android:textColor="@color/celeste_logo"
+        android:textColorHint="#9922D6F6"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtPonerPregunta" />
+
+    <CheckBox
+        android:id="@+id/cb1"
+        android:layout_width="40dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="16dp"
+        android:buttonTint="@color/amarillo_logo"
+        app:layout_constraintStart_toEndOf="@+id/txtOpcion1"
+        app:layout_constraintTop_toBottomOf="@+id/txtPonerPregunta"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <EditText
+        android:id="@+id/txtOpcion3"
+        style="@style/Widget.AppCompat.CompoundButton.RadioButton"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="12dp"
+        android:autofillHints="Ingrese opcion 1"
+        android:background="@drawable/edittext_border"
+        android:backgroundTint="#33000000"
+        android:buttonTint="@color/celeste_logo"
+        android:hint="Ingrese opcion 3"
+        android:textColor="@color/celeste_logo"
+        android:textColorHint="#9922D6F6"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtOpcion2" />
+
+    <Spinner
+        android:id="@+id/spinnerCategorias"
+        android:layout_width="355dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/edittext_border"
+        android:backgroundTint="#33000000"
+        android:padding="8dp"
+        android:textAlignment="center"
+        android:textColor="@color/celeste_logo"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtOpcion3"
+        tools:textColorHint="#9922D6F6" />
+
+    <CheckBox
+        android:id="@+id/cb3"
+        android:layout_width="40dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="72dp"
+        android:buttonTint="@color/amarillo_logo"
+        app:layout_constraintStart_toEndOf="@+id/txtOpcion3"
+        app:layout_constraintTop_toTopOf="@+id/cb2"
+        tools:ignore="TouchTargetSizeCheck" />
 
     <Button
-            android:id="@+id/btnVolver7"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="4dp"
-            android:layout_marginTop="4dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:backgroundTint="@color/azuloscuro_logo"
-            android:drawableLeft="@drawable/icono_atras"
-            android:text="VOLVER"
-            android:textColor="@color/celeste_logo"/>
+        android:id="@+id/btnGuardar"
+        android:layout_width="180dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="28dp"
+        android:backgroundTint="@color/azuloscuro_logo"
+        android:text="GUARDAR"
+        android:textColor="@color/celeste_logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgPreguntaElegida" />
 
+    <ImageView
+        android:id="@+id/imgTriviaTrek"
+        android:layout_width="64dp"
+        android:layout_height="63dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo1" />
 
+    <Button
+        android:id="@+id/btnVolver7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="@color/azuloscuro_logo"
+        android:drawableLeft="@drawable/icono_atras"
+        android:text="VOLVER"
+        android:textColor="@color/celeste_logo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imgPreguntaElegida"
+        android:layout_width="258dp"
+        android:layout_height="133dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnBuscar" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
