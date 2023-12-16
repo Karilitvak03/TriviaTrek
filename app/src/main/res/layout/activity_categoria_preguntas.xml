@@ -8,35 +8,37 @@
                                                    android:contentDescription="DEPORTE"
                                                    tools:context=".CategoriaPreguntasActivity">
 
-    <ImageButton
-            android:id="@+id/btnArte"
-            android:layout_width="185dp"
-            android:layout_height="250dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="92dp"
-            android:backgroundTint="@color/cardview_shadow_start_color"
-            android:contentDescription="ARTE"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/icono_arte"/>
-
-    <ImageButton
-            android:id="@+id/btnEntretenimiento"
-            android:layout_width="185dp"
-            android:layout_height="250dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginBottom="128dp"
-            android:backgroundTint="@color/cardview_shadow_start_color"
-            android:contentDescription="ENTRETENIMIENTO"
+    <ImageView
+            android:id="@+id/iconoVolver4"
+            android:layout_width="64dp"
+            android:layout_height="49dp"
+            android:layout_alignParentBottom="true"
+            android:clickable="true"
+            android:contentDescription="Volver atrás"
+            android:onClick="volverAtras"
+            android:src="@drawable/atras"
             app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.023"
             app:layout_constraintEnd_toEndOf="parent"
-            app:srcCompat="@drawable/icono_entretenimiento"/>
-
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.046"/>
+    <ImageButton
+            android:id="@+id/btnGeografia"
+            android:layout_width="185dp"
+            android:layout_height="250dp"
+            android:layout_marginTop="124dp"
+            android:layout_marginEnd="20dp"
+            android:backgroundTint="@color/cardview_shadow_start_color"
+            android:contentDescription="GEOGRAFIA"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/icono_geografia"/>
     <Button
             android:id="@+id/btnRandom"
             android:layout_width="372dp"
             android:layout_height="50dp"
-            android:layout_marginBottom="68dp"
+            android:layout_marginBottom="32dp"
             android:text="TODAS LAS CATEGORIAS, ME LA RE BANCO"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -45,50 +47,48 @@
             tools:ignore="TextContrastCheck"
             android:backgroundTint="@color/azuloscuro_logo"
             android:textColor="@color/celeste_logo"
-    />
-
+            android:fontFamily="@font/sprite_graffiti"
+            android:textSize="18sp"/>
+    <ImageButton
+            android:id="@+id/btnEntretenimiento"
+            android:layout_width="185dp"
+            android:layout_height="250dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="92dp"
+            android:backgroundTint="@color/cardview_shadow_start_color"
+            android:contentDescription="ENTRETENIMIENTO"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:srcCompat="@drawable/icono_entretenimiento"/>
+    <ImageButton
+            android:id="@+id/btnArte"
+            android:layout_width="185dp"
+            android:layout_height="250dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="124dp"
+            android:backgroundTint="@color/cardview_shadow_start_color"
+            android:contentDescription="ARTE"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/icono_arte"/>
     <TextView
             android:id="@+id/txtCategoria"
             android:layout_width="382dp"
             android:layout_height="46dp"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="72dp"
             android:text="Selecciona una categoria"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:textSize="34sp" android:textColor="@color/rosado_logo"/>
-    <Button
-            android:id="@+id/btnVolver4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="VOLVER"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:backgroundTint="@color/azuloscuro_logo"
-            android:textColor="@color/celeste_logo"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginStart="4dp"
-            app:layout_constraintHorizontal_bias="0.049"
-            app:layout_constraintVertical_bias="0.976"/>
-    <ImageButton
-            android:id="@+id/btnGeografia"
-            android:layout_width="185dp"
-            android:layout_height="250dp"
-            android:layout_marginTop="92dp"
-            android:layout_marginEnd="16dp"
-            android:backgroundTint="@color/cardview_shadow_start_color"
-            android:contentDescription="GEOGRAFIA"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/icono_geografia"/>
-
+            android:textSize="34sp"
+            android:textColor="@color/rosado_logo"
+            android:fontFamily="@font/sprite_graffiti" app:layout_constraintHorizontal_bias="0.517"/>
     <ImageButton
             android:id="@+id/btnDeporte"
             android:layout_width="185dp"
             android:layout_height="250dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginBottom="128dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginBottom="92dp"
             android:backgroundTint="@color/cardview_shadow_start_color"
             android:contentDescription="DEPORTE"
             app:layout_constraintBottom_toBottomOf="parent"

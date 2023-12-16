@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
-
+import android.widget.ImageView;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -22,7 +22,7 @@ import java.util.Map;
 public class PerfilActivity extends AppCompatActivity {
 
     private FirebaseFirestore db;
-
+    private ImageView iconoVolver7;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,13 +30,13 @@ public class PerfilActivity extends AppCompatActivity {
 
         db = FirebaseFirestore.getInstance();
 
-        Button btnVolver3 = findViewById(R.id.btnVolver3);
+        iconoVolver7 = findViewById(R.id.iconoVolver7);
         Button btnAceptar2 = findViewById(R.id.btnAceptar2);
 
-        btnVolver3.setOnClickListener(new View.OnClickListener() {
+        iconoVolver7.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                onBackPressed();
+                volverAtras();
             }
         });
 
@@ -46,6 +46,10 @@ public class PerfilActivity extends AppCompatActivity {
                 actualizarPerfil();
             }
         });
+    }
+
+    private void volverAtras() {
+        onBackPressed();
     }
 
     private void actualizarPerfil() {

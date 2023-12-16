@@ -23,13 +23,14 @@
         android:layout_height="53dp"
         android:layout_marginTop="48dp"
         android:background="@drawable/edittext_border"
-        android:backgroundTint="#33000000"
+        android:backgroundTint="@color/fondo_radiobutton"
         android:textColor="@color/rosado_logo"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/imgLogo4"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:fontFamily="@font/sprite_graffiti"/>
 
     <Button
         android:id="@+id/btnJugar"
@@ -45,24 +46,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.489"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnInstrucciones" />
-
-    <Button
-        android:id="@+id/btnEditar"
-        android:layout_width="47dp"
-        android:layout_height="44dp"
-        android:layout_marginTop="52dp"
-        android:backgroundTint="@color/azuloscuro_logo"
-        android:drawableLeft="@android:drawable/ic_menu_edit"
-        android:drawableTint="@color/celeste_logo"
-        android:paddingHorizontal="10sp"
-
-        android:textAlignment="textStart"
-        android:textColor="@color/celeste_logo"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.964"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/btnInstrucciones"
+        android:fontFamily="@font/sprite_graffiti"/>
 
     <Button
         android:id="@+id/btnSalir"
@@ -76,7 +61,9 @@
         app:layout_constraintHorizontal_bias="0.049"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.976" />
+        app:layout_constraintVertical_bias="0.976"
+        android:fontFamily="@font/sprite_graffiti"
+        android:textSize="20sp"/>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
@@ -84,7 +71,7 @@
         android:layout_height="304dp"
         android:layout_marginTop="160dp"
         android:background="@drawable/edittext_border"
-        android:backgroundTint="#33000000"
+        android:backgroundTint="@color/fondo_radiobutton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -100,7 +87,9 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.496"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtCantidadOro" />
+            app:layout_constraintTop_toBottomOf="@+id/txtCantidadOro"
+            android:fontFamily="@font/sprite_graffiti"
+            android:textSize="20sp"/>
 
         <ImageView
             android:id="@+id/imageView3"
@@ -121,7 +110,8 @@
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/imageView3" />
+            app:layout_constraintTop_toTopOf="@+id/imageView3"
+            android:fontFamily="@font/sprite_graffiti"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <Button
@@ -135,7 +125,22 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
+        android:fontFamily="@font/sprite_graffiti"
+        android:textSize="20sp"/>
+
+    <ImageView
+            android:id="@+id/iconoEditar"
+            android:layout_width="47dp"
+            android:layout_height="44dp"
+            android:layout_alignParentBottom="true"
+            android:clickable="true"
+            android:contentDescription="Editar perfil"
+            android:onClick="abrirPerfil"
+            android:src="@drawable/icono_editar"
+            tools:layout_editor_absoluteY="53dp"
+            tools:layout_editor_absoluteX="352dp"
+            tools:ignore="MissingConstraints"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

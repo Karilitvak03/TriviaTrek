@@ -17,22 +17,21 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/logo2" />
 
-    <Button
-        android:id="@+id/btnVolver6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="664dp"
-        android:backgroundTint="@color/azuloscuro_logo"
-        android:drawableLeft="@drawable/icono_atras"
-        android:text="VOLVER"
-        android:textColor="@color/celeste_logo"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
-
+    <ImageView
+            android:id="@+id/iconoVolver"
+            android:layout_width="64dp"
+            android:layout_height="49dp"
+            android:layout_alignParentBottom="true"
+            android:clickable="true"
+            android:contentDescription="Volver atrás"
+            android:onClick="volverAtras"
+            android:src="@drawable/atras"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.023"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.046"/>
     <TextView
         android:id="@+id/txtSugerir"
         android:layout_width="310dp"
@@ -45,7 +44,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.485"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:fontFamily="@font/sprite_graffiti"/>
 
 
     <EditText
@@ -54,19 +54,20 @@
         android:layout_height="57dp"
         android:layout_marginTop="16dp"
         android:background="@drawable/edittext_border"
-        android:backgroundTint="#33000000"
+        android:backgroundTint="@color/fondo_radiobutton"
         android:drawableLeft="@drawable/outline_person_white_24dp"
         android:drawablePadding="10sp"
         android:ems="10"
         android:hint="Ingresa tu apellido"
         android:inputType="text"
         android:textColor="@color/amarillo_logo"
-        android:textColorHint="#99F6D922"
+        android:textColorHint="@color/texto_de_fondo"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtNombre3" />
+        app:layout_constraintTop_toBottomOf="@+id/txtNombre3"
+        android:fontFamily="@font/sprite_graffiti"/>
 
     <EditText
         android:id="@+id/txtNombre3"
@@ -74,19 +75,20 @@
         android:layout_height="57dp"
         android:layout_marginTop="240dp"
         android:background="@drawable/edittext_border"
-        android:backgroundTint="#33000000"
+        android:backgroundTint="@color/fondo_radiobutton"
         android:drawableLeft="@drawable/outline_person_white_24dp"
         android:drawablePadding="10sp"
         android:ems="10"
         android:hint="Ingresa tu nombre"
         android:inputType="text"
         android:textColor="@color/amarillo_logo"
-        android:textColorHint="#99F6D922"
+        android:textColorHint="@color/texto_de_fondo"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imgLogo4" />
+        app:layout_constraintTop_toTopOf="@+id/imgLogo4"
+        android:fontFamily="@font/sprite_graffiti"/>
 
     <EditText
         android:id="@+id/txtEmail4"
@@ -94,19 +96,20 @@
         android:layout_height="57dp"
         android:layout_marginTop="16dp"
         android:background="@drawable/edittext_border"
-        android:backgroundTint="#33000000"
+        android:backgroundTint="@color/fondo_radiobutton"
         android:drawableLeft="@drawable/outline_email_white_24dp"
         android:drawablePadding="10sp"
         android:ems="10"
         android:hint="Ingresa tu eMail"
         android:inputType="text"
         android:textColor="@color/amarillo_logo"
-        android:textColorHint="#99F6D922"
+        android:textColorHint="@color/texto_de_fondo"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtApellido3" />
+        app:layout_constraintTop_toBottomOf="@+id/txtApellido3"
+        android:fontFamily="@font/sprite_graffiti"/>
 
     <EditText
         android:id="@+id/txtSugerirPregunta"
@@ -114,18 +117,19 @@
         android:layout_height="172dp"
         android:layout_marginTop="16dp"
         android:background="@drawable/edittext_border"
-        android:backgroundTint="#33000000"
+        android:backgroundTint="@color/fondo_radiobutton"
         android:drawablePadding="10sp"
         android:ems="10"
         android:hint="Deja aquí tu sugerencia"
         android:inputType="textMultiLine"
         android:gravity="top|start"
         android:textColor="@color/amarillo_logo"
-        android:textColorHint="#99F6D922"
+        android:textColorHint="@color/texto_de_fondo"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtEmail4" />
+        app:layout_constraintTop_toBottomOf="@+id/txtEmail4"
+        android:fontFamily="@font/sprite_graffiti"/>
 
     <Button
         android:id="@+id/btnEnviar"
@@ -138,5 +142,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtSugerirPregunta" />
+        app:layout_constraintTop_toBottomOf="@+id/txtSugerirPregunta"
+        android:fontFamily="@font/sprite_graffiti"
+        android:textSize="20sp"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

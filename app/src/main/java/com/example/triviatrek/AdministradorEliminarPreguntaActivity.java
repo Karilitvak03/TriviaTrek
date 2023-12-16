@@ -8,7 +8,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
-
+import android.widget.ImageView;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -27,7 +27,7 @@ public class AdministradorEliminarPreguntaActivity extends AppCompatActivity {
     private ListView listViewPreguntas;
     private Button btnEliminarPregunta;
     private FirebaseFirestore db;
-    private Button btnVolver8;
+    private ImageView iconoVolver8;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,7 +40,7 @@ public class AdministradorEliminarPreguntaActivity extends AppCompatActivity {
         // Inicializar ListView y botón
         listViewPreguntas = findViewById(R.id.listViewPreguntas); // Asegúrate de tener un ListView con el ID listViewPreguntas en tu layout.
         btnEliminarPregunta = findViewById(R.id.btnEliminarPregunta); // Asegúrate de tener un Button con el ID btnEliminarPregunta en tu layout.
-        btnVolver8 = findViewById(R.id.btnVolver8);
+        iconoVolver8 = findViewById(R.id.iconoVolver8);
         // Obtener y mostrar preguntas en el ListView
         obtenerPreguntasDeFirestore();
 
@@ -64,12 +64,17 @@ public class AdministradorEliminarPreguntaActivity extends AppCompatActivity {
                 eliminarPreguntaDeFirestore(preguntaSeleccionada);
             }
         });
-        btnVolver8.setOnClickListener(new View.OnClickListener() {
+
+        iconoVolver8.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                onBackPressed();
+                volverAtras();
             }
         });
+    }
+
+    private void volverAtras() {
+        onBackPressed();
     }
 
     private void obtenerPreguntasDeFirestore() {

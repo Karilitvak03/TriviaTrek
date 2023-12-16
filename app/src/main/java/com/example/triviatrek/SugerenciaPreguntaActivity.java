@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+import android.widget.ImageView;
 import androidx.appcompat.app.AppCompatActivity;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -19,18 +20,27 @@ import java.util.Map;
 public class SugerenciaPreguntaActivity extends AppCompatActivity {
 
     private FirebaseFirestore db;
+    private ImageView iconoVolver;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.sugerenciapregunta_main);
 
         db = FirebaseFirestore.getInstance();  // Inicio el coso de Firestore
-        Button btnVolver6 = findViewById(R.id.btnVolver6);
+        iconoVolver = findViewById(R.id.iconoVolver);
         Button btnEnviar = findViewById(R.id.btnEnviar);
-        EditText txtApellido3= findViewById(R.id.txtApellido3);
-        EditText txtNombre3= findViewById(R.id.txtNombre3);
-        EditText txtEmail4= findViewById(R.id.txtEmail4);
-        EditText txtSugerirPregunta  = findViewById(R.id.txtSugerirPregunta);
+        EditText txtApellido3 = findViewById(R.id.txtApellido3);
+        EditText txtNombre3 = findViewById(R.id.txtNombre3);
+        EditText txtEmail4 = findViewById(R.id.txtEmail4);
+        EditText txtSugerirPregunta = findViewById(R.id.txtSugerirPregunta);
+
+        iconoVolver.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                volverAtras();
+            }
+        });
 
         btnEnviar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -41,7 +51,7 @@ public class SugerenciaPreguntaActivity extends AppCompatActivity {
                 String email = txtEmail4.getText().toString();
                 String pregunta = txtSugerirPregunta.getText().toString();
 
-                if (nombre.isEmpty() || apellido.isEmpty()  || email.isEmpty() || pregunta.isEmpty()) {
+                if (nombre.isEmpty() || apellido.isEmpty() || email.isEmpty() || pregunta.isEmpty()) {
                     Toast.makeText(SugerenciaPreguntaActivity.this, "Por favor, complete todos los campos", Toast.LENGTH_SHORT).show();
                     return;
                 }
@@ -74,11 +84,9 @@ public class SugerenciaPreguntaActivity extends AppCompatActivity {
             }
         });
 
-        btnVolver6.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                onBackPressed(); }
-        });
+    }
+    public void volverAtras () {
+        onBackPressed();
     }
 }
 

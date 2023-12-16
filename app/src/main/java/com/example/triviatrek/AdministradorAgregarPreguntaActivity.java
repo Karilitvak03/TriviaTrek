@@ -10,7 +10,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.Toast;
-
+import android.widget.ImageView;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.firebase.auth.FirebaseAuth;
@@ -24,7 +24,7 @@ public class AdministradorAgregarPreguntaActivity extends AppCompatActivity {
     private CheckBox cb1, cb2, cb3;
     private Spinner spinnerCategorias;
     private ImageView imgPreguntaElegida;
-
+    private ImageView iconoVolver9;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,7 +39,7 @@ public class AdministradorAgregarPreguntaActivity extends AppCompatActivity {
         cb3 = findViewById(R.id.cb3);
         spinnerCategorias = findViewById(R.id.spinnerCategorias);
         imgPreguntaElegida = findViewById(R.id.imgPreguntaElegida);
-        Button btnVolver = findViewById(R.id.btnVolver7);
+        iconoVolver9 = findViewById(R.id.iconoVolver9);
 
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(
                 this, R.array.categorias_array, android.R.layout.simple_spinner_item);
@@ -50,10 +50,10 @@ public class AdministradorAgregarPreguntaActivity extends AppCompatActivity {
         Button btnGuardar = findViewById(R.id.btnGuardar);
 
 
-        btnVolver.setOnClickListener(new View.OnClickListener() {
+        iconoVolver9.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                onBackPressed();
+            public void onClick(View v) {
+                volverAtras();
             }
         });
 
@@ -112,6 +112,10 @@ public class AdministradorAgregarPreguntaActivity extends AppCompatActivity {
                 }
             }
         });
+    }
+
+    private void volverAtras() {
+        onBackPressed();
     }
 
     private boolean validarCampos() {

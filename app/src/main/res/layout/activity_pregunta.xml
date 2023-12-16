@@ -12,7 +12,7 @@
         android:layout_width="416dp"
         android:layout_height="250dp"
         android:layout_marginTop="60dp"
-        android:background="#4D000000"
+        android:background="@color/fondo_imagen"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.6"
         app:layout_constraintStart_toStartOf="parent"
@@ -36,10 +36,11 @@
             android:layout_height="60dp"
             android:layout_marginBottom="10sp"
             android:background="@drawable/edittext_border"
-            android:backgroundTint="#33000000"
+            android:backgroundTint="@color/fondo_radiobutton"
             android:buttonTint="@color/celeste_logo"
             android:textColor="@color/rosado_logo"
-            android:textSize="18sp" />
+            android:textSize="18sp"
+            android:fontFamily="@font/sprite_graffiti" />
 
         <RadioButton
             android:id="@+id/txtOpcion2"
@@ -48,10 +49,11 @@
             android:layout_height="60dp"
             android:layout_marginBottom="10sp"
             android:background="@drawable/edittext_border"
-            android:backgroundTint="#33000000"
+            android:backgroundTint="@color/fondo_radiobutton"
             android:buttonTint="@color/celeste_logo"
             android:textColor="@color/rosado_logo"
-            android:textSize="18sp" />
+            android:textSize="18sp"
+            android:fontFamily="@font/sprite_graffiti" />
 
         <RadioButton
             android:id="@+id/txtOpcion3"
@@ -59,25 +61,28 @@
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:background="@drawable/edittext_border"
-            android:backgroundTint="#33000000"
+            android:backgroundTint="@color/fondo_radiobutton"
             android:buttonTint="@color/celeste_logo"
             android:textColor="@color/rosado_logo"
-            android:textSize="18sp" />
+            android:textSize="18sp"
+            android:fontFamily="@font/sprite_graffiti" />
 
     </RadioGroup>
 
     <Button
-        android:id="@+id/btnContinuar"
-        android:layout_width="180dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="20dp"
-        android:backgroundTint="@color/azuloscuro_logo"
-        android:text="CONTINUAR"
-        android:textColor="@color/celeste_logo"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/radioGroup1" />
+            android:id="@+id/btnContinuar"
+            android:layout_width="180dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="@color/azuloscuro_logo"
+            android:text="CONTINUAR"
+            android:textColor="@color/celeste_logo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/radioGroup1"
+            android:fontFamily="@font/sprite_graffiti"
+            android:textSize="20sp"/>
 
     <TextView
         android:id="@+id/txtPregunta"
@@ -85,13 +90,14 @@
         android:layout_height="94dp"
         android:layout_marginTop="8dp"
         android:background="@drawable/edittext_border"
-        android:backgroundTint="#33000000"
+        android:backgroundTint="@color/fondo_radiobutton"
         android:textAlignment="center"
         android:textColor="@color/rosado_logo"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imgPregunta" />
+        app:layout_constraintTop_toBottomOf="@+id/imgPregunta"
+        android:fontFamily="@font/sprite_graffiti" />
 
     <ImageView
         android:id="@+id/imgOro2"
@@ -127,7 +133,8 @@
         app:layout_constraintBottom_toTopOf="@+id/imgPregunta"
         app:layout_constraintEnd_toStartOf="@+id/imgOro2"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.5" />
+        app:layout_constraintVertical_bias="0.5"
+        android:fontFamily="@font/sprite_graffiti"/>
 
     <TextView
         android:id="@+id/txtusuario"
@@ -140,7 +147,8 @@
         app:layout_constraintBottom_toTopOf="@+id/imgPregunta"
         app:layout_constraintStart_toEndOf="@+id/imgTriviaTrek"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.5" />
+        app:layout_constraintVertical_bias="0.5"
+        android:fontFamily="@font/sprite_graffiti"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

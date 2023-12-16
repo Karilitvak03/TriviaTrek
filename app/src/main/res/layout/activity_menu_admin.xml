@@ -34,7 +34,8 @@
             app:layout_constraintHorizontal_bias="0.492"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintVertical_bias="0.401"
-            android:fontFamily="@font/sprite_graffiti" android:textAlignment="center"/>
+            android:fontFamily="@font/sprite_graffiti"
+            android:textAlignment="center"/>
     <Button
             android:id="@+id/btnVersugerencia"
             android:layout_width="247dp"
@@ -46,7 +47,9 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintVertical_bias="0.514"
             android:backgroundTint="@color/azuloscuro_logo"
-            android:textColor="@color/celeste_logo"/>
+            android:textColor="@color/celeste_logo"
+            android:fontFamily="@font/sprite_graffiti"
+            android:textSize="20sp"/>
     <Button
             android:id="@+id/btnAgregar"
             android:layout_width="198dp"
@@ -59,7 +62,9 @@
             app:layout_constraintVertical_bias="0.679"
             android:backgroundTint="@color/azuloscuro_logo"
             android:textColor="@color/celeste_logo"
-            app:layout_constraintHorizontal_bias="0.497"/>
+            app:layout_constraintHorizontal_bias="0.497"
+            android:fontFamily="@font/sprite_graffiti"
+            android:textSize="20sp"/>
     <Button
             android:id="@+id/btnEliminar"
             android:layout_width="198dp"
@@ -72,5 +77,7 @@
             app:layout_constraintVertical_bias="0.838"
             android:backgroundTint="@color/azuloscuro_logo"
             android:textColor="@color/celeste_logo"
-            app:layout_constraintHorizontal_bias="0.497"/>
+            app:layout_constraintHorizontal_bias="0.497"
+            android:fontFamily="@font/sprite_graffiti"
+            android:textSize="20sp"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -25,6 +25,7 @@
         android:layout_height="416dp"
         android:layout_above="@+id/btnEliminarPregunta"
         android:background="@drawable/edittext_border"
+        android:backgroundTint="@color/fondo_textos"
         android:cacheColorHint="@color/amarillo_logo"
         android:divider="@color/azuloscuro_logo"
         android:dividerHeight="1dp"
@@ -39,7 +40,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.469" />
+        app:layout_constraintVertical_bias="0.469"
+        android:fontFamily="@font/sprite_graffiti"
+        android:textSize="18sp"/>
 
     <Button
         android:id="@+id/btnEliminarPregunta"
@@ -52,19 +55,23 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.487"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/btnVolver8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="664dp"
-        android:backgroundTint="@color/azuloscuro_logo"
-        android:text="VOLVER"
-        android:textColor="@color/celeste_logo"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.049"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:fontFamily="@font/sprite_graffiti"
+        android:textSize="20sp"/>
+
+    <ImageView
+            android:id="@+id/iconoVolver8"
+            android:layout_width="64dp"
+            android:layout_height="49dp"
+            android:layout_alignParentBottom="true"
+            android:clickable="true"
+            android:contentDescription="Volver atrás"
+            android:onClick="volverAtras"
+            android:src="@drawable/atras"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.023"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.046"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

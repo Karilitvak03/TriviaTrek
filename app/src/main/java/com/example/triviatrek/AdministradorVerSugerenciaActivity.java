@@ -1,12 +1,10 @@
 package com.example.triviatrek;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.ArrayAdapter;
-import android.widget.Button;
-import android.widget.ListView;
-import android.widget.Toast;
+import android.widget.*;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -15,12 +13,15 @@ import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import java.util.ArrayList;
 import java.util.List;
+import android.widget.ImageView;
 
 public class AdministradorVerSugerenciaActivity extends AppCompatActivity {
 
     private ListView listViewMensajes;
     private FirebaseFirestore db;
+    private ImageView iconoVolver2;
 
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,15 +36,19 @@ public class AdministradorVerSugerenciaActivity extends AppCompatActivity {
         // Obtener mensajes de Firestore y mostrarlos en el ListView
         obtenerMensajesDeFirestore();
 
-        Button btnVolver9 = findViewById(R.id.btnVolver9);
+        iconoVolver2 = findViewById(R.id.iconoVolver2);
 
 
-        btnVolver9.setOnClickListener(new View.OnClickListener() {
+        iconoVolver2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                onBackPressed();
+                volverAtras();
             }
         });
+    }
+
+    private void volverAtras() {
+        onBackPressed();
     }
 
     private void obtenerMensajesDeFirestore() {
@@ -84,5 +89,6 @@ public class AdministradorVerSugerenciaActivity extends AppCompatActivity {
                         }
                     }
                 });
+
     }
 }

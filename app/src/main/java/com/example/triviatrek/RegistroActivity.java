@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
-
+import android.widget.ImageView;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -24,9 +24,9 @@ import java.util.Map;
 public class RegistroActivity extends AppCompatActivity {
 
     private EditText txtNombre, txtApellido, txtEmail, txtClave, txtConfirmarClave;
-    private Button btnAceptar, btnVolver;
+    private Button btnAceptar;
     private FirebaseFirestore db;
-
+    private ImageView iconoVolver5;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,7 +41,7 @@ public class RegistroActivity extends AppCompatActivity {
         txtConfirmarClave = findViewById(R.id.txtClave3);
 
         btnAceptar = findViewById(R.id.btnAceptar);
-        btnVolver = findViewById(R.id.btnVovler);
+        iconoVolver5 = findViewById(R.id.iconoVolver5);
 
         btnAceptar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -72,13 +72,19 @@ public class RegistroActivity extends AppCompatActivity {
         });
 
 
-        btnVolver.setOnClickListener(new View.OnClickListener() {
+        iconoVolver5.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                finish();
+            public void onClick(View v) {
+                volverAtras();
             }
         });
     }
+
+    private void volverAtras() {
+        onBackPressed();
+    }
+
+
 
     private boolean validarCampos() {
         String nombre = txtNombre.getText().toString().trim();

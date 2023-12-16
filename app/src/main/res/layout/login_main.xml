@@ -8,24 +8,25 @@
     tools:context=".LoginActivity">
 
     <EditText
-        android:id="@+id/txtEmail"
-        android:layout_width="289dp"
-        android:layout_height="57dp"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/edittext_border"
-        android:backgroundTint="#38000000"
-        android:drawableLeft="@drawable/outline_email_white_24dp"
-        android:drawablePadding="10sp"
-        android:ems="10"
-        android:hint="Ingresa tu email"
-        android:inputType="text"
-        android:textColor="@color/amarillo_logo"
-        android:textColorHint="#99F6D922"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtIniciarSesion" />
+            android:id="@+id/txtEmail"
+            android:layout_width="289dp"
+            android:layout_height="57dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/edittext_border"
+            android:backgroundTint="@color/fondo_textos"
+            android:drawableLeft="@drawable/outline_email_white_24dp"
+            android:drawablePadding="10sp"
+            android:ems="10"
+            android:hint="Ingresa tu email"
+            android:inputType="text"
+            android:textColor="@color/amarillo_logo"
+            android:textColorHint="@color/texto_de_fondo"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtIniciarSesion"
+            android:fontFamily="@font/sprite_graffiti"/>
 
     <EditText
         android:id="@+id/txtClave"
@@ -33,19 +34,20 @@
         android:layout_height="57dp"
         android:layout_marginTop="92dp"
         android:background="@drawable/edittext_border"
-        android:backgroundTint="#38000000"
+        android:backgroundTint="@color/fondo_textos"
         android:drawableLeft="@drawable/outline_lock_open_white_24dp"
         android:drawablePadding="10sp"
         android:ems="10"
         android:hint="Ingresa tu contraseña"
         android:inputType="textPassword"
         android:textColor="@color/amarillo_logo"
-        android:textColorHint="#99F6D922"
+        android:textColorHint="@color/texto_de_fondo"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtIniciarSesion" />
+        app:layout_constraintTop_toBottomOf="@+id/txtIniciarSesion"
+        android:fontFamily="@font/sprite_graffiti"/>
 
     <TextView
         android:id="@+id/txtIniciarSesion"
@@ -58,7 +60,8 @@
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:fontFamily="@font/sprite_graffiti"/>
 
     <TextView
         android:id="@+id/textView3"
@@ -67,12 +70,13 @@
         android:layout_marginTop="132dp"
         android:text="¿Todavia no tenes cuenta?"
         android:textAlignment="center"
-        android:textColor="#FED900"
+        android:textColor="@color/amarillo_logo"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtClave" />
+        app:layout_constraintTop_toBottomOf="@+id/txtClave"
+        android:fontFamily="@font/sprite_graffiti"/>
 
     <TextView
         android:id="@+id/textView4"
@@ -81,13 +85,14 @@
         android:layout_marginTop="156dp"
         android:text="Registrate acá"
         android:textAlignment="center"
-        android:textColor="#FE1C9E"
+        android:textColor="@color/rosado_logo"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/textView3"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtClave" />
+        app:layout_constraintTop_toBottomOf="@+id/txtClave"
+        android:fontFamily="@font/sprite_graffiti"/>
 
     <ImageView
         android:id="@+id/imageView2"
@@ -112,6 +117,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtClave" />
+        app:layout_constraintTop_toBottomOf="@+id/txtClave"
+        android:fontFamily="@font/sprite_graffiti"
+        android:textSize="20sp"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

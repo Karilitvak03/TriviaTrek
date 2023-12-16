@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
-
+import android.widget.ImageView;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -23,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
 
     private TextView txtHola;
     private TextView txtCantidadOro;
+    private ImageView iconoEditar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,9 +33,8 @@ public class MainActivity extends AppCompatActivity {
         Button btnJugar = findViewById(R.id.btnJugar);
         Button btnTop3 = findViewById(R.id.btnTop3);
         Button btnInstrucciones = findViewById(R.id.btnInstrucciones);
-        Button btnEditar = findViewById(R.id.btnEditar);
         Button btnSalir = findViewById(R.id.btnSalir);
-
+        iconoEditar = findViewById(R.id.iconoEditar);
         txtHola = findViewById(R.id.txtHola);
         txtCantidadOro = findViewById(R.id.txtCantidadOro);
 
@@ -96,11 +96,10 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        btnEditar.setOnClickListener(new View.OnClickListener() {
+        iconoEditar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, PerfilActivity.class);
-                startActivity(intent);
+                abrirPerfil();
             }
         });
 
@@ -110,5 +109,11 @@ public class MainActivity extends AppCompatActivity {
                 finish();
             }
         });
+    }
+
+    // Método para abrir el perfil
+    public void abrirPerfil() {
+        Intent intent = new Intent(MainActivity.this, PerfilActivity.class);
+        startActivity(intent);
     }
 }

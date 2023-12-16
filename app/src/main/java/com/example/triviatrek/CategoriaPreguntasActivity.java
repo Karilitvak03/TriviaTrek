@@ -5,11 +5,12 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
-
+import android.widget.ImageView;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class CategoriaPreguntasActivity extends AppCompatActivity {
 
+    private ImageView iconoVolver4;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,7 +21,7 @@ public class CategoriaPreguntasActivity extends AppCompatActivity {
         ImageButton btnGeografia = findViewById(R.id.btnGeografia);
         ImageButton btnDeporte = findViewById(R.id.btnDeporte);
         Button btnRandom = findViewById(R.id.btnRandom);
-        Button btnVolver4 = findViewById(R.id.btnVolver4);
+        iconoVolver4 = findViewById(R.id.iconoVolver4);
 
         btnArte.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -56,13 +57,17 @@ public class CategoriaPreguntasActivity extends AppCompatActivity {
                 jugar("random");
             }
         });
-        btnVolver4.setOnClickListener(new View.OnClickListener() {
+        iconoVolver4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                onBackPressed();
+                volverAtras();
             }
         });
     }
+    private void volverAtras() {
+        onBackPressed();
+    }
+
     private void jugar(String categoria) {
         Intent intent = new Intent(CategoriaPreguntasActivity.this, PreguntaActivity.class);
         intent.putExtra("categoria", categoria);

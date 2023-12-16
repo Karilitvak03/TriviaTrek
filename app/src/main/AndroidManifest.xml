@@ -17,7 +17,8 @@
         <activity
             android:name=".AdministradorVerSugerenciaActivity"
             android:exported="false" />
-         <activity android:name=".AdministradorAgregarPreguntaActivity"
+         <activity
+                 android:name=".AdministradorAgregarPreguntaActivity"
                 android:exported="false" />
         <activity
                 android:name=".AdministradorEliminarPreguntaActivity"

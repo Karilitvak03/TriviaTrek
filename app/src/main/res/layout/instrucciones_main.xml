@@ -19,29 +19,50 @@
         app:layout_constraintVertical_bias="0.001"
         app:srcCompat="@drawable/logo2" />
 
-    <Button
-        android:id="@+id/btnVolver"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="664dp"
-        android:backgroundTint="@color/azuloscuro_logo"
-        android:text="VOLVER"
-        android:textColor="@color/celeste_logo"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.049"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <ImageView
+            android:id="@+id/iconoVolver3"
+            android:layout_width="64dp"
+            android:layout_height="49dp"
+            android:layout_alignParentBottom="true"
+            android:clickable="true"
+            android:contentDescription="Volver atrás"
+            android:onClick="volverAtras"
+            android:src="@drawable/atras"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.023"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.046"/>
 
     <TextView
-        android:id="@+id/textInstrucciones"
-        android:layout_width="327dp"
-        android:layout_height="556dp"
-        android:text=""
-        android:textColor="@color/rosado_logo"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.634" />
+            android:id="@+id/textInstrucciones"
+            android:layout_width="351dp"
+            android:layout_height="531dp"
+            android:text="Bienvenido a TriviaTrek, el emocionante juego de preguntas y respuestas donde tu conocimiento puede llevarte a la gloria o dejarte en la bancarrota.
+            \n1-Inicio:
+            \n→Comienzas con 100 unidades de oro.
+            \n2-Categorías Específicas:
+            \n→Elige entre 4 categorías.
+            \n→Respuesta correcta: +10 oro.
+            \n→Respuesta incorrecta: -10 oro.
+            \n3-Categoría Random:
+            \n→Preguntas de todas las categorías.
+            \n→Respuesta correcta: +25 oro.
+            \n→Respuesta incorrecta: -25 oro.
+            \n4-Tener 0 monedas:
+            \n→No pierdes más oro al responder incorrectamente.
+            \n→Vuelve a sumar oro al responder correctamente.
+            \n5-Fin del juego:
+            \n→Juega hasta que decidas terminar el juego.
+            \n→Acumula oro para una puntuación alta.
+            \n¡Disfruta de TriviaTrek y demuestra tu conocimiento!"
+            android:textColor="@color/rosado_logo"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.634"
+            android:fontFamily="@font/sprite_graffiti"
+            android:textSize="20sp"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
