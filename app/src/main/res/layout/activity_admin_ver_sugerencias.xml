@@ -5,18 +5,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/fondo_oscuro"
-    tools:context=".AdministradorVerSugerenciaActivity">
+    tools:context=".AdminVerSugerenciasActivity">
 
     <ImageView
         android:id="@+id/imgLogo4"
         android:layout_width="170dp"
-        android:layout_height="169dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_height="170dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.001"
         app:srcCompat="@drawable/logo2" />
 
     <TextView
@@ -26,31 +24,31 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:text="LISTA DE SUGERENCIAS RECIBIDAS"
+        android:layout_marginTop="152dp"
+        android:fontFamily="@font/sprite_graffiti"
+        android:text="SUGERENCIAS RECIBIDAS"
         android:textAlignment="center"
-        android:textColor="@color/rosado_logo"
-        android:textSize="20sp"
+        android:textColor="@color/celeste_logo"
+        android:textSize="30sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.242"
-        android:fontFamily="@font/sprite_graffiti"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ListView
         android:id="@+id/listViewMensajes"
-        android:layout_width="297dp"
-        android:layout_height="416dp"
+        android:layout_width="330dp"
+        android:layout_height="480dp"
         android:layout_below="@+id/textView2"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
-        android:background="@drawable/edittext_border"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/style_borde"
         android:backgroundTint="@color/fondo_textos"
         android:cacheColorHint="@color/amarillo_logo"
-        android:divider="@color/azuloscuro_logo"
+        android:divider="@color/celeste_logo"
         android:dividerHeight="1dp"
+        android:fontFamily="@font/sprite_graffiti"
         android:paddingTop="8dp"
         android:paddingBottom="8dp"
         android:shadowColor="@color/amarillo_logo"
@@ -58,28 +56,22 @@
         android:textColorHighlight="@color/amarillo_logo"
         android:textColorHint="@color/amarillo_logo"
         android:textColorLink="@color/amarillo_logo"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.685"
-        android:fontFamily="@font/sprite_graffiti"
-        android:textSize="20sp"/>
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/textView2"
+        app:layout_constraintStart_toStartOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
     <ImageView
-            android:id="@+id/iconoVolver2"
-            android:layout_width="64dp"
-            android:layout_height="49dp"
-            android:layout_alignParentBottom="true"
-            android:clickable="true"
-            android:contentDescription="Volver atrás"
-            android:onClick="volverAtras"
-            android:src="@drawable/atras"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.023"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintHorizontal_bias="0.046"/>
+        android:id="@+id/iconoVolver2"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="16dp"
+        android:clickable="true"
+        android:contentDescription="Volver atrás"
+        android:onClick="volverAtras"
+        android:src="@drawable/atras"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
