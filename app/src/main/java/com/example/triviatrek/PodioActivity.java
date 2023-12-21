@@ -5,6 +5,7 @@ import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
@@ -24,6 +25,7 @@ public class PodioActivity extends AppCompatActivity {
     private TextView txtOro2;
     private TextView txtOro3;
     private TextView txtPuesto;
+    private Button btnJugar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +40,7 @@ public class PodioActivity extends AppCompatActivity {
         txtOro2 = findViewById(R.id.txtOro2);
         txtOro3 = findViewById(R.id.txtOro3);
         txtPuesto = findViewById(R.id.txtPuesto);
+        btnJugar = findViewById(R.id.btnJugar2);
 
         FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();
         if (currentUser != null) {
@@ -55,6 +58,15 @@ public class PodioActivity extends AppCompatActivity {
             public void onClick(View v) {
                 onBackPressed();
             }
+        });
+
+        btnJugar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v){
+                Intent intent = new Intent(PodioActivity.this, CategoriaPreguntasActivity.class);
+                startActivity(intent);
+                finish();
+            };
         });
     }
 
