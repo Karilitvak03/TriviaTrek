@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo_oscuro"
+    android:textAlignment="center"
+    tools:context=".AdminMenuActivity">
+
+
+    <ImageView
+        android:id="@+id/imgLogo4"
+        android:layout_width="170dp"
+        android:layout_height="170dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/logo2" />
+
+    <TextView
+        android:id="@+id/txtOpcion"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="152dp"
+        android:fontFamily="@font/sprite_graffiti"
+        android:text="Selecciona una opcion"
+        android:textAlignment="center"
+        android:textColor="@color/rosado_logo"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnAgregar"
+        android:layout_width="155dp"
+        android:layout_height="220dp"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="#33000000"
+        android:drawableBottom="@android:drawable/ic_menu_upload"
+        android:drawableTint="@color/celeste_logo"
+        android:fontFamily="@font/sprite_graffiti"
+        android:paddingVertical="40dp"
+        android:text="AGREGAR PREGUNTA"
+        android:textColor="@color/celeste_logo"
+        android:textSize="18sp"
+        app:cornerRadius="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnVersugerencia"
+        app:layout_constraintTop_toBottomOf="@+id/txtOpcion" />
+
+    <Button
+        android:id="@+id/btnProbarJuego"
+        android:layout_width="155dp"
+        android:layout_height="220dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#33000000"
+        android:drawableBottom="@android:drawable/ic_menu_slideshow"
+        android:drawableTint="@color/celeste_logo"
+        android:fontFamily="@font/sprite_graffiti"
+        android:paddingVertical="40dp"
+        android:text="PROBAR JUEGO"
+        android:textColor="@color/celeste_logo"
+        android:textSize="18sp"
+        app:cornerRadius="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnEliminar"
+        app:layout_constraintTop_toBottomOf="@+id/btnAgregar" />
+
+    <Button
+        android:id="@+id/btnEliminar"
+        android:layout_width="155dp"
+        android:layout_height="220dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#33000000"
+        android:drawableBottom="@android:drawable/ic_menu_delete"
+        android:drawableTint="@color/celeste_logo"
+        android:fontFamily="@font/sprite_graffiti"
+        android:paddingVertical="40dp"
+        android:text="ELIMINAR PREGUNTA"
+        android:textColor="@color/celeste_logo"
+        android:textSize="18sp"
+        app:cornerRadius="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/btnProbarJuego"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnVersugerencia" />
+
+    <Button
+        android:id="@+id/btnVersugerencia"
+        android:layout_width="155dp"
+        android:layout_height="220dp"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="#33000000"
+        android:drawableBottom="@android:drawable/ic_menu_sort_by_size"
+        android:drawableTint="@color/celeste_logo"
+        android:fontFamily="@font/sprite_graffiti"
+        android:paddingVertical="40dp"
+        android:text="VER SUGERENCIAS"
+        android:textColor="@color/celeste_logo"
+        android:textSize="18sp"
+        app:cornerRadius="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/btnAgregar"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtOpcion" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

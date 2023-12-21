@@ -2,4 +2,7 @@
 <resources>
     <dimen name="imagen_ancho">409dp</dimen>
     <dimen name="imagen_alto">184dp</dimen>
+
+    <dimen name="ancho_icono_oro">24dp</dimen>
+    <dimen name="alto_icono_oro">24dp</dimen>
 </resources>

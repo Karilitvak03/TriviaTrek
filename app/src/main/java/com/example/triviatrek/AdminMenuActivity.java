@@ -7,21 +7,22 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class MenuAdminActivity extends AppCompatActivity {
+public class AdminMenuActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_menu_admin);
+        setContentView(R.layout.activity_admin_menu);
 
         Button btnVersugerencia = findViewById(R.id.btnVersugerencia);
         Button btnAgregar = findViewById(R.id.btnAgregar);
         Button btnEliminar = findViewById(R.id.btnEliminar);
+        Button btnProbarJuego = findViewById(R.id.btnProbarJuego);
 
         btnVersugerencia.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MenuAdminActivity.this, AdministradorVerSugerenciaActivity.class);
+                Intent intent = new Intent(AdminMenuActivity.this, AdminVerSugerenciasActivity.class);
                 startActivity(intent);
             }
         });
@@ -29,7 +30,7 @@ public class MenuAdminActivity extends AppCompatActivity {
         btnAgregar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MenuAdminActivity.this, AdministradorAgregarPreguntaActivity.class);
+                Intent intent = new Intent(AdminMenuActivity.this, AdminAgregarPreguntaActivity.class);
                 startActivity(intent);
             }
         });
@@ -37,7 +38,15 @@ public class MenuAdminActivity extends AppCompatActivity {
         btnEliminar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MenuAdminActivity.this, AdministradorEliminarPreguntaActivity.class);
+                Intent intent = new Intent(AdminMenuActivity.this, AdminEliminarPreguntaActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        btnProbarJuego.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(AdminMenuActivity.this, MainActivity.class);
                 startActivity(intent);
             }
         });

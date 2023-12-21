@@ -2,11 +2,13 @@
     <string name="app_name">TriviaTrek</string>
 
     <string-array name="categorias_array">
-        <item>Seleccione una categoría</item>
-        <item>arte</item>
-        <item>deportes</item>
-        <item>geografia</item>
-        <item>entretenimiento</item>
+        <item>Selecciona una categoría</item>
+        <item>Arte</item>
+        <item>Ciencia</item>
+        <item>Deportes</item>
+        <item>Entretenimiento</item>
+        <item>Geografia</item>
+
     </string-array>
 
 
