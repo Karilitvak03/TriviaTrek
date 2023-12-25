@@ -16,7 +16,7 @@ public class AdminMenuActivity extends AppCompatActivity {
 
         Button btnVersugerencia = findViewById(R.id.btnVersugerencia);
         Button btnAgregar = findViewById(R.id.btnAgregar);
-        Button btnEliminar = findViewById(R.id.btnEliminar);
+        Button btnPreguntas = findViewById(R.id.btnPreguntas);
         Button btnProbarJuego = findViewById(R.id.btnProbarJuego);
 
         btnVersugerencia.setOnClickListener(new View.OnClickListener() {
@@ -35,10 +35,10 @@ public class AdminMenuActivity extends AppCompatActivity {
             }
         });
 
-        btnEliminar.setOnClickListener(new View.OnClickListener() {
+        btnPreguntas.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(AdminMenuActivity.this, AdminEliminarPreguntaActivity.class);
+                Intent intent = new Intent(AdminMenuActivity.this, AdminListaPreguntasActivity.class);
                 startActivity(intent);
             }
         });

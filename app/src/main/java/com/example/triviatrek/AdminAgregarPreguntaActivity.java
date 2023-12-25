@@ -173,6 +173,7 @@ public class AdminAgregarPreguntaActivity extends AppCompatActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
+        imgPreguntaElegida.setVisibility(View.INVISIBLE);
 
         if (requestCode == 1 && resultCode == RESULT_OK && data != null && data.getData() != null) {
             // Obtiene la URI de la imagen seleccionada
@@ -204,10 +205,11 @@ public class AdminAgregarPreguntaActivity extends AppCompatActivity {
         // Elegir categoría
         List<String> categoriasPermitidas = new ArrayList<>();
         categoriasPermitidas.add("arte");
+        categoriasPermitidas.add("ciencia");
         categoriasPermitidas.add("deportes");
-        categoriasPermitidas.add("geografia");
         categoriasPermitidas.add("entretenimiento");
-        categoriasPermitidas.add("lalala");
+        categoriasPermitidas.add("geografia");
+
 
         if (!categoriasPermitidas.contains(categoria.toLowerCase())) {
             mostrarToast("Falta la categoría che!");
@@ -277,7 +279,7 @@ public class AdminAgregarPreguntaActivity extends AppCompatActivity {
                                     })
                                     .addOnFailureListener(e -> {
                                         // Error al agregar el documento
-                                        mostrarToast("Error al guardar la pregunta. Intenta de nuevo.");
+                                        mostrarToast("Error al guardar la pregunta. Intenta de nuevo");
                                     });
                         } else {
                             // El usuario no está autenticado
@@ -305,6 +307,7 @@ public class AdminAgregarPreguntaActivity extends AppCompatActivity {
                             // Éxito al agregar el documento
                             mostrarToast("Pregunta guardada con éxito");
                             vaciarCampos();
+                            imgPreguntaElegida.setVisibility(View.INVISIBLE);
                         })
                         .addOnFailureListener(e -> {
                             // Error al agregar el documento

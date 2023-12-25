@@ -39,7 +39,7 @@
         android:id="@+id/btnAgregar"
         android:layout_width="155dp"
         android:layout_height="220dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="8dp"
         android:backgroundTint="#33000000"
         android:drawableBottom="@android:drawable/ic_menu_upload"
         android:drawableTint="@color/celeste_logo"
@@ -51,14 +51,14 @@
         app:cornerRadius="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/btnVersugerencia"
+        app:layout_constraintStart_toEndOf="@+id/btnPreguntas"
         app:layout_constraintTop_toBottomOf="@+id/txtOpcion" />
 
     <Button
         android:id="@+id/btnProbarJuego"
         android:layout_width="155dp"
         android:layout_height="220dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="16dp"
         android:backgroundTint="#33000000"
         android:drawableBottom="@android:drawable/ic_menu_slideshow"
         android:drawableTint="@color/celeste_logo"
@@ -70,33 +70,33 @@
         app:cornerRadius="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/btnEliminar"
+        app:layout_constraintStart_toEndOf="@+id/btnVersugerencia"
         app:layout_constraintTop_toBottomOf="@+id/btnAgregar" />
 
     <Button
-        android:id="@+id/btnEliminar"
+        android:id="@+id/btnPreguntas"
         android:layout_width="155dp"
         android:layout_height="220dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="8dp"
         android:backgroundTint="#33000000"
-        android:drawableBottom="@android:drawable/ic_menu_delete"
+        android:drawableBottom="@android:drawable/ic_menu_view"
         android:drawableTint="@color/celeste_logo"
         android:fontFamily="@font/sprite_graffiti"
         android:paddingVertical="40dp"
-        android:text="ELIMINAR PREGUNTA"
+        android:text="LISTADO DE  PREGUNTAS"
         android:textColor="@color/celeste_logo"
         android:textSize="18sp"
         app:cornerRadius="20sp"
-        app:layout_constraintEnd_toStartOf="@+id/btnProbarJuego"
+        app:layout_constraintEnd_toStartOf="@+id/btnAgregar"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnVersugerencia" />
+        app:layout_constraintTop_toBottomOf="@+id/txtOpcion" />
 
     <Button
         android:id="@+id/btnVersugerencia"
         android:layout_width="155dp"
         android:layout_height="220dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="16dp"
         android:backgroundTint="#33000000"
         android:drawableBottom="@android:drawable/ic_menu_sort_by_size"
         android:drawableTint="@color/celeste_logo"
@@ -106,9 +106,9 @@
         android:textColor="@color/celeste_logo"
         android:textSize="18sp"
         app:cornerRadius="20sp"
-        app:layout_constraintEnd_toStartOf="@+id/btnAgregar"
+        app:layout_constraintEnd_toStartOf="@+id/btnProbarJuego"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtOpcion" />
+        app:layout_constraintTop_toBottomOf="@+id/btnPreguntas" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

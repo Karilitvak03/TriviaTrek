@@ -2,7 +2,7 @@
     <string name="app_name">TriviaTrek</string>
 
     <string-array name="categorias_array">
-        <item>Selecciona una categoría</item>
+        <item>Selecciona una categoría ↷</item>
         <item>Arte</item>
         <item>Ciencia</item>
         <item>Deportes</item>
@@ -11,5 +11,14 @@
 
     </string-array>
 
+    <string-array name="categorias2_array">
+        <item>Selecciona una categoría ↷</item>
+        <item>Arte</item>
+        <item>Ciencia</item>
+        <item>Deportes</item>
+        <item>Entretenimiento</item>
+        <item>Geografia</item>
+        <item>Todas</item>
 
+    </string-array>
 </resources>
