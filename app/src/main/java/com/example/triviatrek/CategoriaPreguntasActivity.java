@@ -3,8 +3,6 @@ package com.example.triviatrek;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -16,56 +14,63 @@ public class CategoriaPreguntasActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_categoria_preguntas);
 
-        ImageButton btnArte = findViewById(R.id.btnArte);
-        ImageButton btnEntretenimiento = findViewById(R.id.btnEntretenimiento);
-        ImageButton btnGeografia = findViewById(R.id.btnGeografia);
-        ImageButton btnDeporte = findViewById(R.id.btnDeporte);
-        Button btnRandom = findViewById(R.id.btnRandom);
+        ImageView imgArte = findViewById(R.id.imgArte);
+        ImageView imgEntretenimiento = findViewById(R.id.imgEntretenimiento);
+        ImageView imgGeografia = findViewById(R.id.imgGeografia);
+        ImageView imgDeporte = findViewById(R.id.imgDeporte);
+        ImageView imgCiencia = findViewById(R.id.imgCiencia);
+        ImageView imgTodas = findViewById(R.id.imgTodas);
+
         iconoVolver4 = findViewById(R.id.iconoVolver4);
 
-        btnArte.setOnClickListener(new View.OnClickListener() {
+        imgArte.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 jugar("arte");
             }
         });
 
-        btnEntretenimiento.setOnClickListener(new View.OnClickListener() {
+        imgEntretenimiento.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 jugar("entretenimiento");
             }
         });
 
-        btnGeografia.setOnClickListener(new View.OnClickListener() {
+        imgGeografia.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 jugar("geografia");
             }
         });
 
-        btnDeporte.setOnClickListener(new View.OnClickListener() {
+        imgDeporte.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 jugar("deportes");
             }
         });
 
-        btnRandom.setOnClickListener(new View.OnClickListener() {
+        imgCiencia.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                jugar("random");
+                jugar("ciencia");
             }
         });
+
+        imgTodas.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                jugar("todas");
+            }
+        });
+
         iconoVolver4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                volverAtras();
+                onBackPressed();
             }
         });
-    }
-    private void volverAtras() {
-        onBackPressed();
     }
 
     private void jugar(String categoria) {
