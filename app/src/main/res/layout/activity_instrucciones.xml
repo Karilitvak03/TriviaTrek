@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo_oscuro"
+    tools:context=".PreguntaActivity">
+
+    <ImageView
+        android:id="@+id/imgLogo4"
+        android:layout_width="120dp"
+        android:layout_height="118dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo2" />
+
+    <ImageView
+        android:id="@+id/iconoVolver3"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="16dp"
+        android:clickable="true"
+        android:contentDescription="Volver atrás"
+        android:onClick="volverAtras"
+        android:src="@drawable/atras"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtTitulo"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="108dp"
+        android:fontFamily="@font/sprite_graffiti"
+        android:textAlignment="center"
+        android:textColor="@color/amarillo_logo"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imgLogo4" />
+
+    <!-- Título 1 -->
+    <TextView
+        android:id="@+id/titulo1"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="#33000000"
+        android:clickable="true"
+        android:fontFamily="@font/sprite_graffiti"
+        android:onClick="mostrarDescripcion"
+        android:padding="8dp"
+        android:textColor="@color/celeste_logo"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtTitulo" />
+
+    <!-- Descripción 1 -->
+    <TextView
+        android:id="@+id/descripcion1"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:background="#33000000"
+        android:fontFamily="@font/sprite_graffiti"
+        android:padding="8dp"
+        android:textColor="@color/rosado_logo"
+        android:textSize="18sp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/titulo1" />
+
+    <!-- Título 2 -->
+    <TextView
+        android:id="@+id/titulo2"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="#33000000"
+        android:clickable="true"
+        android:fontFamily="@font/sprite_graffiti"
+        android:onClick="mostrarDescripcion"
+        android:padding="8dp"
+        android:textColor="@color/celeste_logo"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/descripcion1" />
+
+    <!-- Descripción 2 -->
+    <TextView
+        android:id="@+id/descripcion2"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:background="#33000000"
+        android:fontFamily="@font/sprite_graffiti"
+        android:padding="8dp"
+        android:textColor="@color/rosado_logo"
+        android:textSize="18sp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/titulo2" />
+
+    <!-- Título 3 -->
+    <TextView
+        android:id="@+id/titulo3"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="#33000000"
+        android:clickable="true"
+        android:fontFamily="@font/sprite_graffiti"
+        android:onClick="mostrarDescripcion"
+        android:padding="8dp"
+        android:textColor="@color/celeste_logo"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/descripcion2" />
+
+    <!-- Descripción 3 -->
+    <TextView
+        android:id="@+id/descripcion3"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:background="#33000000"
+        android:fontFamily="@font/sprite_graffiti"
+        android:padding="8dp"
+        android:textColor="@color/rosado_logo"
+        android:textSize="18sp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/titulo3" />
+
+    <!-- Título 4 -->
+    <TextView
+        android:id="@+id/titulo4"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="#33000000"
+        android:clickable="true"
+        android:fontFamily="@font/sprite_graffiti"
+        android:onClick="mostrarDescripcion"
+        android:padding="8dp"
+        android:textColor="@color/celeste_logo"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/descripcion3" />
+
+    <!-- Descripción 4 -->
+    <TextView
+        android:id="@+id/descripcion4"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:background="#33000000"
+        android:fontFamily="@font/sprite_graffiti"
+        android:padding="8dp"
+        android:textColor="@color/rosado_logo"
+        android:textSize="18sp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/titulo4" />
+
+    <!-- Título 5 -->
+    <TextView
+        android:id="@+id/titulo5"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="#33000000"
+        android:clickable="true"
+        android:fontFamily="@font/sprite_graffiti"
+        android:onClick="mostrarDescripcion"
+        android:padding="8dp"
+        android:textColor="@color/celeste_logo"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/descripcion4" />
+
+    <!-- Descripción 5 -->
+    <TextView
+        android:id="@+id/descripcion5"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:background="#33000000"
+        android:fontFamily="@font/sprite_graffiti"
+        android:padding="8dp"
+        android:textColor="@color/rosado_logo"
+        android:textSize="18sp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/titulo5" />
+
+    <TextView
+        android:id="@+id/txt"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/sprite_graffiti"
+        android:text="¡Disfruta de TriviaTrek y demuestra tu conocimiento!"
+        android:textAlignment="center"
+        android:textColor="@color/amarillo_logo"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/descripcion5" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
