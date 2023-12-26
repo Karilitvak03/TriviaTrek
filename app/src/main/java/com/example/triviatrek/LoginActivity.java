@@ -16,7 +16,6 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseAuthInvalidUserException;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QuerySnapshot;
@@ -32,7 +31,7 @@ public class LoginActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.login_main);
+        setContentView(R.layout.activity_login);
 
         txtEmail = findViewById(R.id.txtEmail);
         txtClave = findViewById(R.id.txtClave);
@@ -44,7 +43,7 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View view) {
                 if (validarCampos()) {
                     // Saco el feo espacio que aveces queda al ingresar datos
-                    String email = txtEmail.getText().toString().trim();
+                    String email = txtEmail.getText().toString().trim().toLowerCase();
 
                     // Verificando si el chabon esta registrado
                     FirebaseFirestore.getInstance().collection("usuarios")
@@ -87,7 +86,7 @@ public class LoginActivity extends AppCompatActivity {
                                                                                         // Redirigir según el rol
                                                                                         if ("admin".equals(rol)) {
                                                                                             // Si el usuario tiene rol de admin, ir a MenuAdminActivity
-                                                                                            Intent intentAdmin = new Intent(LoginActivity.this, MenuAdminActivity.class);
+                                                                                            Intent intentAdmin = new Intent(LoginActivity.this, AdminMenuActivity.class);
                                                                                             startActivity(intentAdmin);
                                                                                             finish();
                                                                                         } else{

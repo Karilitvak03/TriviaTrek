@@ -136,11 +136,11 @@ public class PreguntaActivity extends AppCompatActivity {
                         Toast.makeText(PreguntaActivity.this, "Respuesta Correcta", Toast.LENGTH_SHORT).show();
 
                         // Actualizar la cantidad de oro
-                        if ("random".equals(categoriaElegida)) {
-                            // Si la categoría es "random", ganar 25 de oro
+                        if (categoriaElegida.equals("todas")) {
+                            // Si la categoría es "todas", ganar 25 de oro
                             cantidadOro += 25;
                         } else {
-                            // Si la categoría no es "random", ganar 10 de oro
+                            // Si la categoría no es "todas", ganar 10 de oro
                             cantidadOro += 10;
                         }
                     } else {
@@ -148,11 +148,11 @@ public class PreguntaActivity extends AppCompatActivity {
                         Toast.makeText(PreguntaActivity.this, "Respuesta Incorrecta", Toast.LENGTH_SHORT).show();
 
                         // Actualizar la cantidad de oro
-                        if ("random".equals(categoriaElegida)) {
-                            // Si la categoría es "random", restar 25 de oro
+                        if (categoriaElegida.equals("todas")) {
+                            // Si la categoría es "todas", restar 25 de oro
                             cantidadOro = Math.max(0, cantidadOro - 25);
                         } else {
-                            // Si la categoría no es "random", restar 10 de oro
+                            // Si la categoría no es "todas", restar 10 de oro
                             cantidadOro = Math.max(0, cantidadOro - 10);
                         }
                     }
@@ -184,10 +184,11 @@ public class PreguntaActivity extends AppCompatActivity {
     }//---- FIN DE ON CREATE ----
 
     private void cargarPreguntaAleatoria() {
-        vaciarRadioButtoms();
+        radioGroup.clearCheck(); // Vacio los checks seleccionados en los radio butoms
+
         if(intentosRestantes  != 0) {
-            // Verificar si la categoría elegida es "random"
-            if ("random".equals(categoriaElegida)) {
+            // Verificar si la categoría elegida es "todas"
+            if (categoriaElegida.equals("todas")) {
                 // Realizar una consulta para obtener una pregunta aleatoria de cualquier categoría
                 db.collection("preguntas")
                         .get()
@@ -263,13 +264,6 @@ public class PreguntaActivity extends AppCompatActivity {
                 }
             });
         }
-    }
-
-
-    private void vaciarRadioButtoms() {
-        rbOpcion1.setActivated(false);
-        rbOpcion2.setActivated(false);
-        rbOpcion3.setActivated(false);
     }
 
     private void buscarPregunta(LinkedList<PreguntaClass> preguntas) {

@@ -6,12 +6,12 @@ import android.view.View;
 import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
 
-public class MenuActivity extends AppCompatActivity {
+public class MenuFinalActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.menu_main);
+        setContentView(R.layout.activity_menu_final);
 
         Button btnSeguir = findViewById(R.id.btnSeguir);
         Button btnSugerir = findViewById(R.id.btnSugerir);
@@ -20,7 +20,7 @@ public class MenuActivity extends AppCompatActivity {
         btnSeguir.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MenuActivity.this, CategoriaPreguntasActivity.class);
+                Intent intent = new Intent(MenuFinalActivity.this, CategoriaPreguntasActivity.class);
                 startActivity(intent);
             }
         });
@@ -28,7 +28,7 @@ public class MenuActivity extends AppCompatActivity {
         btnSugerir.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MenuActivity.this, SugerenciaPreguntaActivity.class);
+                Intent intent = new Intent(MenuFinalActivity.this, SugerenciaActivity.class);
                 startActivity(intent);
             }
         });
@@ -36,7 +36,7 @@ public class MenuActivity extends AppCompatActivity {
         btnTerminar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MenuActivity.this, ResultadosActivity.class);
+                Intent intent = new Intent(MenuFinalActivity.this, ResultadosActivity.class);
                 startActivity(intent);
             }
         });

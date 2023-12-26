@@ -30,7 +30,7 @@ public class RegistroActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.registro_main);
+        setContentView(R.layout.activity_registro);
 
         db = FirebaseFirestore.getInstance();
 
@@ -48,7 +48,7 @@ public class RegistroActivity extends AppCompatActivity {
             public void onClick(View view) {
                 if (validarCampos()) {
                     // Limpiar espacios iniciales y finales
-                    String email = txtEmail.getText().toString().trim();
+                    String email = txtEmail.getText().toString().trim().toLowerCase(); // Convertir a minúsculas
                     String nombre = txtNombre.getText().toString().trim();
                     String apellido = txtApellido.getText().toString().trim();
 
@@ -144,7 +144,7 @@ public class RegistroActivity extends AppCompatActivity {
                 .set(usuario)
                 .addOnSuccessListener(documentReference -> {
                     // Registro en Firestore completado con éxito
-                    Toast.makeText(RegistroActivity.this, "Registro en Firestore completado", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(RegistroActivity.this, "Registro trekminado exitosamente", Toast.LENGTH_SHORT).show();
 
                     Intent intent = new Intent(RegistroActivity.this, LoginActivity.class);
                     startActivity(intent);
@@ -152,7 +152,7 @@ public class RegistroActivity extends AppCompatActivity {
                 })
                 .addOnFailureListener(e -> {
                     // Handle failure
-                    mostrarMensaje("Error al guardar en Firestore: " + e.getMessage());
+                    mostrarMensaje("Ocurrió un error, intente nuevamente" + e.getMessage());
                 });
     }
 
