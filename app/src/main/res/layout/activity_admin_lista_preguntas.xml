@@ -27,7 +27,7 @@
         android:layout_height="50dp"
         android:layout_marginTop="8dp"
         android:background="@drawable/style_borde"
-        android:backgroundTint="#33000000"
+        android:backgroundTint="@color/fondo_radiobutton"
         android:padding="8dp"
         android:textAlignment="center"
         android:textSize="18sp"

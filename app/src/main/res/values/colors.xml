@@ -12,4 +12,12 @@
     <color name="fondo_radiobutton">#33000000</color>
     <color name="texto_de_fondos">#9922D6F6</color>
     <color name="fondo_inicio">#2B2929</color>
+    <color name="spinner">#33222121</color>
+    <color name="texto_fondo">#99F6299B</color>
+    <color name="ciencia">#1FC869</color>
+    <color name="geografia">#1675CE</color>
+    <color name="arte">#F32630</color>
+    <color name="entretenimiento">#E3449F</color>
+    <color name="deporte">#FE9300</color>
+
 </resources>
