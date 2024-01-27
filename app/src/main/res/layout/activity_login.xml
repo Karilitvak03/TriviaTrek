@@ -7,70 +7,24 @@
     android:background="@drawable/fondo_oscuro"
     tools:context=".LoginActivity">
 
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="280dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
-        android:fontFamily="@font/sprite_graffiti"
-        android:paddingBottom="10px"
-        android:text="O ingresa usando:"
-        android:textAlignment="center"
-        android:textColor="@color/rosado_logo"
-        android:textSize="20sp"
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="226dp"
+        android:layout_height="192dp"
+        android:contentDescription="@string/logo"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnIngresar" />
-
-    <EditText
-        android:id="@+id/txtEmail"
-        android:layout_width="289dp"
-        android:layout_height="57dp"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/style_borde"
-        android:backgroundTint="@color/fondo_textos"
-        android:drawableLeft="@drawable/outline_email_white_24dp"
-        android:drawablePadding="10sp"
-        android:ems="10"
-        android:fontFamily="@font/sprite_graffiti"
-        android:hint="Ingresa tu email"
-        android:inputType="text"
-        android:textColor="@color/amarillo_logo"
-        android:textColorHint="@color/texto_de_fondo"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtIniciarSesion" />
-
-    <EditText
-        android:id="@+id/txtClave"
-        android:layout_width="289dp"
-        android:layout_height="57dp"
-        android:layout_marginTop="12dp"
-        android:background="@drawable/style_borde"
-        android:backgroundTint="@color/fondo_textos"
-        android:drawableLeft="@drawable/outline_lock_open_white_24dp"
-        android:drawablePadding="10sp"
-        android:ems="10"
-        android:fontFamily="@font/sprite_graffiti"
-        android:hint="Ingresa tu contraseña"
-        android:inputType="textPassword"
-        android:textColor="@color/amarillo_logo"
-        android:textColorHint="@color/texto_de_fondo"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtEmail" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo2" />
 
     <TextView
         android:id="@+id/txtIniciarSesion"
-        android:layout_width="280dp"
-        android:layout_height="44dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginTop="172dp"
         android:fontFamily="@font/sprite_graffiti"
-        android:text="INICIA SESION"
+        android:text="@string/login"
         android:textAlignment="center"
         android:textColor="@color/amarillo_logo"
         android:textSize="30sp"
@@ -79,49 +33,48 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/imageView2" />
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="330dp"
-        android:layout_height="60dp"
-        android:layout_marginBottom="4dp"
+    <EditText
+        android:id="@+id/txtEmail"
+        android:layout_width="289dp"
+        android:layout_height="57dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/style_borde"
+        android:backgroundTint="@color/fondo_textos"
+        android:drawableStart="@drawable/outline_email_white_24dp"
+        android:drawablePadding="10sp"
+        android:ems="10"
         android:fontFamily="@font/sprite_graffiti"
-        android:padding="10px"
-        android:text="¿Todavia no tenes cuenta?"
-        android:textAlignment="center"
+        android:hint="@string/email"
+        android:inputType="text"
         android:textColor="@color/amarillo_logo"
+        android:textColorHint="@color/texto_de_fondo"
         android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="@+id/textView4"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.555"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="330dp"
-        android:layout_height="60dp"
-        android:layout_marginBottom="48dp"
-        android:fontFamily="@font/sprite_graffiti"
-        android:gravity="bottom"
-        android:paddingBottom="10px"
-        android:text="Registrate acá"
-        android:textAlignment="center"
-        android:textColor="@color/rosado_logo"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/textView3"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="226dp"
-        android:layout_height="192dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.507"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/logo2" />
+        app:layout_constraintTop_toBottomOf="@+id/txtIniciarSesion"
+        tools:ignore="Autofill,TextFields" />
+
+    <EditText
+        android:id="@+id/txtClave"
+        android:layout_width="289dp"
+        android:layout_height="57dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/style_borde"
+        android:backgroundTint="@color/fondo_textos"
+        android:drawableStart="@drawable/outline_lock_open_white_24dp"
+        android:drawablePadding="10sp"
+        android:ems="10"
+        android:fontFamily="@font/sprite_graffiti"
+        android:hint="@string/clave"
+        android:inputType="textPassword"
+        android:textColor="@color/amarillo_logo"
+        android:textColorHint="@color/texto_de_fondo"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtEmail"
+        tools:ignore="Autofill" />
 
     <Button
         android:id="@+id/btnIngresar"
@@ -130,7 +83,7 @@
         android:layout_marginTop="32dp"
         android:backgroundTint="@color/azuloscuro_logo"
         android:fontFamily="@font/sprite_graffiti"
-        android:text="INGRESAR"
+        android:text="@string/ingresar"
         android:textColor="@color/celeste_logo"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -138,29 +91,40 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtClave" />
 
-    <ImageView
-        android:id="@+id/icoGoogle"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        app:layout_constraintStart_toStartOf="@+id/textView5"
-        app:layout_constraintTop_toBottomOf="@+id/textView5"
-        app:srcCompat="@drawable/ic_launcher_foreground" />
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="330dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="4dp"
+        android:fontFamily="@font/sprite_graffiti"
+        android:padding="5dp"
+        android:text="@string/cuenta"
+        android:textAlignment="center"
+        android:textColor="@color/amarillo_logo"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.555"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="VisualLintOverlap" />
 
-    <ImageView
-        android:id="@+id/icoFacebook"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        app:layout_constraintEnd_toStartOf="@+id/icoMicrosoft"
-        app:layout_constraintStart_toEndOf="@+id/icoGoogle"
-        app:layout_constraintTop_toBottomOf="@+id/textView5"
-        app:srcCompat="@drawable/ic_launcher_foreground" />
-
-    <ImageView
-        android:id="@+id/icoMicrosoft"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        app:layout_constraintEnd_toEndOf="@+id/textView5"
-        app:layout_constraintTop_toBottomOf="@+id/textView5"
-        app:srcCompat="@drawable/ic_launcher_foreground" />
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="330dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="48dp"
+        android:fontFamily="@font/sprite_graffiti"
+        android:gravity="bottom"
+        android:paddingBottom="10dp"
+        android:text="@string/registrate"
+        android:textAlignment="center"
+        android:textColor="@color/rosado_logo"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/textView3"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="TextContrastCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

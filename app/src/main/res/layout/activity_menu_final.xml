@@ -7,73 +7,195 @@
     android:background="@drawable/fondo_oscuro"
     tools:context=".MenuFinalActivity">
 
+    <ImageView
+        android:id="@+id/iconoVolver10"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="16dp"
+        android:clickable="true"
+        android:contentDescription="@string/desc_atras"
+        android:src="@drawable/atras"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TouchTargetSizeCheck" />
+
     <TextView
-        android:id="@+id/txtOpcion"
-        android:layout_width="254dp"
-        android:layout_height="76dp"
-        android:layout_marginTop="148dp"
+        android:id="@+id/txtCaegoriaElegida"
+        android:layout_width="301dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
         android:fontFamily="@font/sprite_graffiti"
-        android:text="Selecciona una opcion"
         android:textAlignment="center"
-        android:textColor="@color/rosado_logo"
-        android:textSize="30sp"
-        app:layout_constraintEnd_toEndOf="@+id/imageView"
-        app:layout_constraintStart_toStartOf="@+id/imageView"
-        app:layout_constraintTop_toTopOf="@+id/imageView" />
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtCaegoriaElegida3" />
+
+    <TextView
+        android:id="@+id/txtCaegoriaElegida3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/sprite_graffiti"
+        android:text="@string/mis_resultados"
+        android:textAlignment="textEnd"
+        android:textColor="@color/amarillo_logo"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="@+id/txtCaegoriaElegida"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="@+id/txtCaegoriaElegida"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:textAlignment="center" />
+
+    <TextView
+        android:id="@+id/txtTotalCorrectas"
+        android:layout_width="301dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/sprite_graffiti"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/txtCaegoriaElegida"
+        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintStart_toStartOf="@+id/txtCaegoriaElegida"
+        app:layout_constraintTop_toBottomOf="@+id/txtCaegoriaElegida" />
+
+    <ImageView
+        android:id="@+id/imgPodio2"
+        android:layout_width="300dp"
+        android:layout_height="350dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/style_borde"
+        android:backgroundTint="#33000000"
+        android:contentDescription="@string/podio"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.525"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtTotalCorrectas"
+        app:srcCompat="@drawable/podio" />
+
+    <TextView
+        android:id="@+id/txtOro4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/sprite_graffiti"
+        android:textAlignment="center"
+        android:textColor="@color/amarillo_logo"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/txtPrimerPuesto2"
+        app:layout_constraintStart_toStartOf="@+id/txtPrimerPuesto2"
+        app:layout_constraintTop_toBottomOf="@+id/txtPrimerPuesto2" />
+
+    <TextView
+        android:id="@+id/txtOro5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/sprite_graffiti"
+        android:textAlignment="center"
+        android:textColor="@color/amarillo_logo"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/txtSegundoPuesto2"
+        app:layout_constraintStart_toStartOf="@+id/txtSegundoPuesto2"
+        app:layout_constraintTop_toBottomOf="@+id/txtSegundoPuesto2" />
+
+    <TextView
+        android:id="@+id/txtOro6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/sprite_graffiti"
+        android:textAlignment="center"
+        android:textColor="@color/amarillo_logo"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/txtTercerPuesto2"
+        app:layout_constraintStart_toStartOf="@+id/txtTercerPuesto2"
+        app:layout_constraintTop_toBottomOf="@+id/txtTercerPuesto2" />
+
+    <TextView
+        android:id="@+id/txtPrimerPuesto2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/sprite_graffiti"
+        android:textAlignment="center"
+        android:textColor="@color/amarillo_logo"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imgPodio2" />
+
+    <TextView
+        android:id="@+id/txtSegundoPuesto2"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginBottom="40dp"
+        android:fontFamily="@font/sprite_graffiti"
+        android:textAlignment="center"
+        android:textColor="#C3C5C7"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imgPodio2"
+        app:layout_constraintStart_toStartOf="@+id/imgPodio2" />
+
+    <TextView
+        android:id="@+id/txtTercerPuesto2"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="40dp"
+        android:fontFamily="@font/sprite_graffiti"
+        android:textAlignment="center"
+        android:textColor="#CCA24A"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imgPodio2"
+        app:layout_constraintEnd_toEndOf="@+id/imgPodio2" />
+
+    <TextView
+        android:id="@+id/txtPuesto2"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/sprite_graffiti"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="@+id/btnSeguir"
+        app:layout_constraintHorizontal_bias="0.483"
+        app:layout_constraintStart_toStartOf="@+id/btnSeguir"
+        app:layout_constraintTop_toBottomOf="@+id/imgPodio2" />
 
     <Button
         android:id="@+id/btnSeguir"
-        android:layout_width="198dp"
-        android:layout_height="63dp"
-        android:layout_marginStart="70dp"
-        android:layout_marginTop="36dp"
-        android:layout_marginEnd="71dp"
-        android:backgroundTint="@color/azuloscuro_logo"
+        android:layout_width="270dp"
+        android:layout_height="55dp"
+        android:layout_marginBottom="28dp"
+        android:backgroundTint="@color/amarillo_logo"
         android:fontFamily="@font/sprite_graffiti"
-        android:text="SEGUIR JUGANDO"
-        android:textColor="@color/celeste_logo"
-        android:textSize="20sp"
+        android:text="@string/seguir"
+        android:textColor="@color/rosado_logo"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnSugerir"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnSugerir" />
+        tools:ignore="TextSizeCheck,TextContrastCheck" />
 
     <Button
         android:id="@+id/btnSugerir"
-        android:layout_width="198dp"
-        android:layout_height="63dp"
-        android:layout_marginStart="70dp"
-        android:layout_marginEnd="71dp"
+        android:layout_width="250dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="16dp"
         android:backgroundTint="@color/azuloscuro_logo"
         android:fontFamily="@font/sprite_graffiti"
-        android:text="SUGERIR PREGUNTA"
+        android:text="@string/sugerir"
         android:textColor="@color/celeste_logo"
         android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtOpcion" />
+        app:layout_constraintStart_toStartOf="parent" />
 
-    <Button
-        android:id="@+id/btnTerminar"
-        android:layout_width="198dp"
-        android:layout_height="63dp"
-        android:layout_marginStart="70dp"
-        android:layout_marginTop="36dp"
-        android:layout_marginEnd="71dp"
-        android:backgroundTint="@color/azuloscuro_logo"
-        android:fontFamily="@font/sprite_graffiti"
-        android:text="TERMINAR JUEGO"
-        android:textColor="@color/celeste_logo"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnSeguir" />
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="170dp"
-        android:layout_height="170dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/logo2" />
 </androidx.constraintlayout.widget.ConstraintLayout>

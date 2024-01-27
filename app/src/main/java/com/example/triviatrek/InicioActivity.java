@@ -5,8 +5,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
-import android.widget.ImageView;
-import android.widget.TextView;
 
 public class InicioActivity extends AppCompatActivity {
 
@@ -15,11 +13,6 @@ public class InicioActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_inicio);
 
-        // Obtén las referencias a los elementos del layout
-        ImageView imgLogo = findViewById(R.id.imgLogo);
-        TextView textView = findViewById(R.id.textView);
-
-
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
@@ -27,6 +20,6 @@ public class InicioActivity extends AppCompatActivity {
                 startActivity(intent);
                 finish();
             }
-        }, 3000); // Espera de 3 segundos
+        }, 2000); // Espera de 2 segundos
     }
 }

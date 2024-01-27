@@ -11,6 +11,7 @@
         android:id="@+id/imgLogo3"
         android:layout_width="170dp"
         android:layout_height="170dp"
+        android:contentDescription="@string/logo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -18,11 +19,11 @@
 
     <TextView
         android:id="@+id/txtIRegistrate"
-        android:layout_width="300dp"
-        android:layout_height="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginTop="148dp"
         android:fontFamily="@font/sprite_graffiti"
-        android:text="EDITAR PERFIL"
+        android:text="@string/perfil"
         android:textAlignment="center"
         android:textColor="@color/amarillo_logo"
         android:textSize="30sp"
@@ -37,10 +38,11 @@
         android:layout_marginTop="12dp"
         android:background="@drawable/style_borde"
         android:backgroundTint="@color/fondo_radiobutton"
-        android:drawableLeft="@drawable/outline_email_white_24dp"
+        android:drawableStart="@drawable/outline_email_white_24dp"
         android:drawablePadding="10sp"
         android:ems="10"
         android:fontFamily="@font/sprite_graffiti"
+        android:hint="@string/email2"
         android:inputType="text"
         android:textColor="@color/amarillo_logo"
         android:textColorHint="@color/texto_de_fondo"
@@ -48,7 +50,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.516"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtApellido2" />
+        app:layout_constraintTop_toBottomOf="@+id/txtApellido2"
+        tools:ignore="Autofill" />
 
     <EditText
         android:id="@+id/txtNombre2"
@@ -57,10 +60,11 @@
         android:layout_marginTop="196dp"
         android:background="@drawable/style_borde"
         android:backgroundTint="@color/fondo_radiobutton"
-        android:drawableLeft="@drawable/outline_person_white_24dp"
+        android:drawableStart="@drawable/outline_person_white_24dp"
         android:drawablePadding="10sp"
         android:ems="10"
         android:fontFamily="@font/sprite_graffiti"
+        android:hint="@string/nombre"
         android:inputType="text"
         android:textColor="@color/amarillo_logo"
         android:textColorHint="@color/texto_de_fondo"
@@ -68,7 +72,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.516"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imgLogo3" />
+        app:layout_constraintTop_toTopOf="@+id/imgLogo3"
+        tools:ignore="Autofill" />
 
     <EditText
         android:id="@+id/txtApellido2"
@@ -77,10 +82,11 @@
         android:layout_marginTop="12dp"
         android:background="@drawable/style_borde"
         android:backgroundTint="@color/fondo_radiobutton"
-        android:drawableLeft="@drawable/outline_person_white_24dp"
+        android:drawableStart="@drawable/outline_person_white_24dp"
         android:drawablePadding="10sp"
         android:ems="10"
         android:fontFamily="@font/sprite_graffiti"
+        android:hint="@string/apellido"
         android:inputType="text"
         android:textColor="@color/amarillo_logo"
         android:textColorHint="@color/texto_de_fondo"
@@ -88,7 +94,30 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.516"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtNombre2" />
+        app:layout_constraintTop_toBottomOf="@+id/txtNombre2"
+        tools:ignore="Autofill" />
+
+    <EditText
+        android:id="@+id/txtClaveActual"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:background="@drawable/style_borde"
+        android:backgroundTint="@color/fondo_radiobutton"
+        android:drawableStart="@drawable/outline_lock_open_white_24dp"
+        android:drawablePadding="10sp"
+        android:ems="10"
+        android:fontFamily="@font/sprite_graffiti"
+        android:hint="@string/clave_actual"
+        android:inputType="textPassword"
+        android:textColor="@color/amarillo_logo"
+        android:textColorHint="@color/texto_de_fondo"
+        android:textSize="20sp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/swClave"
+        tools:ignore="Autofill" />
 
     <EditText
         android:id="@+id/txtClaveNueva"
@@ -97,11 +126,11 @@
         android:layout_marginTop="12dp"
         android:background="@drawable/style_borde"
         android:backgroundTint="@color/fondo_radiobutton"
-        android:drawableLeft="@drawable/outline_lock_open_white_24dp"
+        android:drawableStart="@drawable/outline_lock_open_white_24dp"
         android:drawablePadding="10sp"
         android:ems="10"
         android:fontFamily="@font/sprite_graffiti"
-        android:hint="Ingresa nueva contraseña"
+        android:hint="@string/calve_nueva"
         android:inputType="textPassword"
         android:textColor="@color/amarillo_logo"
         android:textColorHint="@color/texto_de_fondo"
@@ -110,28 +139,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtClaveActual" />
-
-    <EditText
-        android:id="@+id/txtClaveActual"
-        android:layout_width="300dp"
-        android:layout_height="50dp"
-        android:background="@drawable/style_borde"
-        android:backgroundTint="@color/fondo_radiobutton"
-        android:drawableLeft="@drawable/outline_lock_open_white_24dp"
-        android:drawablePadding="10sp"
-        android:ems="10"
-        android:fontFamily="@font/sprite_graffiti"
-        android:hint="Contraseña actual"
-        android:inputType="textPassword"
-        android:textColor="@color/amarillo_logo"
-        android:textColorHint="@color/texto_de_fondo"
-        android:textSize="20sp"
-        android:visibility="visible"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/swClave" />
+        app:layout_constraintTop_toBottomOf="@+id/txtClaveActual"
+        tools:ignore="Autofill" />
 
     <EditText
         android:id="@+id/txtClaveFinal"
@@ -140,11 +149,11 @@
         android:layout_marginTop="12dp"
         android:background="@drawable/style_borde"
         android:backgroundTint="@color/fondo_radiobutton"
-        android:drawableLeft="@drawable/outline_lock_open_white_24dp"
+        android:drawableStart="@drawable/outline_lock_open_white_24dp"
         android:drawablePadding="10sp"
         android:ems="10"
         android:fontFamily="@font/sprite_graffiti"
-        android:hint="Confirma la contraseña"
+        android:hint="@string/clave_final"
         android:inputType="textPassword"
         android:textColor="@color/amarillo_logo"
         android:textColorHint="@color/texto_de_fondo"
@@ -153,7 +162,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtClaveNueva" />
+        app:layout_constraintTop_toBottomOf="@+id/txtClaveNueva"
+        tools:ignore="Autofill" />
 
     <Button
         android:id="@+id/btnAceptar2"
@@ -162,7 +172,7 @@
         android:layout_marginBottom="28dp"
         android:backgroundTint="@color/azuloscuro_logo"
         android:fontFamily="@font/sprite_graffiti"
-        android:text="ACEPTAR"
+        android:text="@string/aceptar"
         android:textColor="@color/celeste_logo"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -176,7 +186,7 @@
         android:layout_alignParentBottom="true"
         android:layout_marginTop="16dp"
         android:clickable="true"
-        android:contentDescription="Volver atrás"
+        android:contentDescription="@string/desc_atras"
         android:onClick="volverAtras"
         android:src="@drawable/atras"
         app:layout_constraintStart_toStartOf="parent"
@@ -185,16 +195,17 @@
 
     <Switch
         android:id="@+id/swClave"
-        android:layout_width="249dp"
+        android:layout_width="wrap_content"
         android:layout_height="50dp"
         android:layout_marginTop="28dp"
         android:fontFamily="@font/sprite_graffiti"
-        android:text="Cambiar contrañseña"
+        android:text="@string/cambiar"
         android:textColor="@color/amarillo_logo"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.279"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtEmail3" />
+        app:layout_constraintTop_toBottomOf="@+id/txtEmail3"
+        tools:ignore="UseSwitchCompatOrMaterialXml" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

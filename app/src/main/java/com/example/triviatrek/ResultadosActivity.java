@@ -11,7 +11,7 @@ public class ResultadosActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.resultados_main);
+        setContentView(R.layout.activity_resultados);
 
         Button btnVolver5 = findViewById(R.id.btnVolver5);
         Button btnCerrarSesion = findViewById(R.id.btnCerrarSesion);
@@ -19,7 +19,7 @@ public class ResultadosActivity extends AppCompatActivity {
         btnCerrarSesion.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                finish(); // Cierra la cosa esta y vuelva a la pantalla anterior supuestamente xD
+                finish();
             }
         });
         btnVolver5.setOnClickListener(new View.OnClickListener() {

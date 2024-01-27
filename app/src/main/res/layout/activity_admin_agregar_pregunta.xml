@@ -14,10 +14,10 @@
         android:layout_height="50dp"
         android:layout_marginTop="16dp"
         android:backgroundTint="@color/azuloscuro_logo"
-        android:drawableLeft="@android:drawable/ic_menu_search"
+        android:drawableStart="@android:drawable/ic_menu_search"
         android:drawableTint="@color/celeste_logo"
         android:fontFamily="@font/sprite_graffiti"
-        android:text="BUSCAR IMAGEN"
+        android:text="@string/buscar"
         android:textColor="@color/celeste_logo"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="@+id/spinnerCategorias"
@@ -33,7 +33,7 @@
         android:background="@drawable/style_borde"
         android:backgroundTint="@color/fondo_radiobutton"
         android:fontFamily="@font/sprite_graffiti"
-        android:hint="Ingrese la pregunta aquí"
+        android:hint="@string/ingresar_pregunta"
         android:textAlignment="center"
         android:textColor="@color/celeste_logo"
         android:textColorHint="@color/texto_de_fondos"
@@ -41,7 +41,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+        app:layout_constraintTop_toBottomOf="@+id/textView6"
+        tools:ignore="Autofill,TextFields,TouchTargetSizeCheck" />
 
     <Spinner
         android:id="@+id/spinnerCategorias"
@@ -54,7 +55,8 @@
         android:textAlignment="center"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="@+id/txtPonerPregunta"
-        app:layout_constraintTop_toBottomOf="@+id/txtOpcion3" />
+        app:layout_constraintTop_toBottomOf="@+id/txtOpcion3"
+        tools:ignore="TouchTargetSizeCheck" />
 
     <EditText
 
@@ -68,13 +70,14 @@
         android:backgroundTint="@color/fondo_radiobutton"
         android:buttonTint="@color/celeste_logo"
         android:fontFamily="@font/sprite_graffiti"
-        android:hint="Ingrese opcion 1"
+        android:hint="@string/opcion1"
         android:textColor="@color/rosado_logo"
         android:textColorHint="@color/texto_fondo"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="@+id/txtPonerPregunta"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtPonerPregunta" />
+        app:layout_constraintTop_toBottomOf="@+id/txtPonerPregunta"
+        tools:ignore="Autofill,TextContrastCheck,TextFields,TouchTargetSizeCheck" />
 
     <EditText
         android:id="@+id/txtOpcion2"
@@ -86,14 +89,15 @@
         android:backgroundTint="@color/fondo_radiobutton"
         android:buttonTint="@color/celeste_logo"
         android:fontFamily="@font/sprite_graffiti"
-        android:hint="Ingrese opcion 2"
+        android:hint="@string/opcion2"
         android:textColor="@color/rosado_logo"
         android:textColorHint="@color/texto_fondo"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="@+id/txtOpcion1"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/txtOpcion1"
-        app:layout_constraintTop_toBottomOf="@+id/txtOpcion1" />
+        app:layout_constraintTop_toBottomOf="@+id/txtOpcion1"
+        tools:ignore="Autofill,TextContrastCheck,TextFields,TouchTargetSizeCheck" />
 
     <EditText
         android:id="@+id/txtOpcion3"
@@ -106,14 +110,15 @@
         android:backgroundTint="@color/fondo_radiobutton"
         android:buttonTint="@color/celeste_logo"
         android:fontFamily="@font/sprite_graffiti"
-        android:hint="Ingrese opcion 3"
+        android:hint="@string/opcion3"
         android:textColor="@color/rosado_logo"
         android:textColorHint="@color/texto_fondo"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="@+id/txtOpcion2"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/txtOpcion2"
-        app:layout_constraintTop_toBottomOf="@+id/txtOpcion2" />
+        app:layout_constraintTop_toBottomOf="@+id/txtOpcion2"
+        tools:ignore="TextContrastCheck,TextFields,TouchTargetSizeCheck" />
 
     <CheckBox
         android:id="@+id/cb1"
@@ -124,7 +129,7 @@
         app:layout_constraintBottom_toBottomOf="@+id/txtOpcion1"
         app:layout_constraintStart_toEndOf="@+id/txtOpcion1"
         app:layout_constraintTop_toTopOf="@+id/txtOpcion1"
-        tools:ignore="TouchTargetSizeCheck" />
+        tools:ignore="TouchTargetSizeCheck,DuplicateSpeakableTextCheck" />
 
     <CheckBox
         android:id="@+id/cb2"
@@ -154,10 +159,10 @@
         android:layout_height="50dp"
         android:layout_marginBottom="16dp"
         android:backgroundTint="@color/azuloscuro_logo"
-        android:drawableLeft="@android:drawable/ic_menu_save"
+        android:drawableStart="@android:drawable/ic_menu_save"
         android:drawableTint="@color/celeste_logo"
         android:fontFamily="@font/sprite_graffiti"
-        android:text="GUARDAR"
+        android:text="@string/guardar"
         android:textColor="@color/celeste_logo"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -169,6 +174,7 @@
         android:id="@+id/imgTriviaTrek"
         android:layout_width="64dp"
         android:layout_height="63dp"
+        android:contentDescription="@string/logo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/logo1" />
@@ -180,7 +186,7 @@
         android:layout_alignParentBottom="true"
         android:layout_marginTop="16dp"
         android:clickable="true"
-        android:contentDescription="Volver atrás"
+        android:contentDescription="@string/desc_atras"
         android:onClick="volverAtras"
         android:src="@drawable/atras"
         app:layout_constraintStart_toStartOf="parent"
@@ -195,10 +201,12 @@
         android:layout_marginBottom="8dp"
         android:background="@drawable/style_borde"
         android:backgroundTint="@color/fondo_radiobutton"
+        android:contentDescription="@string/desc_pregunta"
         app:layout_constraintBottom_toTopOf="@+id/btnGuardar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnBuscar" />
+        app:layout_constraintTop_toBottomOf="@+id/btnBuscar"
+        tools:ignore="ImageContrastCheck" />
 
     <TextView
         android:id="@+id/textView6"
@@ -206,12 +214,13 @@
         android:layout_height="81dp"
         android:layout_marginTop="40dp"
         android:fontFamily="@font/sprite_graffiti"
-        android:text="Agrega una nueva pregunta, sus opciones y selecciona la respuesta correcta."
+        android:text="@string/desc_ingresar"
         android:textAlignment="center"
         android:textColor="@color/amarillo_logo"
-        android:textSize="20dp"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TextSizeCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

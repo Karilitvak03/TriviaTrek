@@ -10,6 +10,7 @@
         android:id="@+id/imgLogo3"
         android:layout_width="170dp"
         android:layout_height="170dp"
+        android:contentDescription="@string/logo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/txtIRegistrate"
         app:layout_constraintStart_toStartOf="parent"
@@ -18,11 +19,11 @@
 
     <TextView
         android:id="@+id/txtIRegistrate"
-        android:layout_width="300dp"
-        android:layout_height="36dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginTop="156dp"
         android:fontFamily="@font/sprite_graffiti"
-        android:text="REGISTRATE"
+        android:text="@string/registrate2"
         android:textAlignment="center"
         android:textColor="@color/amarillo_logo"
         android:textSize="30sp"
@@ -38,11 +39,11 @@
         android:layout_marginTop="12dp"
         android:background="@drawable/style_borde"
         android:backgroundTint="@color/fondo_radiobutton"
-        android:drawableLeft="@drawable/outline_person_white_24dp"
+        android:drawableStart="@drawable/outline_person_white_24dp"
         android:drawablePadding="10sp"
         android:ems="10"
         android:fontFamily="@font/sprite_graffiti"
-        android:hint="Apellido - Ej: Torres"
+        android:hint="@string/apellido"
         android:inputType="text"
         android:paddingHorizontal="10sp"
         android:textColor="@color/amarillo_logo"
@@ -51,7 +52,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtNombre" />
+        app:layout_constraintTop_toBottomOf="@+id/txtNombre"
+        tools:ignore="Autofill" />
 
     <EditText
         android:id="@+id/txtClave2"
@@ -60,11 +62,11 @@
         android:layout_marginTop="60dp"
         android:background="@drawable/style_borde"
         android:backgroundTint="@color/fondo_radiobutton"
-        android:drawableLeft="@drawable/outline_lock_open_white_24dp"
+        android:drawableStart="@drawable/outline_lock_open_white_24dp"
         android:drawablePadding="10sp"
         android:ems="10"
         android:fontFamily="@font/sprite_graffiti"
-        android:hint="Ingresa tu contraseña"
+        android:hint="@string/ing_clave"
         android:inputType="textPassword"
         android:paddingHorizontal="10sp"
         android:textColor="@color/amarillo_logo"
@@ -73,7 +75,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.517"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtEmail2" />
+        app:layout_constraintTop_toBottomOf="@+id/txtEmail2"
+        tools:ignore="Autofill" />
 
     <EditText
         android:id="@+id/txtClave3"
@@ -82,11 +85,11 @@
         android:layout_marginTop="12dp"
         android:background="@drawable/style_borde"
         android:backgroundTint="@color/fondo_radiobutton"
-        android:drawableLeft="@drawable/outline_lock_open_white_24dp"
+        android:drawableStart="@drawable/outline_lock_open_white_24dp"
         android:drawablePadding="10sp"
         android:ems="10"
         android:fontFamily="@font/sprite_graffiti"
-        android:hint="Confirma tu contraseña"
+        android:hint="@string/ing_clave2"
         android:inputType="textPassword"
         android:paddingHorizontal="10sp"
         android:textColor="@color/amarillo_logo"
@@ -95,7 +98,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.517"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtClave2" />
+        app:layout_constraintTop_toBottomOf="@+id/txtClave2"
+        tools:ignore="Autofill" />
 
     <EditText
         android:id="@+id/txtNombre"
@@ -104,11 +108,11 @@
         android:layout_marginTop="16dp"
         android:background="@drawable/style_borde"
         android:backgroundTint="@color/fondo_radiobutton"
-        android:drawableLeft="@drawable/outline_person_white_24dp"
+        android:drawableStart="@drawable/outline_person_white_24dp"
         android:drawablePadding="10sp"
         android:ems="10"
         android:fontFamily="@font/sprite_graffiti"
-        android:hint="Nombre - Ej: Belén "
+        android:hint="@string/nombre"
         android:inputType="text"
         android:paddingHorizontal="10sp"
         android:textColor="@color/amarillo_logo"
@@ -117,7 +121,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtIRegistrate" />
+        app:layout_constraintTop_toBottomOf="@+id/txtIRegistrate"
+        tools:ignore="Autofill" />
 
     <EditText
         android:id="@+id/txtEmail2"
@@ -126,11 +131,11 @@
         android:layout_marginTop="12dp"
         android:background="@drawable/style_borde"
         android:backgroundTint="@color/fondo_radiobutton"
-        android:drawableLeft="@drawable/outline_email_white_24dp"
+        android:drawableStart="@drawable/outline_email_white_24dp"
         android:drawablePadding="10sp"
         android:ems="10"
         android:fontFamily="@font/sprite_graffiti"
-        android:hint="eMail - Ej: abc@xyz.com"
+        android:hint="@string/email2"
         android:inputType="text"
         android:paddingHorizontal="10sp"
         android:textColor="@color/amarillo_logo"
@@ -139,7 +144,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtApellido" />
+        app:layout_constraintTop_toBottomOf="@+id/txtApellido"
+        tools:ignore="Autofill" />
 
     <Button
         android:id="@+id/btnAceptar"
@@ -148,7 +154,7 @@
         android:layout_marginBottom="16dp"
         android:backgroundTint="@color/azuloscuro_logo"
         android:fontFamily="@font/sprite_graffiti"
-        android:text="ACEPTAR"
+        android:text="@string/aceptar"
         android:textColor="@color/celeste_logo"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -163,7 +169,7 @@
         android:layout_alignParentBottom="true"
         android:layout_marginTop="16dp"
         android:clickable="true"
-        android:contentDescription="Volver atrás"
+        android:contentDescription="@string/desc_atras"
         android:onClick="volverAtras"
         android:src="@drawable/atras"
         app:layout_constraintStart_toStartOf="parent"

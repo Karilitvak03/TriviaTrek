@@ -9,13 +9,13 @@
 
     <TextView
         android:id="@+id/textView9"
-        android:layout_width="214dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/sprite_graffiti"
-        android:text="Editar Pregunta"
+        android:text="@string/editar_pregunta"
         android:textAlignment="center"
         android:textColor="@color/amarillo_logo"
-        android:textSize="25dp"
+        android:textSize="25sp"
         app:layout_constraintBottom_toBottomOf="@+id/iconoVolver11"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -28,8 +28,7 @@
         android:layout_alignParentBottom="true"
         android:layout_marginTop="16dp"
         android:clickable="true"
-        android:contentDescription="Volver atrás"
-        android:onClick="volverAtras"
+        android:contentDescription="@string/desc_atras"
         android:src="@drawable/atras"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -44,7 +43,7 @@
         app:layout_constraintBottom_toBottomOf="@+id/txtOpcion7"
         app:layout_constraintStart_toEndOf="@+id/txtOpcion7"
         app:layout_constraintTop_toTopOf="@+id/txtOpcion7"
-        tools:ignore="TouchTargetSizeCheck" />
+        tools:ignore="TouchTargetSizeCheck,DuplicateSpeakableTextCheck" />
 
     <Button
         android:id="@+id/btnBuscar3"
@@ -52,10 +51,10 @@
         android:layout_height="50dp"
         android:layout_marginTop="20dp"
         android:backgroundTint="@color/azuloscuro_logo"
-        android:drawableLeft="@android:drawable/ic_menu_search"
+        android:drawableStart="@android:drawable/ic_menu_search"
         android:drawableTint="@color/celeste_logo"
         android:fontFamily="@font/sprite_graffiti"
-        android:text="CAMBIAR IMAGEN"
+        android:text="@string/cambiar_img"
         android:textColor="@color/celeste_logo"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -70,9 +69,11 @@
         android:layout_marginTop="12dp"
         android:background="@drawable/style_borde"
         android:backgroundTint="@color/fondo_radiobutton"
+        android:contentDescription="@string/desc_pregunta"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView9" />
+        app:layout_constraintTop_toBottomOf="@+id/textView9"
+        tools:ignore="PxUsage,ImageContrastCheck" />
 
     <EditText
 
@@ -86,13 +87,14 @@
         android:backgroundTint="@color/fondo_radiobutton"
         android:buttonTint="@color/celeste_logo"
         android:fontFamily="@font/sprite_graffiti"
-        android:hint="Ingrese opcion 1"
+        android:hint="@string/opcion1"
         android:textColor="@color/rosado_logo"
         android:textColorHint="@color/texto_fondo"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="@+id/txtPonerPregunta3"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtPonerPregunta3" />
+        app:layout_constraintTop_toBottomOf="@+id/txtPonerPregunta3"
+        tools:ignore="Autofill,TextFields,TouchTargetSizeCheck,TextContrastCheck" />
 
     <EditText
         android:id="@+id/txtOpcion9"
@@ -105,12 +107,13 @@
         android:backgroundTint="@color/fondo_radiobutton"
         android:buttonTint="@color/celeste_logo"
         android:fontFamily="@font/sprite_graffiti"
-        android:hint="Ingrese opcion 3"
+        android:hint="@string/opcion3"
         android:textColor="@color/rosado_logo"
         android:textColorHint="@color/texto_fondo"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="@+id/txtOpcion8"
-        app:layout_constraintTop_toBottomOf="@+id/txtOpcion8" />
+        app:layout_constraintTop_toBottomOf="@+id/txtOpcion8"
+        tools:ignore="TextContrastCheck,TextFields,TouchTargetSizeCheck" />
 
     <EditText
         android:id="@+id/txtOpcion8"
@@ -122,12 +125,13 @@
         android:backgroundTint="@color/fondo_radiobutton"
         android:buttonTint="@color/celeste_logo"
         android:fontFamily="@font/sprite_graffiti"
-        android:hint="Ingrese opcion 2"
+        android:hint="@string/opcion2"
         android:textColor="@color/rosado_logo"
         android:textColorHint="@color/texto_fondo"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="@+id/txtOpcion7"
-        app:layout_constraintTop_toBottomOf="@+id/txtOpcion7" />
+        app:layout_constraintTop_toBottomOf="@+id/txtOpcion7"
+        tools:ignore="Autofill,TextFields,TextContrastCheck,TouchTargetSizeCheck" />
 
     <Button
         android:id="@+id/btnGuardar3"
@@ -136,10 +140,10 @@
         android:layout_marginStart="16dp"
         android:layout_marginBottom="16dp"
         android:backgroundTint="@color/azuloscuro_logo"
-        android:drawableLeft="@android:drawable/ic_menu_save"
+        android:drawableStart="@android:drawable/ic_menu_save"
         android:drawableTint="@color/celeste_logo"
         android:fontFamily="@font/sprite_graffiti"
-        android:text="GUARDAR"
+        android:text="@string/guardar"
         android:textColor="@color/celeste_logo"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -152,10 +156,10 @@
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="16dp"
         android:backgroundTint="@color/azuloscuro_logo"
-        android:drawableLeft="@android:drawable/ic_menu_delete"
+        android:drawableStart="@android:drawable/ic_menu_delete"
         android:drawableTint="@color/celeste_logo"
         android:fontFamily="@font/sprite_graffiti"
-        android:text="Eliminar"
+        android:text="@string/eliminar"
         android:textColor="@color/celeste_logo"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -205,19 +209,21 @@
         android:background="@drawable/style_borde"
         android:backgroundTint="@color/fondo_radiobutton"
         android:fontFamily="@font/sprite_graffiti"
-        android:hint="Ingrese la pregunta aquí"
+        android:hint="@string/ingresar_pregunta"
         android:textAlignment="center"
         android:textColor="@color/celeste_logo"
         android:textColorHint="@color/texto_de_fondos"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnBuscar3" />
+        app:layout_constraintTop_toBottomOf="@+id/btnBuscar3"
+        tools:ignore="Autofill,TextFields,TouchTargetSizeCheck" />
 
     <ImageView
         android:id="@+id/imgTriviaTrek3"
         android:layout_width="64dp"
         android:layout_height="63dp"
+        android:contentDescription="@string/logo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/logo1" />

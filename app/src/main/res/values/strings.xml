@@ -1,6 +1,104 @@
 <resources>
     <string name="app_name">TriviaTrek</string>
 
+    //activity_incio
+    <string name="logo">LOGO</string>
+    <string name="byto">HECHO POR LITVAK Y MARTÍNEZ</string>
+
+    //activity_login
+    <string name="login">INICIA SESION</string>
+    <string name="email">INGRESA TU EMAIL</string>
+    <string name="clave">INGREDSA TU CONTRASEÑA</string>
+    <string name="ingresar">INGRESAR</string>
+    <string name="cuenta">¿Todavia no tenes cuenta?</string>
+    <string name="registrate">Registrate acá</string>
+
+    //activity_registro
+    <string name="desc_atras">Volver atrás</string>
+    <string name="registrate2">REGISTRATE</string>
+    <string name="nombre">Nombre - Ej: Belén </string>
+    <string name="apellido">Apellido - Ej: Torres</string>
+    <string name="email2">eMail - Ej: abc@xyz.com</string>
+    <string name="ing_clave">Ingresa tu contraseña</string>
+    <string name="ing_clave2">Confirma tu contraseña</string>
+    <string name="aceptar">ACEPTAR</string>
+
+    //activity_main
+    <string name="desc_editar">editar</string>
+    <string name="desc_oro">oro</string>
+    <string name="jugar">JUGAR</string>
+    <string name="salir">SALIR</string>
+    <string name="top3">VER TOP 3</string>
+    <string name="instrucciones">INSTRUCCIONES</string>
+
+    //activity_editar_perfil
+    <string name="perfil">EDITAR PERFIL</string>
+    <string name="cambiar">Cambiar contrañseña</string>
+    <string name="clave_actual">Contraseña actual</string>
+    <string name="calve_nueva">Ingresa nueva contraseña</string>
+    <string name="clave_final">Confirma la contraseña</string>
+
+    //activity_instrucciones
+    <string name="desc_final">¡Disfruta de TriviaTrek y demuestra tu conocimiento!</string>
+
+    //activity_podio
+    <string name="podio">podio</string>
+
+    //activity_categoria_preguntas
+    <string name="categoria">Selecciona una categoría</string>
+    <string name="desc_categoria">categoría</string>
+    <string name="deporte">DEPORTE</string>
+    <string name="arte">ARTE</string>
+    <string name="entretenimiento">ENTRETENIMIENTO</string>
+    <string name="geografia">GEOGRAFIA</string>
+    <string name="ciencia">CIENCIA</string>
+    <string name="todas">TODAS</string>
+
+    //activity_pregunta
+    <string name="desc_pregunta">imagen pregunta</string>
+    <string name="continuar">CONTINUAR</string>
+
+    //activity_menu_final
+    <string name="mis_resultados">MIS RESULTADOS</string>
+    <string name="seguir">SEGUIR JUGANDO</string>
+    <string name="sugerir">DEJAR SUGERENCIA</string>
+
+    //activity_resultlados
+    <string name="volver">VOLVER AL MENU</string>
+    <string name="cerrar">CERRAR SESION</string>
+
+    //activity_sugerencia
+    <string name="sugerencia">Deja tu sugerencia, comentario, o ideas de preguntas para que podamos agregar a TriviaTrek.</string>
+    <string name="asunto">Asunto - Ej: Sugiero pregunta</string>
+    <string name="sugerir2">Deja tu sugerencia aquí.</string>
+    <string name="enviar">ENVIAR</string>
+
+    //activity_admin_menu
+    <string name="opciones">Selecciona una opcion</string>
+    <string name="listado">LISTADO DE  PREGUNTAS</string>
+    <string name="agregar">AGREGAR PREGUNTA</string>
+    <string name="ver">VER SUGERENCIAS</string>
+    <string name="probar">PROBAR JUEGO</string>
+
+    //activity_admin_lista_preguntas
+    <string name="selecciona">Selecciona una pregunta para editar o eliminar</string>
+
+    //activity_admin_agregar_pregunta
+    <string name="desc_ingresar">Agrega una nueva pregunta, sus opciones y selecciona la respuesta correcta.</string>
+    <string name="ingresar_pregunta">Ingrese la pregunta aquí</string>
+    <string name="buscar">BUSCAR IMAGEN</string>
+    <string name="opcion1">Ingrese opcion 1</string>
+    <string name="opcion2">Ingrese opcion 2</string>
+    <string name="opcion3">Ingrese opcion 3</string>
+    <string name="guardar">GUARDAR</string>
+
+    //activity_admin_pregunta
+    <string name="editar_pregunta">Editar Pregunta</string>
+    <string name="eliminar">ELIMINAR</string>
+
+    //activity_admin_ver_sugerencia
+    <string name="recibidas">SUGERENCIAS RECIBIDAS</string>
+
     <string-array name="categorias_array">
         <item>Selecciona una categoría ↷</item>
         <item>Arte</item>
@@ -8,7 +106,6 @@
         <item>Deportes</item>
         <item>Entretenimiento</item>
         <item>Geografia</item>
-
     </string-array>
 
     <string-array name="categorias2_array">
@@ -19,6 +116,6 @@
         <item>Entretenimiento</item>
         <item>Geografia</item>
         <item>Todas</item>
-
     </string-array>
+
 </resources>

@@ -4,14 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".PodioActivity"
-    android:background="@drawable/fondo_oscuro">
+    android:background="@drawable/fondo_oscuro"
+    tools:context=".PodioActivity">
 
 
     <ImageView
         android:id="@+id/imageView4"
         android:layout_width="170dp"
         android:layout_height="170dp"
+        android:contentDescription="@string/logo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -24,6 +25,7 @@
         android:layout_alignParentBottom="true"
         android:layout_marginTop="16dp"
         android:clickable="true"
+        android:contentDescription="@string/desc_atras"
         android:onClick="volverAtras"
         android:src="@drawable/atras"
         app:layout_constraintStart_toStartOf="parent"
@@ -38,8 +40,8 @@
         android:layout_marginEnd="10dp"
         android:background="@drawable/style_borde"
         android:backgroundTint="@color/fondo_radiobutton"
+        android:contentDescription="@string/podio"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.51"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView4"
         app:srcCompat="@drawable/podio" />
@@ -95,33 +97,33 @@
 
     <TextView
         android:id="@+id/txtSegundoPuesto"
-        android:layout_width="wrap_content"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="12dp"
-        android:layout_marginBottom="32dp"
+        android:layout_marginBottom="40dp"
         android:fontFamily="@font/sprite_graffiti"
-        android:textAlignment="textStart"
-        android:textColor="#B6914A"
+        android:textAlignment="center"
+        android:textColor="#C3C5C7"
         android:textSize="15sp"
         app:layout_constraintBottom_toBottomOf="@+id/imgPodio"
         app:layout_constraintStart_toStartOf="@+id/imgPodio" />
 
     <TextView
         android:id="@+id/txtTercerPuesto"
-        android:layout_width="wrap_content"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="32dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="40dp"
         android:fontFamily="@font/sprite_graffiti"
-        android:textAlignment="textEnd"
-        android:textColor="#C3C5C7"
+        android:textAlignment="center"
+        android:textColor="#CCA24A"
         android:textSize="15sp"
         app:layout_constraintBottom_toBottomOf="@+id/imgPodio"
         app:layout_constraintEnd_toEndOf="@+id/imgPodio" />
 
     <TextView
         android:id="@+id/txtPuesto"
-        android:layout_width="301dp"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:fontFamily="@font/sprite_graffiti"
@@ -129,7 +131,6 @@
         android:textColor="@color/white"
         android:textSize="25sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.508"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imgPodio" />
 
@@ -140,14 +141,15 @@
         android:layout_marginStart="108dp"
         android:layout_marginEnd="109dp"
         android:layout_marginBottom="16dp"
-        android:backgroundTint="@color/azuloscuro_logo"
+        android:backgroundTint="@color/amarillo_logo"
         android:fontFamily="@font/sprite_graffiti"
-        android:text="JUGAR"
-        android:textColor="@color/celeste_logo"
+        android:text="@string/jugar"
+        android:textColor="@color/rosado_logo"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="TextContrastCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

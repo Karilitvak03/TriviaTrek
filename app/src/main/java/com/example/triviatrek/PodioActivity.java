@@ -33,13 +33,17 @@ public class PodioActivity extends AppCompatActivity {
         setContentView(R.layout.activity_podio);
 
         iconoVolver6 = findViewById(R.id.iconoVolver6);
+
         txtPrimerPuesto = findViewById(R.id.txtPrimerPuesto);
         txtSegundoPuesto = findViewById(R.id.txtSegundoPuesto);
         txtTercerPuesto = findViewById(R.id.txtTercerPuesto);
+
         txtOro1 = findViewById(R.id.txtOro1);
         txtOro2 = findViewById(R.id.txtOro2);
         txtOro3 = findViewById(R.id.txtOro3);
+
         txtPuesto = findViewById(R.id.txtPuesto);
+
         btnJugar = findViewById(R.id.btnJugar2);
 
         FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();
@@ -49,8 +53,6 @@ public class PodioActivity extends AppCompatActivity {
 
             // Mostrar el podio y el mensaje del puesto
             mostrarUsuarios(emailUsuarioActual);
-        } else {
-            // El usuario no está autenticado, puedes manejar esta situación según tus necesidades
         }
 
         iconoVolver6.setOnClickListener(new View.OnClickListener() {

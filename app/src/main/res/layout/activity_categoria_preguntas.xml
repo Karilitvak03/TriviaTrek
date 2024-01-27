@@ -11,6 +11,7 @@
         android:id="@+id/imglogoTriviaTrek"
         android:layout_width="131dp"
         android:layout_height="133dp"
+        android:contentDescription="@string/logo"
         android:tint="#88817D7D"
         app:layout_constraintBottom_toBottomOf="@+id/txtGeografia"
         app:layout_constraintEnd_toEndOf="parent"
@@ -28,7 +29,7 @@
         android:layout_alignParentBottom="true"
         android:layout_marginTop="16dp"
         android:clickable="true"
-        android:contentDescription="Volver atrás"
+        android:contentDescription="@string/desc_atras"
         android:onClick="volverAtras"
         android:src="@drawable/atras"
         app:layout_constraintStart_toStartOf="parent"
@@ -41,76 +42,81 @@
         android:layout_height="67dp"
         android:layout_marginTop="32dp"
         android:fontFamily="@font/sprite_graffiti"
-        android:text="Selecciona una categoria"
+        android:text="@string/categoria"
         android:textAlignment="center"
         android:textColor="@color/rosado_logo"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TextContrastCheck,TextSizeCheck" />
 
     <TextView
-            android:id="@+id/txtDeporte"
-            android:layout_width="220px"
-            android:layout_height="25dp"
-            android:layout_marginStart="40dp"
-            android:layout_marginBottom="8dp"
-            android:fontFamily="@font/sprite_graffiti"
-            android:text="deporte"
-            android:textAlignment="center"
-            android:textColor="@color/deporte"
-            android:textSize="12sp"
-            app:layout_constraintBottom_toBottomOf="@+id/imgDeporte"
-            app:layout_constraintEnd_toEndOf="@+id/imgDeporte"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="@+id/imgDeporte"/>
+        android:id="@+id/txtDeporte"
+        android:layout_width="220px"
+        android:layout_height="25dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="@font/sprite_graffiti"
+        android:text="@string/deporte"
+        android:textAlignment="center"
+        android:textColor="@color/deporte"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imgDeporte"
+        app:layout_constraintEnd_toEndOf="@+id/imgDeporte"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/imgDeporte"
+        tools:ignore="PxUsage,TextContrastCheck,VisualLintOverlap" />
 
     <TextView
-            android:id="@+id/txtArte"
-            android:layout_width="220px"
-            android:layout_height="25dp"
-            android:layout_marginEnd="80dp"
-            android:layout_marginBottom="8dp"
-            android:fontFamily="@font/sprite_graffiti"
-            android:text="arte"
-            android:textAlignment="center"
-            android:textColor="@color/arte"
-            android:textSize="12sp"
-            app:layout_constraintBottom_toBottomOf="@+id/imgArte"
-            app:layout_constraintEnd_toEndOf="@+id/imgArte"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/imgArte"/>
+        android:id="@+id/txtArte"
+        android:layout_width="220px"
+        android:layout_height="25dp"
+        android:layout_marginEnd="80dp"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="@font/sprite_graffiti"
+        android:text="@string/arte"
+        android:textAlignment="center"
+        android:textColor="@color/arte"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imgArte"
+        app:layout_constraintEnd_toEndOf="@+id/imgArte"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/imgArte"
+        tools:ignore="PxUsage,TextContrastCheck,VisualLintOverlap" />
 
     <TextView
-            android:id="@+id/txtEntretenimiento"
-            android:layout_width="220px"
-            android:layout_height="25dp"
-            android:layout_marginBottom="8dp"
-            android:fontFamily="@font/sprite_graffiti"
-            android:text="entretenimiento"
-            android:textAlignment="center"
-            android:textColor="@color/entretenimiento"
-            android:textSize="12sp"
-            app:layout_constraintBottom_toBottomOf="@+id/imgEntretenimiento"
-            app:layout_constraintEnd_toEndOf="@+id/imgEntretenimiento"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="@+id/imgEntretenimiento"/>
+        android:id="@+id/txtEntretenimiento"
+        android:layout_width="220px"
+        android:layout_height="25dp"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="@font/sprite_graffiti"
+        android:text="@string/entretenimiento"
+        android:textAlignment="center"
+        android:textColor="@color/entretenimiento"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imgEntretenimiento"
+        app:layout_constraintEnd_toEndOf="@+id/imgEntretenimiento"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/imgEntretenimiento"
+        tools:ignore="PxUsage,TextContrastCheck,TextSizeCheck,VisualLintOverlap" />
 
     <TextView
-            android:id="@+id/txtGeografia"
-            android:layout_width="220px"
-            android:layout_height="25dp"
-            android:layout_marginBottom="8dp"
-            android:fontFamily="@font/sprite_graffiti"
-            android:text="geografía"
-            android:textAlignment="center"
-            android:textColor="@color/geografia"
-            android:textSize="12sp"
-            app:layout_constraintBottom_toBottomOf="@+id/imgGeografia"
-            app:layout_constraintEnd_toEndOf="@+id/imgGeografia"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/imgGeografia"/>
+        android:id="@+id/txtGeografia"
+        android:layout_width="220px"
+        android:layout_height="25dp"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="@font/sprite_graffiti"
+        android:text="@string/geografia"
+        android:textAlignment="center"
+        android:textColor="@color/geografia"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imgGeografia"
+        app:layout_constraintEnd_toEndOf="@+id/imgGeografia"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/imgGeografia"
+        tools:ignore="PxUsage,TextContrastCheck,VisualLintOverlap" />
 
     <TextView
         android:id="@+id/txtCiencia"
@@ -118,14 +124,15 @@
         android:layout_height="25dp"
         android:layout_marginBottom="8dp"
         android:fontFamily="@font/sprite_graffiti"
-        android:text="Ciencia"
+        android:text="@string/ciencia"
         android:textAlignment="center"
         android:textColor="@color/ciencia"
         android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="@+id/imgCiencia"
         app:layout_constraintEnd_toEndOf="@+id/imgCiencia"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/imgCiencia" />
+        app:layout_constraintStart_toStartOf="@+id/imgCiencia"
+        tools:ignore="PxUsage,TextContrastCheck,VisualLintOverlap,VisualLintBounds" />
 
     <TextView
         android:id="@+id/txtTodas"
@@ -133,38 +140,43 @@
         android:layout_height="25dp"
         android:layout_marginBottom="8dp"
         android:fontFamily="@font/sprite_graffiti"
-        android:text="todas"
+        android:text="@string/todas"
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="@+id/imgTodas"
         app:layout_constraintEnd_toEndOf="@+id/imgTodas"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/imgTodas" />
+        app:layout_constraintStart_toStartOf="@+id/imgTodas"
+        tools:ignore="PxUsage,VisualLintOverlap,VisualLintBounds" />
 
     <ImageView
         android:id="@+id/imgDeporte"
         android:layout_width="220px"
         android:layout_height="350px"
-        android:layout_marginStart="56dp"
+        android:layout_marginStart="70dp"
         android:layout_marginTop="4dp"
         android:background="@drawable/style_borde"
         android:backgroundTint="@color/fondo_radiobutton"
+        android:contentDescription="@string/desc_categoria"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtCategoria"
-        app:srcCompat="@drawable/icono_deporte" />
+        app:srcCompat="@drawable/icono_deporte"
+        tools:ignore="PxUsage" />
 
     <ImageView
         android:id="@+id/imgArte"
         android:layout_width="220px"
         android:layout_height="350px"
         android:layout_marginTop="4dp"
-        android:layout_marginEnd="56dp"
+        android:layout_marginEnd="70dp"
         android:background="@drawable/style_borde"
         android:backgroundTint="#33000000"
+        android:contentDescription="@string/desc_categoria"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtCategoria"
-        app:srcCompat="@drawable/icono_arte" />
+        app:srcCompat="@drawable/icono_arte"
+        tools:ignore="PxUsage,ImageContrastCheck" />
 
     <ImageView
         android:id="@+id/imgEntretenimiento"
@@ -174,9 +186,11 @@
         android:layout_marginTop="16dp"
         android:background="@drawable/style_borde"
         android:backgroundTint="@color/fondo_radiobutton"
+        android:contentDescription="@string/desc_categoria"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imgDeporte"
-        app:srcCompat="@drawable/icono_entretenimiento" />
+        app:srcCompat="@drawable/icono_entretenimiento"
+        tools:ignore="PxUsage" />
 
     <ImageView
         android:id="@+id/imgGeografia"
@@ -186,30 +200,38 @@
         android:layout_marginEnd="10dp"
         android:background="@drawable/style_borde"
         android:backgroundTint="@color/fondo_radiobutton"
+        android:contentDescription="@string/desc_categoria"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imgArte"
-        app:srcCompat="@drawable/icono_geografia" />
+        app:srcCompat="@drawable/icono_geografia"
+        tools:ignore="PxUsage" />
 
     <ImageView
-            android:id="@+id/imgCiencia"
-            android:layout_width="220px"
-            android:layout_height="350px"
-            android:layout_marginTop="20dp"
-            android:background="@drawable/style_borde"
-            android:backgroundTint="@color/fondo_radiobutton"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imgEntretenimiento"
-            app:srcCompat="@drawable/icono_ciencia" android:layout_marginStart="56dp"/>
+        android:id="@+id/imgCiencia"
+        android:layout_width="220px"
+        android:layout_height="350px"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/style_borde"
+        android:backgroundTint="@color/fondo_radiobutton"
+        android:contentDescription="@string/desc_categoria"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgEntretenimiento"
+        app:srcCompat="@drawable/icono_ciencia"
+        tools:ignore="PxUsage,VisualLintBounds" />
+
     <ImageView
         android:id="@+id/imgTodas"
         android:layout_width="220px"
         android:layout_height="350px"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="56dp"
+        android:layout_marginEnd="70dp"
         android:background="@drawable/style_borde"
         android:backgroundTint="@color/fondo_radiobutton"
+        android:contentDescription="@string/desc_categoria"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imgGeografia"
-        app:srcCompat="@drawable/icono_random" />
+        app:srcCompat="@drawable/icono_random"
+        tools:ignore="PxUsage,VisualLintBounds" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

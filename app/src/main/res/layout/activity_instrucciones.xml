@@ -11,6 +11,7 @@
         android:id="@+id/imgLogo4"
         android:layout_width="120dp"
         android:layout_height="118dp"
+        android:contentDescription="@string/logo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
@@ -24,11 +25,12 @@
         android:layout_alignParentBottom="true"
         android:layout_marginTop="16dp"
         android:clickable="true"
-        android:contentDescription="Volver atrás"
+        android:contentDescription="@string/desc_atras"
         android:onClick="volverAtras"
         android:src="@drawable/atras"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TouchTargetSizeCheck" />
 
     <TextView
         android:id="@+id/txtTitulo"
@@ -58,7 +60,8 @@
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtTitulo" />
+        app:layout_constraintTop_toBottomOf="@+id/txtTitulo"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
     <!-- Descripción 1 -->
     <TextView
@@ -90,7 +93,8 @@
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/descripcion1" />
+        app:layout_constraintTop_toBottomOf="@id/descripcion1"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
     <!-- Descripción 2 -->
     <TextView
@@ -122,7 +126,8 @@
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/descripcion2" />
+        app:layout_constraintTop_toBottomOf="@id/descripcion2"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
     <!-- Descripción 3 -->
     <TextView
@@ -154,7 +159,8 @@
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/descripcion3" />
+        app:layout_constraintTop_toBottomOf="@id/descripcion3"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
     <!-- Descripción 4 -->
     <TextView
@@ -186,7 +192,8 @@
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/descripcion4" />
+        app:layout_constraintTop_toBottomOf="@id/descripcion4"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck,TouchTargetSizeCheck" />
 
     <!-- Descripción 5 -->
     <TextView
@@ -209,12 +216,13 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:fontFamily="@font/sprite_graffiti"
-        android:text="¡Disfruta de TriviaTrek y demuestra tu conocimiento!"
+        android:text="@string/desc_final"
         android:textAlignment="center"
         android:textColor="@color/amarillo_logo"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/descripcion5" />
+        app:layout_constraintTop_toBottomOf="@id/descripcion5"
+        tools:ignore="TextSizeCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

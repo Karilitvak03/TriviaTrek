@@ -13,13 +13,14 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="152dp"
         android:fontFamily="@font/sprite_graffiti"
-        android:text="Selecciona una pregunta para editar o eliminar"
+        android:text="@string/selecciona"
         android:textAlignment="center"
         android:textColor="@color/amarillo_logo"
-        android:textSize="20dp"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TextSizeCheck" />
 
     <Spinner
         android:id="@+id/spinnerCategorias2"
@@ -40,6 +41,7 @@
         android:id="@+id/imgLogo4"
         android:layout_width="170dp"
         android:layout_height="170dp"
+        android:contentDescription="@string/logo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -75,10 +77,10 @@
         android:layout_alignParentBottom="true"
         android:layout_marginTop="16dp"
         android:clickable="true"
-        android:contentDescription="Volver atrás"
-        android:onClick="volverAtras"
+        android:contentDescription="@string/desc_atras"
         android:src="@drawable/atras"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TouchTargetSizeCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -9,6 +9,7 @@ import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -26,6 +27,10 @@ public class LoginActivity extends AppCompatActivity {
     private Button btnIngresar;
     private TextView txtRegistrarse;
 
+    private ImageView icoGoogle;
+    private ImageView icoFace;
+    private ImageView icoMicrosoft;
+
     private DocumentSnapshot documento;
 
     @Override
@@ -37,6 +42,10 @@ public class LoginActivity extends AppCompatActivity {
         txtClave = findViewById(R.id.txtClave);
         btnIngresar = findViewById(R.id.btnIngresar);
         txtRegistrarse = findViewById(R.id.textView4);
+
+        icoGoogle = findViewById(R.id.icoGoogle);
+        icoFace = findViewById(R.id.icoFacebook);
+        icoMicrosoft = findViewById(R.id.icoMicrosoft);
 
         btnIngresar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -128,6 +137,14 @@ public class LoginActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        icoGoogle.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
+
     }
 
     private boolean validarCampos() {

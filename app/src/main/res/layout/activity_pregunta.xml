@@ -30,6 +30,7 @@
         android:layout_height="63dp"
         android:layout_marginStart="4dp"
         android:layout_marginTop="4dp"
+        android:contentDescription="@string/logo"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/logo1" />
@@ -68,6 +69,7 @@
         android:layout_height="42dp"
         android:layout_marginTop="12dp"
         android:layout_marginEnd="16dp"
+        android:contentDescription="@string/desc_oro"
         app:layout_constraintBottom_toTopOf="@+id/imgPregunta"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -81,10 +83,12 @@
         android:layout_marginTop="60dp"
         android:background="@drawable/style_borde"
         android:backgroundTint="@color/fondo_radiobutton"
+        android:contentDescription="@string/desc_pregunta"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="PxUsage,ImageContrastCheck" />
 
     <RadioGroup
         android:id="@+id/radioGroup1"
@@ -107,7 +111,8 @@
             android:fontFamily="@font/sprite_graffiti"
             android:textColor="@color/rosado_logo"
             android:textColorHighlight="@color/rosado_logo"
-            android:textSize="18sp" />
+            android:textSize="18sp"
+            tools:ignore="DuplicateSpeakableTextCheck" />
 
         <RadioButton
             android:id="@+id/txtOpcion2"
@@ -145,7 +150,7 @@
         android:layout_marginBottom="16dp"
         android:backgroundTint="@color/azuloscuro_logo"
         android:fontFamily="@font/sprite_graffiti"
-        android:text="CONTINUAR"
+        android:text="@string/continuar"
         android:textColor="@color/celeste_logo"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
