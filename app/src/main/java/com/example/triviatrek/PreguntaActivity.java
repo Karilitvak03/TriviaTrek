@@ -251,24 +251,27 @@
 
 
         private void cargarImagen(String imagenPath) {
-            // Pongo el ImgaeView invisible para q no se vea feo antes de cargar la imagen
+            // Hago invisible la imageView mientras se carga la imagen
             imgPregunta.setVisibility(View.INVISIBLE);
 
-            // Verificar si la actividad aún está en un estado válido
-            if (!isDestroyed()) {
-                StorageReference storageReference = FirebaseStorage.getInstance().getReference().child(imagenPath);
-                storageReference.getDownloadUrl().addOnSuccessListener(uri -> {
-                    // Verificar nuevamente si la actividad aún está en un estado válido
-                    if (!isDestroyed()) {
-                        // Cargar la imagen con Glide
-                        Glide.with(this)
-                                .load(uri)
-                                .into(imgPregunta);
-                        imgPregunta.setVisibility(View.VISIBLE); // Hago visible la imageView
-                    }
-                });
-            }
+            // Creo la referencia al archivo en Firebase Storage
+            StorageReference storageReference = FirebaseStorage.getInstance().getReference().child(imagenPath);
+
+            // Obtengo el URL de descarga del archivo
+            storageReference.getDownloadUrl().addOnSuccessListener(uri -> {
+                // Una vez que obtengo el URL con éxito, cargo la imagen usando Glide
+                Glide.with(this)
+                        .load(uri)
+                        .into(imgPregunta);
+                // Hago visible la imageView después de cargar la imagen
+                imgPregunta.setVisibility(View.VISIBLE);
+            }).addOnFailureListener(exception -> {
+                // En caso de que falle la obtención del URL de descarga, imprimo un mensaje de error
+                Log.e("FirebaseStorage", "Error al obtener el URL de descarga: " + exception.getMessage());
+
+            });
         }
+
 
         private void buscarPregunta(LinkedList<PreguntaClass> preguntas) {
             if (preguntas.isEmpty()) {

@@ -43,10 +43,6 @@ public class LoginActivity extends AppCompatActivity {
         btnIngresar = findViewById(R.id.btnIngresar);
         txtRegistrarse = findViewById(R.id.textView4);
 
-        icoGoogle = findViewById(R.id.icoGoogle);
-        icoFace = findViewById(R.id.icoFacebook);
-        icoMicrosoft = findViewById(R.id.icoMicrosoft);
-
         btnIngresar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -135,13 +131,6 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(LoginActivity.this, RegistroActivity.class);
                 startActivity(intent);
-            }
-        });
-
-        icoGoogle.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
             }
         });
 

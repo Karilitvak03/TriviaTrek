@@ -94,6 +94,7 @@
 
     //activity_admin_pregunta
     <string name="editar_pregunta">Editar Pregunta</string>
+    <string name="cambiar_imagen">Cambiar imagen</string>
     <string name="eliminar">ELIMINAR</string>
 
     //activity_admin_ver_sugerencia

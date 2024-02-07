@@ -54,7 +54,7 @@
         android:drawableStart="@android:drawable/ic_menu_search"
         android:drawableTint="@color/celeste_logo"
         android:fontFamily="@font/sprite_graffiti"
-        android:text="@string/cambiar_img"
+        android:text="@string/cambiar_imagen"
         android:textColor="@color/celeste_logo"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"

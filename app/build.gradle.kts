@@ -59,6 +59,4 @@ dependencies {
 
     implementation("com.google.firebase:firebase-appcheck-playintegrity")
 
-    implementation("com.google.android.gms:play-services-auth:20.7.0") //Login con Google
-    implementation("com.facebook.android:facebook-andorid-sdk:[4,5]")  //Login con Face
 }
