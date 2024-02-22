@@ -9,6 +9,23 @@
     tools:context=".AdminMenuActivity">
 
 
+    <Button
+        android:id="@+id/btnSalir2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:backgroundTint="@color/azuloscuro_logo"
+        android:drawableLeft="@android:drawable/ic_lock_power_off"
+        android:drawableTint="@color/celeste_logo"
+        android:fontFamily="@font/sprite_graffiti"
+        android:text="@string/cerrar_sesion"
+        android:textColor="@color/celeste_logo"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="RtlHardcoded" />
+
     <ImageView
         android:id="@+id/imgLogo4"
         android:layout_width="170dp"

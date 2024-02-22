@@ -7,6 +7,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
+import com.google.firebase.auth.FirebaseAuth;
+
 public class AdminMenuActivity extends AppCompatActivity {
 
     @Override
@@ -18,6 +20,7 @@ public class AdminMenuActivity extends AppCompatActivity {
         Button btnAgregar = findViewById(R.id.btnAgregar);
         Button btnPreguntas = findViewById(R.id.btnPreguntas);
         Button btnProbarJuego = findViewById(R.id.btnProbarJuego);
+        Button btnSalir = findViewById(R.id.btnSalir2);
 
         btnVersugerencia.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -49,6 +52,18 @@ public class AdminMenuActivity extends AppCompatActivity {
                 Intent intent = new Intent(AdminMenuActivity.this, MainActivity.class);
                 startActivity(intent);
             }
+        });
+
+        btnSalir.setOnClickListener(new View.OnClickListener() {
+            FirebaseAuth sesion = FirebaseAuth.getInstance();
+            @Override
+            public void onClick(View view) {
+                sesion.signOut();
+
+                Intent intent = new Intent(AdminMenuActivity.this, LoginActivity.class);
+                startActivity(intent);
+            }
+
         });
 
 
