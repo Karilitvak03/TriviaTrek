@@ -56,16 +56,19 @@
     <Button
         android:id="@+id/btnSalir"
         android:layout_width="wrap_content"
-        android:layout_height="50dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginBottom="16dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginBottom="4dp"
         android:backgroundTint="@color/azuloscuro_logo"
+        android:drawableLeft="@android:drawable/ic_lock_power_off"
+        android:drawableTint="@color/celeste_logo"
         android:fontFamily="@font/sprite_graffiti"
-        android:text="@string/salir"
+        android:text="@string/cerrar_sesion"
         android:textColor="@color/celeste_logo"
-        android:textSize="20sp"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="RtlHardcoded" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"

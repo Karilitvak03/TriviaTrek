@@ -106,10 +106,15 @@
             });
 
             btnSalir.setOnClickListener(new View.OnClickListener() {
+                FirebaseAuth sesion = FirebaseAuth.getInstance();
                 @Override
                 public void onClick(View view) {
-                    finish();
+                    sesion.signOut();
+
+                    Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+                    startActivity(intent);
                 }
+
             });
         }
 

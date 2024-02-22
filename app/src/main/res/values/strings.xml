@@ -27,7 +27,7 @@
     <string name="desc_editar">editar</string>
     <string name="desc_oro">oro</string>
     <string name="jugar">JUGAR</string>
-    <string name="salir">SALIR</string>
+    <string name="cerrar_sesion">CERRAR SESION</string>
     <string name="top3">VER TOP 3</string>
     <string name="instrucciones">INSTRUCCIONES</string>
 
